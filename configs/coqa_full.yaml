@@ -1,0 +1,48 @@
+# coqa tokenization baseline 2: full retokenize (default / current behaviour)
+# Rebuilds and retokenizes the complete conversation text from scratch each turn.
+
+model_name:   "Qwen/Qwen3-0.6B-Base"
+output_dir:   "experiments/coqa_tok_full"
+
+# rollout
+num_generations: 4
+max_turns:       10
+max_new_tokens:  300
+temperature:     0.8
+max_ctx_len:     8192
+
+# loss
+clip_eps:      0.2
+beta:          0.01
+use_ref_model: true
+
+# vllm
+vllm_gpu_memory_utilization: 0.5
+
+# training
+lr:          1.0e-6
+batch_size:  16
+num_epochs:  1
+max_steps:   200
+grad_clip:   1.0
+bf16:        true
+
+# dataset
+dataset:     "coqa"
+reward_type: "f1"
+max_answer_words: 7
+
+# tokenization
+tokenization_strategy: "full"
+
+# checkpointing
+save_every:   20
+resume_from:  ""
+
+# logging
+wandb_project:  "grpo-coqa-tokenization"
+use_wandb:      false
+wandb_run_name: "full"
+log_every:      5
+eval_every:     50
+eval_samples:   20

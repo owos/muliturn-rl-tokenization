@@ -1,0 +1,14 @@
+{
+  "/fs/scratch/PAS2836/owos/experiments/RL_MTT/experiments/gsm8k_grpo_out_complete": {
+    "single": {
+      "accuracy": 0.34040940106141016,
+      "n": 1319
+    }
+  },
+  "Qwen/Qwen3-0.6B-Base": {
+    "single": {
+      "accuracy": 0.3206974981046247,
+      "n": 1319
+    }
+  }
+}

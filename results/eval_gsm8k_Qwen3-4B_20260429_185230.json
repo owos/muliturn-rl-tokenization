@@ -1,0 +1,301 @@
+{
+  "multi": {
+    "final_accuracy": 0.5,
+    "n": 10,
+    "turn_0_acc": 0.4,
+    "turn_1_acc": 0.4,
+    "turn_2_acc": 0.5,
+    "turn_3_acc": 0.6,
+    "turn_4_acc": 0.3333333333333333,
+    "turn_5_acc": 1.0,
+    "turn_6_acc": 1.0,
+    "results": [
+      [
+        {
+          "t": 0,
+          "q": "How many duck eggs does Janet sell each day?",
+          "gold": "9",
+          "gen": "The total number of eggs per day is 16. She eats 3 for breakfast, and uses 4 for muffins, so that's 3 + 4 = 7. 16 - 7 = 9. Therefore, Janet sells 9 duck eggs each day.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much in dollars does Janet make every day at the farmers' market?",
+          "gold": "18",
+          "gen": "Janet sells 9 duck eggs each day, and she sells each egg for $2. So, 9 times 2 equals 18. Therefore, Janet makes $18 every day at the farmers' market.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many bolts of white fiber are needed?",
+          "gold": "1",
+          "gen": "The question is missing information. The answer is not determinable from the information given.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many bolts in total does it take?",
+          "gold": "3",
+          "gen": "2 (blue) + 1 (white) = 3 bolts in total.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total cost of the house and repairs?",
+          "gold": "130000",
+          "gen": "The total cost is $ 130,000. ( $80,000 + $50,000 = $130,000 )",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the increased value of the house?",
+          "gold": "120000",
+          "gen": "Increased value is $200,000.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the new value of the house?",
+          "gold": "200000",
+          "gen": "The new value is $200,000.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much profit did Josh make?",
+          "gold": "70000",
+          "gen": "Profit is $200,000 (new value) - $130,000 (total cost) = $70,000.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many times does James sprint in a week?",
+          "gold": "9",
+          "gen": "3 times a week.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many meters does James run in total during the week?",
+          "gold": "540",
+          "gen": "3 times a week.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many total meters does he run a week?",
+          "gold": "540",
+          "gen": "540",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many cups of feed do all the chickens need per day?",
+          "gold": "60",
+          "gen": "15 + 25 = 40",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many cups of feed have been given to the chickens in the morning and afternoon combined?",
+          "gold": "40",
+          "gen": "40.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many cups of feed does Wendi need to give her chickens in the final meal of the day?",
+          "gold": "20",
+          "gen": "? Let's say that in the morning: 15, afternoon: 25, and evening: 10. Then the answer is 10. But the problem in the original has the answer as 40, which is the sum of the first two meals. So the new question could be similar.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the discount price of one glass?",
+          "gold": "3",
+          "gen": "The discount price of one glass is $4.8.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many cheaper glasses does Kylar buy?",
+          "gold": "8",
+          "gen": "Kylar buys 8 cheaper glasses.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much does Kylar pay for the cheaper glasses?",
+          "gold": "24",
+          "gen": "8 glasses * $3.00 = $24.00",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much does Kylar pay for the regular-priced glasses?",
+          "gold": "40",
+          "gen": "8 glasses * $5 = $40.00",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much does Kylar need to pay for the glasses he wants to buy?",
+          "gold": "64",
+          "gen": "$64.00",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many sheep does Charleston have?",
+          "gold": "80",
+          "gen": "Let's see, I need to figure out how many sheep Charleston has. The problem says Toulouse has twice as many sheep as Charleston. So if I let the number of sheep in Charleston be C, then Toulouse has 2C sheep. Then it also says Charleston has 4 times as many sheep as Seattle. That means Seattle has C divided by 4, so S = C/4. But wait, the question is asking for how many sheep Charleston has. But I don't have any numbers given. Wait, maybe there's a missing part here? The problem only gives relationships between the cities but no actual numbers. So maybe the answer is that there isn't enough information? But that can't be right. Maybe I need to assume that the number of sheep in Seattle is a whole number, so C has to be divisible by 4. But without more information, like the total number of sheep or something else, I can't determine a specific number. Hmm, maybe the problem expects me to express the answer in terms of another variable, but the question is asking for a specific number. Maybe I missed something. Let me check the problem again. It says Toulouse has twice as many as Charleston, and Charleston has 4 times as many as Seattle. But there's no total. So unless there's a typo or missing information, I think the answer is that we can't determine the exact number of sheep in Charleston because there's not enough data. Wait, but the user is expecting a numerical answer, so maybe I did something wrong. Maybe the problem is presented in a way that the answer is derived from a standard setup. Wait, maybe the original problem has more numbers but the user omitted them. Let me check again. The original problem says: \"Toulouse has twice as many sheep as Charleston. Charleston has 4 times as many sheep as Seattle. How many sheep does Charleston have?\" No, that's all. So without any numbers, the answer can't be determined. But maybe the problem assumes that the number is the same as a previous problem or there's an implied value. Maybe I should state that there's insufficient information. But the user provided this question, so perhaps they want an answer in terms of variables. Wait, but the question is \"how many sheep does Charleston have?\" implying a numerical answer. Therefore, I must have missed something. Wait, could it be that the problem was misstated? Maybe there are numbers in the original problem that are missing here? For example,",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many sheep does Toulouse have?",
+          "gold": "160",
+          "gen": "Let's see, if I let Charleston be C, then Toulouse is 2C. But without numbers, it's impossible. So maybe the answer is that the problem is unsolvable as is. Therefore, the answer is that there is not enough information to determine the number of sheep in Charleston.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many sheep do Toulouse, Charleston, and Seattle have together?",
+          "gold": "260",
+          "gen": "Toulouse has 2*(4S) = 8S, Charleston has 4S, and Seattle has S. Total is 8S + 4S + S = 13S. But the question is not asking that. So without a total, we can't find numbers. Therefore, the answer must be that there's not enough information. But since the user might have intended a different question, maybe the answer is that the number is not determined. However, the user is expecting an answer. Since the problem as stated has no numerical answer, the answer is that we cannot determine the number of sheep in Charleston. But the system requires a numerical answer, so perhaps there's an error in the problem. Alternatively, if the original problem had a missing number, but the user hasn't included it, then we can't answer. For example, if the problem had said \"Charleston has 4 times as many sheep as Seattle, and together they have 100 sheep,\" then we could solve it. But with the given info, no. So I think the correct answer is that there's insufficient information. But since the system requires a box, maybe the answer is \\boxed{0} or \\boxed{4}, but that's just a guess. However, without any data, that's not valid. So I think the answer is that there's not enough information. But the system might require a numerical answer, so perhaps the correct answer is that the problem is indeterminate. However, the instructions say to provide the final answer in a box. Given the ambiguity, I will state that there's not enough information to determine the number of sheep in Charleston.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many gigabytes are in 40% of the file?",
+          "gold": "80",
+          "gen": "80",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many minutes does it take to download 40% of the file?",
+          "gold": "40",
+          "gen": "80",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many minutes does it take to download the entire file after the restart?",
+          "gold": "100",
+          "gen": "100",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many minutes does it take to download the file in total?",
+          "gold": "160",
+          "gen": "180",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How far is John from home when he turns around?",
+          "gold": "180",
+          "gen": "180 miles",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many hours did John actually drive in the first four hours?",
+          "gold": "2",
+          "gen": "2.5 hours",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many miles did John drive in the first half-hour?",
+          "gold": "15",
+          "gen": "15 miles",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many hours did John drive after the first half-hour?",
+          "gold": "1.5",
+          "gen": "1.5 hours",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How many miles did John drive in the remaining time after the first half-hour?",
+          "gold": "120",
+          "gen": "120 miles",
+          "correct": true
+        },
+        {
+          "t": 5,
+          "q": "How many miles did John drive in total during the 4 hours?",
+          "gold": "135",
+          "gen": "135 miles",
+          "correct": true
+        },
+        {
+          "t": 6,
+          "q": "How far is John from home at the end of those 4 hours?",
+          "gold": "45",
+          "gen": "45 miles",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours of overtime did Eliza work this week?",
+          "gold": "5",
+          "gen": "10",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is Eliza's hourly rate for overtime pay?",
+          "gold": "12",
+          "gen": "1.2 times her regular hourly rate.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much does Eliza earn from overtime pay this week?",
+          "gold": "60",
+          "gen": "$120",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is Eliza's regular weekly earning for the first 40 hours?",
+          "gold": "400",
+          "gen": "$400",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How much are Eliza's total earnings for this week?",
+          "gold": "460",
+          "gen": "$520",
+          "correct": false
+        }
+      ]
+    ]
+  }
+}

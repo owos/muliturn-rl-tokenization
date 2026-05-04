@@ -1,0 +1,291 @@
+✓ Initialized. View run at 
+https://modal.com/apps/layra/main/ap-TVcICO0YmB1kw4LgwjwXrB
+✓ Created objects.
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/modal_train.py
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/gsm8k_multiturn
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/configs
+├── 🔨 Created mount PythonPackage:grpo_coqa, PythonPackage:tokenization, 
+│   PythonPackage:utils
+└── 🔨 Created function train.
+output_dir: /experiments/coqa_tok_full_20260427_132458
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+[1ALoading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+[1ALoading weights:  16%|█▌        | 50/310 [00:00<00:00, 472.76it/s]
+[1ALoading weights:  32%|███▏      | 100/310 [00:00<00:00, 478.64it/s]
+[1ALoading weights:  48%|████▊     | 148/310 [00:00<00:00, 339.10it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 659.31it/s]
+
+[1ALoading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 4326.46it/s]
+INFO 04-27 13:25:02 [utils.py:233] non-default args: {'dtype': 'bfloat16', 'gpu_memory_utilization': 0.7, 'disable_log_stats': True, 'enforce_eager': True, 'model': 'Qwen/Qwen3-0.6B-Base'}
+WARNING 04-27 13:25:02 [arg_utils.py:1390] The global random seed is set to 0. Since VLLM_ENABLE_V1_MULTIPROCESSING is set to False, this may affect the random state of the Python process that launched vLLM.
+INFO 04-27 13:25:23 [model.py:549] Resolved architecture: Qwen3ForCausalLM
+INFO 04-27 13:25:23 [model.py:1678] Using max model len 32768
+INFO 04-27 13:25:23 [scheduler.py:238] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 04-27 13:25:23 [vllm.py:790] Asynchronous scheduling is enabled.
+WARNING 04-27 13:25:23 [vllm.py:848] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 04-27 13:25:23 [vllm.py:859] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 04-27 13:25:23 [vllm.py:1025] Cudagraph is disabled under eager mode
+INFO 04-27 13:25:23 [compilation.py:292] Enabled custom fusions: norm_quant, act_quant
+INFO 04-27 13:25:25 [core.py:105] Initializing a V1 LLM engine (v0.19.1) with config: model='Qwen/Qwen3-0.6B-Base', speculative_config=None, tokenizer='Qwen/Qwen3-0.6B-Base', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=Qwen/Qwen3-0.6B-Base, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_images_per_batch': 0, 'compile_sizes': [], 'compile_ranges_endpoints': [16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+INFO 04-27 13:25:25 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.0.26:31547 backend=nccl
+INFO 04-27 13:25:25 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+INFO 04-27 13:25:26 [gpu_model_runner.py:4735] Starting to load model Qwen/Qwen3-0.6B-Base...
+INFO 04-27 13:25:29 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+INFO 04-27 13:25:29 [flash_attn.py:596] Using FlashAttention version 3
+INFO 04-27 13:25:29 [weight_utils.py:625] No model.safetensors.index.json found in remote.
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.76it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.75it/s]
+
+INFO 04-27 13:25:29 [default_loader.py:384] Loading weights took 0.33 seconds
+INFO 04-27 13:25:30 [gpu_model_runner.py:4820] Model loading took 1.12 GiB memory and 2.830378 seconds
+INFO 04-27 13:25:44 [gpu_worker.py:436] Available KV cache memory: 94.35 GiB
+INFO 04-27 13:25:44 [kv_cache_utils.py:1319] GPU KV cache size: 883,296 tokens
+INFO 04-27 13:25:44 [kv_cache_utils.py:1324] Maximum concurrency for 32,768 tokens per request: 26.96x
+2026-04-27 13:25:44,782 - INFO - autotuner.py:262 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+2026-04-27 13:25:44,825 - INFO - autotuner.py:268 - flashinfer.jit: [Autotuner]: Autotuning process ends
+INFO 04-27 13:25:44 [core.py:283] init engine (profile, create kv cache, warmup model) took 14.47 seconds
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'stanfordnlp/coqa' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[dataset] kept 5677/7199 train samples (max_answer_words=10)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: owos to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run hxtwl5bn
+wandb: Tracking run with wandb version 0.26.0
+wandb: Run data is saved locally in /app/wandb/run-20260427_132548-hxtwl5bn
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run full
+wandb: ⭐️ View project at https://wandb.ai/owos/grpo-coqa-tokenization
+wandb: 🚀 View run at https://wandb.ai/owos/grpo-coqa-tokenization/runs/hxtwl5bn
+wandb: Detected [openai] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+
+[1AEpoch 1/1:   0%|          | 0/355 [00:00<?, ?it/s]
+[1AEpoch 1/1:   0%|          | 1/355 [04:48<28:21:17, 288.35s/it]
+[1AEpoch 1/1:   1%|          | 2/355 [07:55<22:25:01, 228.62s/it]
+[1AEpoch 1/1:   1%|          | 3/355 [10:55<20:12:38, 206.70s/it]
+[1AEpoch 1/1:   1%|          | 4/355 [14:53<21:21:37, 219.08s/it]
+[1AEpoch 1/1:   1%|▏         | 5/355 [19:42<23:44:18, 244.17s/it]
+[1AEpoch 1/1:   2%|▏         | 6/355 [24:42<25:30:37, 263.15s/it]
+[1AEpoch 1/1:   2%|▏         | 7/355 [29:46<26:43:54, 276.54s/it]
+[1AEpoch 1/1:   2%|▏         | 8/355 [33:59<25:55:41, 269.00s/it]
+[1AEpoch 1/1:   3%|▎         | 9/355 [38:25<25:45:24, 267.99s/it]step 10  loss=0.0208  train_reward=0.4830
+
+--- sample generations ---
+  Q: What is the survivors name?
+  gold: Luis Freddy Lala
+  gen:  Luis Freddy Lala  (f1=1.00)
+
+  Q: What did he live through?
+  gold: harrowing ordeal
+  gen:  A massacre in Mexico where 72 were killed  (f1=0.00)
+
+  Q: Was he shot?
+  gold: yes
+  gen:  Yes  (f1=1.00)
+
+  Q: How many were killed?
+  gold: 72
+  gen:  72  (f1=1.00)
+
+  Q: Where?
+  gold: Mexico
+  gen:  Northern Mexico  (f1=0.67)
+
+  Q: Who were the victims?
+  gold: migrants
+  gen:  Migrants from Central and South America  (f1=0.29)
+
+  Q: From where?
+  gold: Central and South America
+  gen:  Ecuador  (f1=0.00)
+
+  Q: Where were they going?
+  gold: north
+  gen:  Tamaulipas, Mexico  (f1=0.00)
+
+  Q: Was he the only one that lived?
+  gold: unknown
+  gen:  No, he was one of many  (f1=0.00)
+
+  Q: Where did his trip start?
+  gold: Ecuador
+  gen:  Ecuador  (f1=1.00)
+
+  Q: What is the survivors name?
+  gold: Luis Freddy Lala
+  gen:  Luis Freddy Lala  (f1=1.00)
+
+  Q: What did he live through?
+  gold: harrowing ordeal
+  gen:  A massacre in Mexico that left 72 dead  (f1=0.00)
+
+  Q: Was he shot?
+  gold: yes
+  gen:  Yes  (f1=1.00)
+
+  Q: How many were killed?
+  gold: 72
+  gen:  72  (f1=1.00)
+
+  Q: Where?
+  gold: Mexico
+  gen:  Mexico  (f1=1.00)
+
+  Q: Who were the victims?
+  gold: migrants
+  gen:  Migrants from Central and South America  (f1=0.29)
+
+  Q: From where?
+  gold: Central and South America
+  gen:  Honduras and Guatemala  (f1=0.29)
+
+  Q: Where were they going?
+  gold: north
+  gen:  Tamaulipas  (f1=0.00)
+
+  Q: Was he the only one that lived?
+  gold: unknown
+  gen:  No  (f1=0.00)
+
+  Q: Where did his trip start?
+  gold: Ecuador
+  gen:  Ecuador  (f1=1.00)
+
+  Q: What is the survivors name?
+  gold: Luis Freddy Lala
+  gen:  Luis Freddy Lala  (f1=1.00)
+
+  Q: What did he live through?
+  gold: harrowing ordeal
+  gen:  He lived through a massacre in Mexico.  (f1=0.00)
+
+  Q: Was he shot?
+  gold: yes
+  gen:  Yes  (f1=1.00)
+
+  Q: How many were killed?
+  gold: 72
+  gen:  72  (f1=1.00)
+
+  Q: Where?
+  gold: Mexico
+  gen:  Northern Mexico  (f1=0.67)
+
+  Q: Who were the victims?
+  gold: migrants
+  gen:  migrants from Central and South America  (f1=0.29)
+
+  Q: From where?
+  gold: Central and South America
+  gen:  Ecuador  (f1=0.00)
+
+  Q: Where were they going?
+  gold: north
+  gen:  Tamaulipas  (f1=0.00)
+
+  Q: Was he the only one that lived?
+  gold: unknown
+  gen:  No  (f1=0.00)
+
+  Q: Where did his trip start?
+  gold: Ecuador
+  gen:  Ecuador  (f1=1.00)
+
+  Q: What is the survivors name?
+  gold: Luis Freddy Lala
+  gen:  Luis Freddy Lala  (f1=1.00)
+
+  Q: What did he live through?
+  gold: harrowing ordeal
+  gen:  a massacre in Mexico that left 72 dead  (f1=0.00)
+
+  Q: Was he shot?
+  gold: yes
+  gen:  Yes  (f1=1.00)
+
+  Q: How many were killed?
+  gold: 72
+  gen:  72  (f1=1.00)
+
+  Q: Where?
+  gold: Mexico
+  gen:  in northern Mexico  (f1=0.50)
+
+  Q: Who were the victims?
+  gold: migrants
+  gen:  Central and South American migrants to the northeastern Mexican state of Tamaulipas  (f1=0.17)
+
+  Q: From where?
+  gold: Central and South America
+  gen:  Ecuador, Honduras, Guatemala, and then Mexico  (f1=0.20)
+
+  Q: Where were they going?
+  gold: north
+  gen:  Mexican state of Tamaulipas  (f1=0.00)
+
+  Q: Was he the only one that lived?
+  gold: unknown
+  gen:  No  (f1=0.00)
+
+  Q: Where did his trip start?
+  gold: Ecuador
+  gen:  Ecuador  (f1=1.00)
+
+  Q: What is a river in Iraq?
+  gold: the Tigris
+  gen:  the Tigris and Euphrates  (f1=0.50)
+
+  Q: Where is it?
+  gold: it runs south through Iraq
+  gen:  south through Iraq and into the Shatt al-Arab near the Persian Gulf.  (f1=0.40)
+
+  Q: What is another river?
+  gold: Euphrates,
+  gen:  the Euphrates  (f1=1.00)
+
+  Q: Where does that one run?
+  gold: also south
+  gen:  its last one runs into the Persian Gulf  (f1=0.00)
+
+  Q: Where do they feed into?
+  gold: he Persian Gulf.
+  gen:  the Shatt al-Arab  (f1=0.00)
+
+  Q: What mountain range is on part of Iraq's coast?
+  gold: the Zagros mountain range
+  gen:  the Zagros mountain range  (f1=1.00)
+
+  Q: What is the country's official name?
+  gold: the Republic of Iraq
+  gen:  Iraq  (f1=0.50)
+
+  Q: What continent is it in?
+  gold: Western Asia
+  gen:  Western Asia  (f1=1.00)
+
+  Q: What countries is it next to?
+  gold: Turkey
+  gen:  Turkey, Iran, Kuwait, Saudi Arabia, Jordan and Syria  (f1=0.22)
+
+  Q: What else?
+  gold: Iran
+  gen:  Shi'ites and Shi'ites claim a portion of Iraq  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:   3%|▎         | 10/355 [43:30<26:46:22, 279.37s/it]
+[1AEpoch 1/1:   3%|▎         | 11/355 [48:40<27:36:15, 288.88s/it]
+[1AEpoch 1/1:   3%|▎         | 12/355 [52:44<26:12:38, 275.10s/it]
+[1AEpoch 1/1:   4%|▎         | 13/355 [57:42<26:47:41, 282.05s/it]
+[1AEpoch 1/1:   4%|▍         | 14/355 [1:03:53<29:16:10, 309.01s/it]
+[1AEpoch 1/1:   4%|▍         | 15/355 [1:10:06<31:01:03, 328.42s/it]
+[1AEpoch 1/1:   5%|▍         | 16/355 [1:14:59<29:54:32, 317.62s/it]Disconnecting from Modal - This will terminate your Modal app in a few seconds.
+
+Stopping app - keyboard interrupt received. Use `modal run --detach` to prevent KeyboardInterrupts from killing apps.
+
+[1AEpoch 1/1:   5%|▍         | 16/355 [1:20:52<28:33:41, 303.31s/it]
+[modal-client] 2026-04-27T14:46:42+0000 Detected 1 background thread(s) [WorkerAsyncOutput_0] still running after container exit. This will prevent runner shutdown for up to 30 seconds.

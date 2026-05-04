@@ -1,0 +1,893 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/layra/main/ap-l5y2yW3y3EJm4pyDHtFQwI
+✓ Created objects.
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/modal_train.py
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/gsm8k_multiturn
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/configs
+├── 🔨 Created mount PythonPackage:grpo_coqa, PythonPackage:tokenization, 
+│   PythonPackage:utils
+└── 🔨 Created function train.
+output_dir: /experiments/gsm8k_tok_single_20260424_180246
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+[1ALoading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+[1ALoading weights:  16%|█▌        | 49/310 [00:00<00:00, 488.62it/s]
+[1ALoading weights:  39%|███▊      | 120/310 [00:00<00:00, 608.81it/s]
+[1ALoading weights:  60%|█████▉    | 185/310 [00:00<00:00, 620.27it/s]
+[1ALoading weights: 100%|██████████| 310/310 [00:00<00:00, 853.56it/s]
+
+[1ALoading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+[1ALoading weights: 100%|██████████| 310/310 [00:00<00:00, 4966.21it/s]
+INFO 04-24 18:02:48 [utils.py:233] non-default args: {'dtype': 'bfloat16', 'gpu_memory_utilization': 0.7, 'disable_log_stats': True, 'enforce_eager': True, 'model': 'Qwen/Qwen3-0.6B-Base'}
+WARNING 04-24 18:02:49 [arg_utils.py:1390] The global random seed is set to 0. Since VLLM_ENABLE_V1_MULTIPROCESSING is set to False, this may affect the random state of the Python process that launched vLLM.
+INFO 04-24 18:03:00 [model.py:549] Resolved architecture: Qwen3ForCausalLM
+INFO 04-24 18:03:00 [model.py:1678] Using max model len 32768
+INFO 04-24 18:03:00 [scheduler.py:238] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 04-24 18:03:00 [vllm.py:790] Asynchronous scheduling is enabled.
+WARNING 04-24 18:03:00 [vllm.py:848] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 04-24 18:03:00 [vllm.py:859] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 04-24 18:03:00 [vllm.py:1025] Cudagraph is disabled under eager mode
+INFO 04-24 18:03:00 [compilation.py:292] Enabled custom fusions: norm_quant, act_quant
+INFO 04-24 18:03:01 [core.py:105] Initializing a V1 LLM engine (v0.19.1) with config: model='Qwen/Qwen3-0.6B-Base', speculative_config=None, tokenizer='Qwen/Qwen3-0.6B-Base', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=Qwen/Qwen3-0.6B-Base, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_images_per_batch': 0, 'compile_sizes': [], 'compile_ranges_endpoints': [16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+INFO 04-24 18:03:01 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.9.13:36735 backend=nccl
+INFO 04-24 18:03:01 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+INFO 04-24 18:03:01 [gpu_model_runner.py:4735] Starting to load model Qwen/Qwen3-0.6B-Base...
+INFO 04-24 18:03:03 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+INFO 04-24 18:03:03 [flash_attn.py:596] Using FlashAttention version 3
+INFO 04-24 18:03:03 [weight_utils.py:625] No model.safetensors.index.json found in remote.
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.39it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.39it/s]
+
+INFO 04-24 18:03:03 [default_loader.py:384] Loading weights took 0.37 seconds
+INFO 04-24 18:03:04 [gpu_model_runner.py:4820] Model loading took 1.12 GiB memory and 1.602766 seconds
+INFO 04-24 18:03:13 [gpu_worker.py:436] Available KV cache memory: 94.35 GiB
+INFO 04-24 18:03:13 [kv_cache_utils.py:1319] GPU KV cache size: 883,296 tokens
+INFO 04-24 18:03:13 [kv_cache_utils.py:1324] Maximum concurrency for 32,768 tokens per request: 26.96x
+2026-04-24 18:03:13,946 - INFO - autotuner.py:262 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+2026-04-24 18:03:13,970 - INFO - autotuner.py:268 - flashinfer.jit: [Autotuner]: Autotuning process ends
+INFO 04-24 18:03:14 [core.py:283] init engine (profile, create kv cache, warmup model) took 9.34 seconds
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'openai/gsm8k' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[dataset] kept 7473/7473 train samples (max_answer_words=5)
+
+[1AEpoch 1/1:   0%|          | 0/234 [00:00<?, ?it/s]
+[1AEpoch 1/1:   0%|          | 1/234 [01:54<7:24:43, 114.52s/it]
+[1AEpoch 1/1:   1%|          | 2/234 [03:30<6:41:23, 103.81s/it]
+[1AEpoch 1/1:   1%|▏         | 3/234 [04:55<6:06:16, 95.14s/it] 
+[1AEpoch 1/1:   2%|▏         | 4/234 [06:10<5:34:11, 87.18s/it]
+[1AEpoch 1/1:   2%|▏         | 5/234 [07:14<5:01:13, 78.92s/it]
+[1AEpoch 1/1:   3%|▎         | 6/234 [08:21<4:44:28, 74.86s/it]
+[1AEpoch 1/1:   3%|▎         | 7/234 [09:27<4:31:34, 71.78s/it]
+[1AEpoch 1/1:   3%|▎         | 8/234 [10:38<4:29:04, 71.44s/it]
+[1AEpoch 1/1:   4%|▍         | 9/234 [11:46<4:24:53, 70.64s/it]step 10  loss=0.0006  train_reward=0.5703
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 5
+  gen:  Brenda and her nine friends make a total of 10 people. If each person will eat 2 slices, that's a total of 10 people x 2 slices/person = 20 slices. If each pizza has 4 slices, they should order 20 slices / 4 slices per pizza = 5 pizzas.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 5
+  gen:  Brenda and her nine friends make a total of 10 people. If each person eats 2 slices, they will need 10 * 2 = 20 slices. If each pizza has 4 slices, they will need 20 / 4 = 5 pizzas.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 5
+  gen:  Brenda and nine of her friends make a total of 10 people. If each person eats 2 slices, that means they will eat 10 x 2 = 20 slices. If each pizza has 4 slices, and they will eat 20 slices, they should order 20 / 4 = 5 pizzas.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 5
+  gen:  Brenda and her nine friends make a total of 10 people, and each person will eat 2 slices. So, they need 10 x 2 = 20 slices in total. Each pizza has 4 slices, so they need 20 / 4 = 5 pizzas. They should order 5 pizzas.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 1000
+  gen:  Joe started with $6,000. He spent $1,200 on the flight, $800 on a hotel, and $3,000 on food. So, $1,200 + $800 + $3,000 = $5,000. Joe had $6,000 - $5,000 = $1,000 left.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:   4%|▍         | 10/234 [13:02<4:29:32, 72.20s/it]
+[1AEpoch 1/1:   5%|▍         | 11/234 [14:01<4:13:44, 68.27s/it]
+[1AEpoch 1/1:   5%|▌         | 12/234 [15:02<4:03:42, 65.87s/it]
+[1AEpoch 1/1:   6%|▌         | 13/234 [16:06<4:01:00, 65.43s/it]
+[1AEpoch 1/1:   6%|▌         | 14/234 [17:03<3:50:33, 62.88s/it]
+[1AEpoch 1/1:   6%|▋         | 15/234 [18:09<3:52:54, 63.81s/it]
+[1AEpoch 1/1:   7%|▋         | 16/234 [19:08<3:46:06, 62.23s/it]
+[1AEpoch 1/1:   7%|▋         | 17/234 [20:12<3:47:38, 62.94s/it]
+[1AEpoch 1/1:   8%|▊         | 18/234 [21:13<3:43:44, 62.15s/it]
+[1AEpoch 1/1:   8%|▊         | 19/234 [22:18<3:46:16, 63.15s/it]step 20  loss=0.0006  train_reward=0.5469
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 25
+  gen:  Meghan needs 2 drip coffees that cost $2.25 x 2 = $4.50. One double shot espresso costs $3.50. Two lattes cost $4.00 x 2 = $8.00. One vanilla syrup costs an additional $0.50. Two cold brew coffees cost $2.50 x 2 = $5.00. One cappuccino costs $3.50. Adding all these amounts together, $4.50 + $3.50 + $8.00 + $0.50 + $5.00 + $3.50 = $27.00. The coffee order is $27.00.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 25
+  gen:  Meghan needs 2 drip coffees at $2.25 each, so that's 2 * $2.25 = $4.50. For one double shot espresso, it's $3.50. For 2 lattes at $4.00 each, it's 2 * $4.00 = $8.00. For the vanilla syrup on one latte, it's $0.50. And for 2 cold brew coffees at $2.50 each, it's 2 * $2.50 = $5.00. For the cappuccino, it's $3.50. Adding all these up: $4.50 + $3.50 + $8.00 + $0.50 + $5.00 + $3.50 = $28.00. The coffee order is $28.00.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 25
+  gen:  To calculate the total cost of the coffee order, we need to add up the cost of each item. The drip coffees are $2.25 each, so 2 drip coffees are $2.25 * 2 = $4.50. The double shot espresso is $3.50. The lattes are $4.00 each, but Meghan needs to add vanilla syrup to one of them, adding an extra $0.50. So one latte is $4.00 + $0.50 = $4.50. The cold brew coffees are $2.50 each, and Meghan needs 2 of them, so $2.50 * 2 = $5.00. The cappuccino is $3.50. Adding all these together: $4.50 + $3.50 + $4.50 + $5.00 + $3.50 = $24.00. So the total cost of the coffee order is $24.00.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 25
+  gen:  First, calculate the cost of the drip coffees: 2 drip coffees * $2.25 = $4.50. Then add the cost of the double shot espresso: $4.50 + $3.50 = $8.00. Next, add the cost of the lattes: 2 lattes * $4.00 = $8.00. For the vanilla syrup, add $0.50. So, $8.00 + $8.00 + $0.50 = $16.50. Now, calculate the cost of the cold brew coffees: 2 cold brew coffees * $2.50 = $5.00. For the cappuccino, add $3.50. So, $5.00 + $3.50 = $8.50. Finally, add the costs of all the items: $16.50 + $8.50 = $25.00. So, the coffee order is $25.00.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 4455
+  gen:  First, find the total weight of the cube of silver in ounces: 3 inches x 3 inches x 3 inches = 27 cubic inches. Multiply that by 6 ounces to find the total weight: 27 cubic inches x 6 ounces = 162 ounces. Multiply that by $25 per ounce to find the silver value: 162 ounces x $25 = $4050. Multiply that by 110% to find how much he sells it for: $4050 x 1.10 = $4455. Answer: 4455.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:   9%|▊         | 20/234 [23:19<3:43:10, 62.57s/it]
+[1AEpoch 1/1:   9%|▉         | 21/234 [24:15<3:34:23, 60.39s/it]
+[1AEpoch 1/1:   9%|▉         | 22/234 [25:20<3:38:36, 61.87s/it]
+[1AEpoch 1/1:  10%|▉         | 23/234 [26:24<3:39:26, 62.40s/it]
+[1AEpoch 1/1:  10%|█         | 24/234 [27:22<3:34:36, 61.32s/it]
+[1AEpoch 1/1:  11%|█         | 25/234 [28:30<3:40:22, 63.27s/it]
+[1AEpoch 1/1:  11%|█         | 26/234 [29:39<3:44:48, 64.85s/it]
+[1AEpoch 1/1:  12%|█▏        | 27/234 [30:38<3:38:15, 63.27s/it]
+[1AEpoch 1/1:  12%|█▏        | 28/234 [31:40<3:35:34, 62.79s/it]
+[1AEpoch 1/1:  12%|█▏        | 29/234 [32:44<3:35:19, 63.02s/it]step 30  loss=0.0006  train_reward=0.6172
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 11
+  gen:  Perry made a recipe that serves four people. He added a half cup of cream at the end. Cream has 88 grams of fat per cup. First, we need to find out how many grams of fat are in half a cup of cream. Since there are two cups in a half cup, we can calculate the total grams of fat in half a cup by multiplying 88 grams by 2, which equals 176 grams. This means there are 176 grams of fat in an entire half cup of cream. Since the recipe serves four people, we divide the total grams of fat by 4 to find out how many grams of fat were added to each serving of food. So, 176 grams divided by 4 equals 44 grams of fat per serving.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 11
+  gen:  Perry's recipe served four people, and he added half a cup of cream. Since cream has 88 grams of fat per cup, half a cup would contain 88 grams / 2 = 44 grams of fat. This fat is distributed evenly across four servings, so each serving would receive 44 grams / 4 = 11 grams of fat.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 11
+  gen:  Perry made a four-person recipe, so he needed to serve four people. He added a half cup of cream, which has 88 grams of fat per cup. First, find the amount of cream in grams: 88 grams/cup * 0.5 cup = 44 grams of fat. Then, divide the total amount of fat by the number of people: 44 grams of fat / 4 people = 11 grams of fat per serving. Therefore, each serving of food contains 11 grams of fat.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 11
+  gen:  Perry made a recipe that serves four people. He added a half cup of cream, and cream has 88 grams of fat per cup. So, half a cup is 44 grams of fat. The recipe serves four people, so each serving would have 44 grams of fat / 4 servings = 11 grams of fat per serving.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 1500
+  gen:  The auction starts at $300. Harry bids $200, doubling his initial bid, which is $200 * 2 = $400. Then the second bidder adds $400, and the third bidder adds three times Harry's bid, which is $400 * 3 = $1200. Harry's final bid is $400 + $400 + $1200 = $1700. The third bidder's bid is $1200. Harry's final bid of $1700 exceeds the third bidder's bid of $1200 by $1700 - $1200 = $500.  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  13%|█▎        | 30/234 [33:47<3:34:59, 63.23s/it]
+[1AEpoch 1/1:  13%|█▎        | 31/234 [34:46<3:28:50, 61.73s/it]
+[1AEpoch 1/1:  14%|█▎        | 32/234 [35:46<3:26:52, 61.45s/it]
+[1AEpoch 1/1:  14%|█▍        | 33/234 [36:45<3:22:50, 60.55s/it]
+[1AEpoch 1/1:  15%|█▍        | 34/234 [37:54<3:30:42, 63.21s/it]
+[1AEpoch 1/1:  15%|█▍        | 35/234 [39:00<3:31:58, 63.91s/it]
+[1AEpoch 1/1:  15%|█▌        | 36/234 [40:08<3:34:53, 65.12s/it]
+[1AEpoch 1/1:  16%|█▌        | 37/234 [41:13<3:33:50, 65.13s/it]
+[1AEpoch 1/1:  16%|█▌        | 38/234 [42:22<3:36:12, 66.18s/it]
+[1AEpoch 1/1:  17%|█▋        | 39/234 [43:29<3:36:15, 66.54s/it]step 40  loss=0.0003  train_reward=0.6641
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 300
+  gen:  Hallie wins a $150 prize for her art contest and sells 3 paintings for $50 each. She sold 3 * $50 = $150 of her paintings. Her total money makes is $150 (from the prize) + $150 (from selling the paintings) = $300.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 300
+  gen:  Hallie wins $150 from the art contest and sells 3 paintings at $50 each, so she makes 3 * $50 = $150 from the paintings. In total, she makes $150 + $150 = $300.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 300
+  gen:  Hallie receives a $150 prize and sells 3 paintings for $50 each, so she makes 3 * $50 = $150 from selling the paintings. In total, she makes $150 (prize) + $150 (from selling paintings) = $300.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 300
+  gen:  Hallie receives a $150 prize and sells 3 paintings for $50 each. So, she earns 3 * $50 = $150 from selling the paintings. In total, she makes $150 (prize) + $150 (from paintings) = $300.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 114
+  gen:  Let's assume James won $x dollars in total. He donated half of his winnings, so he donated $x/2. He then spent $2 on a hot dog and had $55 left. This means that $x - $x/2 + $2 = $55. Simplifying the equation, we get $x/2 + $2 = $55. Subtracting $2 from both sides, we get $x/2 = $53. Multiplying both sides by 2, we get x = $106. Therefore, James won $106.  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  17%|█▋        | 40/234 [44:41<3:40:51, 68.31s/it]
+[1AEpoch 1/1:  18%|█▊        | 41/234 [45:50<3:40:12, 68.46s/it]
+[1AEpoch 1/1:  18%|█▊        | 42/234 [46:57<3:38:01, 68.13s/it]
+[1AEpoch 1/1:  18%|█▊        | 43/234 [48:07<3:38:22, 68.60s/it]
+[1AEpoch 1/1:  19%|█▉        | 44/234 [49:19<3:40:08, 69.52s/it]
+[1AEpoch 1/1:  19%|█▉        | 45/234 [50:31<3:41:12, 70.23s/it]
+[1AEpoch 1/1:  20%|█▉        | 46/234 [51:38<3:37:13, 69.32s/it]
+[1AEpoch 1/1:  20%|██        | 47/234 [52:43<3:31:48, 67.96s/it]
+[1AEpoch 1/1:  21%|██        | 48/234 [53:54<3:33:52, 68.99s/it]
+[1AEpoch 1/1:  21%|██        | 49/234 [55:00<3:29:37, 67.99s/it]step 50  loss=0.0006  train_reward=0.6328
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 19
+  gen:  Max can trade 3 coconuts for a crab, and 6 crabs for a goat. First, he can trade 342 coconuts by dividing 342 by 3, which gives him 114 crabs. Then, he can trade 114 crabs by dividing 114 by 6, which gives him 19 goats. Therefore, Max will end up with 19 goats.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 19
+  gen:  Max can trade 3 coconuts for a crab, so for 342 coconuts, he can get 342 / 3 = 114 crabs. He can trade 6 crabs for a goat, so for 114 crabs, he can get 114 / 6 = 19 goats. Therefore, Max will have 19 goats.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 19
+  gen:  Max can trade 3 coconuts for a crab, and 6 crabs for a goat. First, we calculate how many crabs he can get from 342 coconuts: 342 coconuts ÷ 3 crabs per coconut = 114 crabs. Then, we calculate how many goats he can get from 114 crabs: 114 crabs ÷ 6 crabs per goat = 19 goats. Therefore, Max will have 19 goats.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 19
+  gen:  First, Max can trade 3 coconuts for a crab, so he can trade 342 coconuts / 3 = 114 crabs. Then, he can trade 6 crabs for a goat, so he can trade 114 crabs / 6 = 19 crabs for 1 goat. Therefore, Max will have 19 goats after trading all the coconuts.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 10
+  gen:  Beatrice looked at 8 TVs in person, 3 times as many TVs at the online store, which is 8 * 3 = 24 TVs. Together, she looked at 8 + 24 = 32 TVs. Since she looked at 42 TVs in all, she looked at 42 - 32 = 10 TVs on the auction site.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  21%|██▏       | 50/234 [56:06<3:27:04, 67.53s/it]
+[1AEpoch 1/1:  22%|██▏       | 51/234 [57:16<3:28:16, 68.29s/it]
+[1AEpoch 1/1:  22%|██▏       | 52/234 [58:23<3:25:33, 67.77s/it]
+[1AEpoch 1/1:  23%|██▎       | 53/234 [59:23<3:17:16, 65.39s/it]
+[1AEpoch 1/1:  23%|██▎       | 54/234 [1:00:27<3:15:14, 65.08s/it]
+[1AEpoch 1/1:  24%|██▎       | 55/234 [1:01:32<3:14:12, 65.10s/it]
+[1AEpoch 1/1:  24%|██▍       | 56/234 [1:02:36<3:11:52, 64.68s/it]
+[1AEpoch 1/1:  24%|██▍       | 57/234 [1:03:46<3:15:42, 66.34s/it]
+[1AEpoch 1/1:  25%|██▍       | 58/234 [1:04:45<3:07:55, 64.07s/it]
+[1AEpoch 1/1:  25%|██▌       | 59/234 [1:05:49<3:06:43, 64.02s/it]step 60  loss=0.0005  train_reward=0.5703
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 5
+  gen:  The songs on Gabe's playlist are "The Best Day" (3 minutes), "Raise the Roof" (2 minutes), and "Rap Battle" (3 minutes). That's a total of 3 + 2 + 3 = 8 minutes. On the 40-minute ride, Gabe can listen to his entire playlist 40 / 8 = 5 times.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 5
+  gen:  Gabe has three songs: "The Best Day" (3 minutes), "Raise the Roof" (2 minutes), and "Rap Battle" (3 minutes). So the total time spent listening to the playlist is 3 + 2 + 3 = 8 minutes. His entire ride is 40 minutes, so he can listen to the playlist 40 minutes / 8 minutes per listen = 5 times.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 5
+  gen:  Gabe has three songs: “The Best Day” (3 minutes), “Raise the Roof” (2 minutes), and “Rap Battle” (3 minutes), which total 3 + 2 + 3 = 8 minutes. His entire ride is 40 minutes. So, he can listen to the playlist 40 / 8 = 5 times.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 5
+  gen:  Gabe has three songs on his playlist: "The Best Day" (3 minutes), "Raise the Roof" (2 minutes), and "Rap Battle" (3 minutes). The total time for the playlist is 3 + 2 + 3 = 8 minutes. During the 40-minute ride, Gabe can listen to his entire playlist 40 / 8 = 5 times.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 40
+  gen:  If Campbell answered 35 questions correctly, Kelsey answered 35 + 8 = 43 questions correctly. Martin answered 43 - 3 = 40 questions correctly. The answer is 40.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  26%|██▌       | 60/234 [1:06:56<3:08:22, 64.96s/it]
+[1AEpoch 1/1:  26%|██▌       | 61/234 [1:08:12<3:16:31, 68.16s/it]
+[1AEpoch 1/1:  26%|██▋       | 62/234 [1:09:17<3:13:05, 67.36s/it]
+[1AEpoch 1/1:  27%|██▋       | 63/234 [1:10:17<3:05:26, 65.06s/it]
+[1AEpoch 1/1:  27%|██▋       | 64/234 [1:11:22<3:04:21, 65.07s/it]
+[1AEpoch 1/1:  28%|██▊       | 65/234 [1:12:29<3:05:11, 65.75s/it]
+[1AEpoch 1/1:  28%|██▊       | 66/234 [1:13:35<3:04:06, 65.76s/it]
+[1AEpoch 1/1:  29%|██▊       | 67/234 [1:14:42<3:04:07, 66.15s/it]
+[1AEpoch 1/1:  29%|██▉       | 68/234 [1:15:50<3:04:36, 66.73s/it]
+[1AEpoch 1/1:  29%|██▉       | 69/234 [1:16:48<2:56:18, 64.11s/it]step 70  loss=0.0007  train_reward=0.6562
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 100
+  gen:  There are 5 classes, so there are a total of 5 * 2 = 10 whiteboards. Each whiteboard uses about 20ml of ink, so the total ink used is 10 * 20 = 200ml. If ink costs 50 cents per ml, then the cost of ink is 200 * 0.50 = 100 dollars.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 100
+  gen:  There are 5 classes, and each class uses 2 whiteboards, so there are 5 * 2 = 10 whiteboards in total. Each whiteboard needs 20ml of ink for a day, so the total ink needed for the day is 10 * 20 = 200ml. Since ink costs 50 cents per ml, the total cost of the ink is 200 * 0.5 = 100 dollars.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 100
+  gen:  There are 5 classes, so there are 5 * 2 = 10 whiteboards. Each whiteboard needs 20 ml of ink, so the total amount of ink needed is 10 * 20 = 200 ml. If ink costs 50 cents per ml, then the total cost of ink for one day is 200 * 50 = $1000. The answer is 1000.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 100
+  gen:  There are 5 classes, each using 2 whiteboards, so there are 5 * 2 = 10 whiteboards. Each whiteboard needs 20ml of ink per day, so the total ink needed for one day is 10 * 20 = 200ml. Since ink costs 50 cents per ml, the total cost for one day is 200 * 0.50 = $100.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 11
+  gen:  Katrina started with 120 cookies. In the morning, she sold 3 dozen cookies. Since 1 dozen = 12, 3 dozen = 3 * 12 = 36 cookies. During the lunch rush, she sold 57 cookies. In the afternoon, she sold 16 cookies. So, the total number of cookies sold is 36 + 57 + 16 = 109 cookies. The number of cookies left to take home is 120 - 109 = 11 cookies.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  30%|██▉       | 70/234 [1:17:53<2:56:07, 64.44s/it]
+[1AEpoch 1/1:  30%|███       | 71/234 [1:18:57<2:54:39, 64.29s/it]
+[1AEpoch 1/1:  31%|███       | 72/234 [1:20:14<3:03:25, 67.94s/it]
+[1AEpoch 1/1:  31%|███       | 73/234 [1:21:18<2:59:39, 66.95s/it]
+[1AEpoch 1/1:  32%|███▏      | 74/234 [1:22:25<2:58:24, 66.91s/it]
+[1AEpoch 1/1:  32%|███▏      | 75/234 [1:23:38<3:02:03, 68.70s/it]
+[1AEpoch 1/1:  32%|███▏      | 76/234 [1:24:53<3:05:46, 70.55s/it]
+[1AEpoch 1/1:  33%|███▎      | 77/234 [1:26:03<3:04:16, 70.42s/it]
+[1AEpoch 1/1:  33%|███▎      | 78/234 [1:27:17<3:05:30, 71.35s/it]
+[1AEpoch 1/1:  34%|███▍      | 79/234 [1:28:33<3:08:13, 72.86s/it]step 80  loss=0.0006  train_reward=0.6094
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 60
+  gen:  The regular price of each polo shirt is $50. Zane purchases 2 polo shirts, so the regular total cost would be 2 * $50 = $100. Since the polo shirts are on a 40% off rack, Zane only pays 60% of the regular price. Therefore, the amount he pays for the shirts is 60% * $100 = 0.60 * $100 = $60. The final answer is $60.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 60
+  gen:  The regular price of each polo shirt is $50. The discount is 40%, so the discount amount per shirt is 40% of $50, which is 0.40 * $50 = $20. Therefore, the price Zane pays for each polo shirt is $50 - $20 = $30. Since he buys 2 shirts, the total amount he pays is 2 * $30 = $60.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 60
+  gen:  The regular price of each polo shirt is $50. Zane purchases 2 shirts, so the total regular price would be 2 * $50 = $100. The shirts are on a 40% off rack, so he pays 60% of the regular price. The amount he pays is 0.60 * $100 = $60. Therefore, the total amount Zane paid for the shirts is $60.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 60
+  gen:  The regular price of each polo shirt is $50. The discount is 40%, so the discounted price per polo shirt is $50 - (0.40 * $50) = $50 - $20 = $30. Since Zane purchases 2 polo shirts, the total amount he paid is 2 * $30 = $60.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 27
+  gen:  If the school bookshop charges $45 per textbook and bookshops outside the school costs 20% less, then the price per textbook outside the school would be $45 * (1 - 0.20) = $45 * 0.80 = $36. Since Peter wants to buy 3 math textbooks, the total cost at the school bookshop would be $45 * 3 = $135, and the total cost outside the school would be $36 * 3 = $108. Therefore, Peter can save $135 - $108 = $27 by buying from other bookshops.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  34%|███▍      | 80/234 [1:29:45<3:06:41, 72.73s/it]
+[1AEpoch 1/1:  35%|███▍      | 81/234 [1:30:56<3:03:37, 72.01s/it]
+[1AEpoch 1/1:  35%|███▌      | 82/234 [1:32:11<3:05:02, 73.04s/it]
+[1AEpoch 1/1:  35%|███▌      | 83/234 [1:33:13<2:55:28, 69.72s/it]
+[1AEpoch 1/1:  36%|███▌      | 84/234 [1:34:25<2:55:41, 70.27s/it]
+[1AEpoch 1/1:  36%|███▋      | 85/234 [1:35:41<2:58:46, 71.99s/it]
+[1AEpoch 1/1:  37%|███▋      | 86/234 [1:36:51<2:56:12, 71.43s/it]
+[1AEpoch 1/1:  37%|███▋      | 87/234 [1:38:00<2:53:25, 70.78s/it]
+[1AEpoch 1/1:  38%|███▊      | 88/234 [1:39:03<2:46:14, 68.32s/it]
+[1AEpoch 1/1:  38%|███▊      | 89/234 [1:40:16<2:48:52, 69.88s/it]step 90  loss=0.0006  train_reward=0.6484
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 84
+  gen:  Your video streaming subscription costs $14 a month. Since you are splitting the cost with your friend, your share of the cost per month is $14 / 2 = $7. Over the course of a year, your total cost would be $14/month * 12 months = $168. So if you pay your friend $7/month for half of it, your total payment for the first year would be $168 - $7 * 12 = $168 - $84 = $84.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 84
+  gen:  The monthly cost of the video streaming subscription is $14. Since you and your friend are splitting the cost evenly, each of you pays $14 / 2 = $7 a month. Over the course of a year (12 months), the total cost for you would be $7 x 12 = $84.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 84
+  gen:  If your video streaming subscription costs $14 per month and you're splitting the cost with your friend, your share of the monthly cost would be $14 / 2 = $7 per month. Over the first year (12 months), your total cost would be $7 * 12 = $84.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 84
+  gen:  If your video streaming subscription costs $14 a month and you're splitting the cost with your friend, you pay $14 / 2 = $7 a month. After the first year, the total cost would be $14 * 12 months = $168. Since you split the cost, your total payment is $168 / 2 = $84.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 77
+  gen:  Holly takes 2 insulin pills per day x 7 days = 14 insulin pills per week. She takes 3 blood pressure pills per day x 7 days = 21 blood pressure pills per week. She takes twice as many anticonvulsants as blood pressure pills each day, so she takes 2 x 3 = 6 anticonvulsant pills per day x 7 days = 42 anticonvulsant pills per week. In total, Holly takes 14 + 21 + 42 = 77 pills per week.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  38%|███▊      | 90/234 [1:41:20<2:43:10, 67.99s/it]
+[1AEpoch 1/1:  39%|███▉      | 91/234 [1:42:37<2:48:24, 70.66s/it]
+[1AEpoch 1/1:  39%|███▉      | 92/234 [1:43:45<2:45:34, 69.96s/it]
+[1AEpoch 1/1:  40%|███▉      | 93/234 [1:45:01<2:48:25, 71.67s/it]
+[1AEpoch 1/1:  40%|████      | 94/234 [1:46:13<2:47:38, 71.85s/it]
+[1AEpoch 1/1:  41%|████      | 95/234 [1:47:26<2:47:12, 72.17s/it]
+[1AEpoch 1/1:  41%|████      | 96/234 [1:48:39<2:46:49, 72.53s/it]
+[1AEpoch 1/1:  41%|████▏     | 97/234 [1:49:56<2:48:15, 73.69s/it]
+[1AEpoch 1/1:  42%|████▏     | 98/234 [1:51:02<2:41:45, 71.36s/it]
+[1AEpoch 1/1:  42%|████▏     | 99/234 [1:52:13<2:40:32, 71.35s/it]step 100  loss=0.0005  train_reward=0.5469
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 12500
+  gen:  If the interest rate is 12% and the total interest is $1500, the original borrowed amount (principal) can be found using the formula for simple interest: Interest = Principal * Rate * Time. Here, the interest is $1500, the rate is 12% or 0.12, and the time is 1 year (t = 1). So, $1500 = Principal * 0.12 * 1, which simplifies to Principal = $1500 / 0.12 = $12500. Therefore, the original borrowed amount was $12500.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 12500
+  gen:  If the total interest is $1500 for a year at a 12% interest rate, the original borrowed amount can be calculated by dividing the total interest by the interest rate. Therefore, the original borrowed amount is $1500 / 0.12 = $12500.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 12500
+  gen:  If the interest rate is 12% and it's for a year, the original amount borrowed is $1500 / 0.12 = $12500.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 12500
+  gen:  If the interest rate is 12% and the total interest is $1500, then the original borrowed amount (principal) can be calculated using the formula: Principal = (Interest / Interest Rate) / Number of Compounding Periods. However, since the interest rate is given per year and no compounding period is mentioned, we assume the interest is simple interest. So, Principal = Interest / Interest Rate = 1500 / 0.12 = $12500.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 46
+  gen:  If Dexter is 8 years old, then Darcy is twice that, so Darcy is 2 * 8 = 16 years old. Last year, Dallas was 3 times the age of his sister Darcy, so Dallas was 3 * 16 = 48 years old. Therefore, Dallas is now 48 + 1 year = 49 years old.  (f1=0.00)
+
+---
+
+
+
+[1A
+[1AWriting model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+
+[1A
+[1AWriting model shards: 100%|██████████| 1/1 [00:03<00:00,  3.18s/it][A
+[1AWriting model shards: 100%|██████████| 1/1 [00:03<00:00,  3.18s/it]
+checkpoint saved → /experiments/gsm8k_tok_single_20260424_180246/checkpoint-100
+
+[1AEpoch 1/1:  43%|████▎     | 100/234 [1:53:36<2:47:01, 74.79s/it]
+[1AEpoch 1/1:  43%|████▎     | 101/234 [1:54:49<2:44:40, 74.29s/it]
+[1AEpoch 1/1:  44%|████▎     | 102/234 [1:55:54<2:37:34, 71.62s/it]
+[1AEpoch 1/1:  44%|████▍     | 103/234 [1:56:57<2:30:56, 69.13s/it]
+[1AEpoch 1/1:  44%|████▍     | 104/234 [1:58:10<2:31:47, 70.06s/it]
+[1AEpoch 1/1:  45%|████▍     | 105/234 [1:59:17<2:28:32, 69.09s/it]
+[1AEpoch 1/1:  45%|████▌     | 106/234 [2:00:24<2:26:05, 68.48s/it]
+[1AEpoch 1/1:  46%|████▌     | 107/234 [2:01:21<2:18:04, 65.23s/it]
+[1AEpoch 1/1:  46%|████▌     | 108/234 [2:02:25<2:15:48, 64.67s/it]
+[1AEpoch 1/1:  47%|████▋     | 109/234 [2:03:34<2:17:39, 66.07s/it]step 110  loss=0.0011  train_reward=0.5859
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 11
+  gen:  If you buy 1 shirt, you pay $10. If you buy 2 shirts, you pay $10 for the first one and pay 50% less for the second one, which is $10 * 0.50 = $5. So for 2 shirts, you pay $10 + $5 = $15. If you buy 3 shirts, you pay $10 for the first one, $5 for the second one (50% discount on the second shirt), and $7 for the third one (it's still at full price but you get a bigger discount on it). So for 3 shirts, you pay $10 + $5 + $7 = $22. Therefore, if you buy 3 shirts, you saved $22 - $10 = $12.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 11
+  gen:  If you buy 3 shirts, the first shirt costs $10. If you buy the second shirt, you get it at a 50% discount, so it costs 10 * 50% = $5. If you buy the third shirt, you get it at a 60% discount, so it costs 10 * (100% - 60%) = $4. In total, you pay $10 + $5 + $4 = $19. If the sale is on "any item $10", then you save $19 - $10 = $9.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 11
+  gen:  If you buy one shirt at $10, the total cost is $10. With a 60% discount, the second shirt costs 10 * 0.40 = $4. The third shirt costs 10 * 0.40 * 0.40 = $1.60. That's a $15 initial cost, and you save 15 - (3 * 10) = 15 - 30 = -$15, but we are looking for the amount saved in dollars, which is $15 in initial cost and $1.60 by the third shirt, making the total savings $6.40 - $15 = -$8.60 out of pocket. If you bought 3 shirts at the discounted prices you saved $6.40 - $15 = -$8.60 in total.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 11
+  gen:  The first shirt costs $10. If you buy the second shirt, you get it at a 50% discount, so it costs 10 - (10 * 0.5) = $5. If you buy the third shirt, you get it at a 60% discount, so it costs 10 - (10 * 0.6) = $4. In total, you save 10 - 4 = $6 from buying the three shirts.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 300
+  gen:  Georgia coughs 5 times a minute, so in 20 minutes, she coughs 5 * 20 = 100 times. Robert coughs twice as much as Georgia, so he coughs 5 * 2 = 10 times a minute, and in 20 minutes, he coughs 10 * 20 = 200 times. Together, they cough a total of 100 + 200 = 300 times.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  47%|████▋     | 110/234 [2:04:47<2:20:45, 68.11s/it]
+[1AEpoch 1/1:  47%|████▋     | 111/234 [2:05:56<2:20:27, 68.51s/it]
+[1AEpoch 1/1:  48%|████▊     | 112/234 [2:07:06<2:20:15, 68.98s/it]
+[1AEpoch 1/1:  48%|████▊     | 113/234 [2:08:15<2:19:04, 68.96s/it]
+[1AEpoch 1/1:  49%|████▊     | 114/234 [2:09:24<2:17:44, 68.87s/it]
+[1AEpoch 1/1:  49%|████▉     | 115/234 [2:10:24<2:11:15, 66.18s/it]
+[1AEpoch 1/1:  50%|████▉     | 116/234 [2:11:35<2:13:12, 67.73s/it]
+[1AEpoch 1/1:  50%|█████     | 117/234 [2:12:51<2:16:42, 70.10s/it]
+[1AEpoch 1/1:  50%|█████     | 118/234 [2:14:05<2:17:41, 71.22s/it]
+[1AEpoch 1/1:  51%|█████     | 119/234 [2:15:21<2:19:18, 72.68s/it]step 120  loss=0.0005  train_reward=0.6797
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 35
+  gen:  If Adelaide bought 30 ducks, and she bought twice as many as Ephraim, then Ephraim bought 30 / 2 = 15 ducks. If Ephraim bought 45 fewer ducks than Kolton, then Kolton bought 15 + 45 = 60 ducks. The total number of ducks bought by Adelaide, Ephraim, and Kolton is 30 + 15 + 60 = 105. The average number of ducks bought by the three is 105 / 3 = 35.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 35
+  gen:  If Adelaide bought twice the number of ducks that Ephraim bought, and Adelaide bought 30 ducks, Ephraim bought 30 / 2 = 15 ducks. If Ephraim bought 45 fewer ducks than Kolton, Kolton bought 15 + 45 = 60 ducks. Therefore, the total number of ducks bought by the three is 30 + 15 + 60 = 105. The average number of ducks bought by the three is 105 / 3 = 35.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 35
+  gen:  If Adelaide bought 30 ducks, Ephraim bought twice the number of ducks that Adelaide bought, so Ephraim bought 2 * 30 = 60 ducks. Kolton bought more ducks than Ephraim, and Ephraim bought 45 fewer ducks than Kolton, so Kolton bought 60 + 45 = 105 ducks. The total number of ducks bought by Adelaide, Ephraim, and Kolton is 30 + 60 + 105 = 195 ducks. The average number of ducks bought by Adelaide, Ephraim, and Kolton is 195 / 3 = 65. The answer is 65.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 35
+  gen:  Adelaide bought 30 ducks, Ephraim bought twice the number of ducks that Adelaide bought, so Ephraim bought 2 * 30 = 60 ducks. Kolton bought more ducks than Ephraim, because Adelaide bought twice as many as Ephraim, so Kolton bought 30 + 60 = 90 ducks. The total number of ducks the three bought is 30 + 60 + 90 = 180. The average number of ducks bought by the three is 180 / 3 = 60. The answer is 60.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 8
+  gen:  First, Alex biked for 4.5 hours at 20 miles per hour, covering a distance of 20 * 4.5 = 90 miles. Then, he biked for 2.5 hours at 12 miles per hour, covering a distance of 12 * 2.5 = 30 miles. Finally, he biked at 24 miles per hour for 1.5 hours, covering a distance of 24 * 1.5 = 36 miles. The total distance he biked is 90 + 30 + 36 = 156 miles. However, he had to walk the remaining distance to the next town, which is 164 miles - 156 miles = 8 miles. The answer is 8.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  51%|█████▏    | 120/234 [2:16:33<2:17:55, 72.59s/it]
+[1AEpoch 1/1:  52%|█████▏    | 121/234 [2:17:42<2:14:42, 71.52s/it]
+[1AEpoch 1/1:  52%|█████▏    | 122/234 [2:18:54<2:13:37, 71.58s/it]
+[1AEpoch 1/1:  53%|█████▎    | 123/234 [2:20:06<2:12:41, 71.73s/it]
+[1AEpoch 1/1:  53%|█████▎    | 124/234 [2:21:17<2:11:05, 71.50s/it]
+[1AEpoch 1/1:  53%|█████▎    | 125/234 [2:22:33<2:12:25, 72.90s/it]
+[1AEpoch 1/1:  54%|█████▍    | 126/234 [2:23:47<2:11:55, 73.29s/it]
+[1AEpoch 1/1:  54%|█████▍    | 127/234 [2:24:57<2:08:38, 72.13s/it]
+[1AEpoch 1/1:  55%|█████▍    | 128/234 [2:26:13<2:09:44, 73.44s/it]
+[1AEpoch 1/1:  55%|█████▌    | 129/234 [2:27:37<2:13:51, 76.49s/it]step 130  loss=0.0007  train_reward=0.6094
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 360
+  gen:  Casey will be staying for 3 months with exactly 4 weeks per month. So, the total number of weeks Casey will be staying is 3 months * 4 weeks/month = 12 weeks. The cost Casey will pay if she pays weekly is $280 per week for 12 weeks, which is 12 * $280 = $3360. Alternatively, the cost Casey will pay if she pays monthly is $1000 per month for 3 months, which is 3 * $1000 = $3000. Therefore, the amount of money Casey saves by paying monthly is $3000 - $3360 = -$360. Since we are looking for the amount of money saved, the negative value indicates Casey will be overspending by $360. However, the question asks for the amount of money saved, which is a negative value indicates the savings will be compensated in other forms, hence the answer is not calculated in terms of money saved from a negative amount, but the question asks for the amount saved as a positive value. Thus the amount of money Casey saves is calculated from the negative value as a positive value, which is the value of the negative amount. If the question is not asking for the amount of money saved in the question, the amount saved would be the amount of time she was using the money, not the money saved. As in the  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 360
+  gen:  Casey will be staying for 3 months, with each month having 4 weeks, so she will be staying for 3 months * 4 weeks/month = 12 weeks for the total of 3 months. The total cost per person if she were paying weekly would be 4 weeks/month * $280/week/month = $1120/month for the whole year. The total cost per person if she were paying monthly would be $1000/mo for the whole year. So Casey would save $1120 - $1000 = $120 per person. The answer is 120.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 360
+  gen:  Casey will be staying for a total of 3 months * 4 weeks/month = 12 weeks. The hotel charges $1000/month, so for 12 weeks, it costs 1000 * 12 = $12,000. The motel charges $280/week, so for 12 weeks, it costs 280 * 12 = $3,360. By paying monthly, Casey saves 12000 - 3360 = $864.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 360
+  gen:  Casey will be staying for 3 months, each with exactly 4 weeks. So in total, she will be staying for 3 * 4 = 12 weeks. If the hotel charges $280/week, then the total cost for 12 weeks would be 12 * $280 = $3360. If the hotel charges $1000/month, then the total cost for 3 months would be 3 * $1000 = $3000. By paying monthly, Casey saves $3360 - $3000 = $360.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 58
+  gen:  On the second day, 34 cm of rain fell. On the third day, 12 cm less than the second day fell, so 34 - 12 = 22 cm. The average rainfall for the first three days of May is usually 140 cm across all three days. Therefore, the total rainfall for these three days is 140 cm. The total rainfall for the first three days of May this year is 26 + 34 + 22 = 82 cm. The average rainfall for these three days this year is 82 / 3 ≈ 27.33 cm. The difference between the average rainfall this year and the usual average rainfall is 27.33 - 140 = -112.67 cm. Since you asked how much less is it raining this year than average, the answer is 112.67 cm.  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  56%|█████▌    | 130/234 [2:28:55<2:13:35, 77.07s/it]
+[1AEpoch 1/1:  56%|█████▌    | 131/234 [2:30:06<2:09:11, 75.26s/it]
+[1AEpoch 1/1:  56%|█████▋    | 132/234 [2:31:16<2:05:07, 73.61s/it]
+[1AEpoch 1/1:  57%|█████▋    | 133/234 [2:32:34<2:05:55, 74.81s/it]
+[1AEpoch 1/1:  57%|█████▋    | 134/234 [2:33:46<2:03:39, 74.20s/it]
+[1AEpoch 1/1:  58%|█████▊    | 135/234 [2:35:03<2:03:30, 74.86s/it]
+[1AEpoch 1/1:  58%|█████▊    | 136/234 [2:36:16<2:01:40, 74.49s/it]
+[1AEpoch 1/1:  59%|█████▊    | 137/234 [2:37:32<2:00:54, 74.79s/it]
+[1AEpoch 1/1:  59%|█████▉    | 138/234 [2:38:43<1:57:49, 73.64s/it]
+[1AEpoch 1/1:  59%|█████▉    | 139/234 [2:40:09<2:02:43, 77.51s/it]step 140  loss=0.0007  train_reward=0.6719
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 80
+  gen:  Jake starts with 80 bitcoins. He donates 20 bitcoins, leaving him with 80 - 20 = 60 bitcoins. He gives half of his bitcoins to his brother, which he has now left, so he gives 60 / 2 = 30 bitcoins to his brother, leaving him with 60 - 30 = 30 bitcoins. He then triples the number of bitcoins he has, so he has 30 * 3 = 90 bitcoins. Then he donates another 10 coins, leaving him with 90 - 10 = 80 bitcoins. The answer is 80.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 80
+  gen:  Jake starts with 80 bitcoins. He donates 20 coins to charity, leaving him with 80 - 20 = 60 coins. He then gives half of his remaining coins to his brother, so he gives away 60 / 2 = 30 coins, leaving him with 60 - 30 = 30 coins. He triples the number of coins he has, so he now has 30 * 3 = 90 coins. Finally, he donates another 10 coins, leaving him with 90 - 10 = 80 coins. The answer is 80.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 80
+  gen:  Jake starts with 80 bitcoins. He donates 20 to charity, leaving him with 80 - 20 = 60 bitcoins. He then gives half of his remaining bitcoins to his brother, which is 60 / 2 = 30 bitcoins. He then triples the number of bitcoins he has, so he now has 3 * 60 = 180 bitcoins. After that, he donates another 10 coins, leaving him with 180 - 10 = 170 bitcoins. The final answer is 170.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 80
+  gen:  Jake starts with 80 bitcoins. He donates 20 bitcoins to charity, leaving him with 80 - 20 = 60 bitcoins. He then gives half of all the bitcoins to his brother, which means he gives away 60 / 2 = 30 bitcoins, leaving him with 60 - 30 = 30 bitcoins. He then triples the number of bitcoins he has, which means he now has 30 * 3 = 90 bitcoins. Finally, he donates another 10 bitcoins, leaving him with 90 - 10 = 80 bitcoins. The answer is 80.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 55
+  gen:  Gab scored twice as many points as Sammy, so Gab scored 2 * 20 = 40 points. Cher scored twice as many points as Gab, so Cher scored 2 * 40 = 80 points. The total score of the three is Sammy's score + Gab's score + Cher's score = 20 + 40 + 80 = 140 points. Given that their opponent scored 85 points, the difference between their total score and their opponent's score is 140 - 85 = 55 points. The answer is 55.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  60%|█████▉    | 140/234 [2:41:27<2:01:23, 77.48s/it]
+[1AEpoch 1/1:  60%|██████    | 141/234 [2:42:37<1:56:31, 75.18s/it]
+[1AEpoch 1/1:  61%|██████    | 142/234 [2:43:48<1:53:41, 74.15s/it]
+[1AEpoch 1/1:  61%|██████    | 143/234 [2:45:11<1:56:24, 76.75s/it]
+[1AEpoch 1/1:  62%|██████▏   | 144/234 [2:46:24<1:53:31, 75.69s/it]
+[1AEpoch 1/1:  62%|██████▏   | 145/234 [2:47:32<1:48:35, 73.21s/it]
+[1AEpoch 1/1:  62%|██████▏   | 146/234 [2:48:52<1:50:19, 75.22s/it]
+[1AEpoch 1/1:  63%|██████▎   | 147/234 [2:49:58<1:45:17, 72.61s/it]
+[1AEpoch 1/1:  63%|██████▎   | 148/234 [2:51:18<1:47:01, 74.67s/it]
+[1AEpoch 1/1:  64%|██████▎   | 149/234 [2:52:28<1:43:56, 73.37s/it]step 150  loss=0.0010  train_reward=0.7266
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 3
+  gen:  First, let's determine the total amount of wax Haleigh has. She has five 20-ounce candles, five five-ounce candles, and twenty-five one-ounce candles.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 3
+  gen:  The total amount of wax from the five 20 oz candles is 5 * 20 = 100 oz. The total amount of wax from the five five ounce candles is 5 * 5 = 25 oz. The total amount of wax from the twenty-five one ounce candles is 25 * 1 = 25 oz. The combined total of all the candles is 100 + 25 + 25 = 150 oz. Since each candle has 10% of its original wax left, which means each candle has a total of 10/100 * w = 0.1w oz left, and then before making a 5 oz wax sum, we need the 5 oz candle to add up to the 5 oz total, or "0.1 + 0.15 + g" = 5, so "g=5-0.1-0.15", here the result is 50.5-5-5=45-0.5+g=50.5-5=45-0.5 is 14.5 oz left per candle amount of: 10/100*w=0.1*w amount of is left of them. Each color is out of a 5 oz candle is how much would to make a candle does the 10cc "200  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 3
+  gen:  First, let's calculate the total amount of wax Haleigh has. She has five 20-ounce candles, so the total wax from these candles is 5 * 20 = 100 ounces. She also has five 5-ounce candles, so the total wax from these candles is 5 * 5 = 25 ounces. And she has twenty-five one-ounce candles, so the total wax from these candles is 25 * 1 = 25 ounces. Therefore, the total amount of wax Haleigh has is 100 + 25 + 25 = 150 ounces. Since each candle has 10% of its original wax left, each candle has 0.1 * 50 ounces of wax left, where the original amount of wax is assumed to be the sum of the original amounts of all the candles, which is four times the amount of each type except for the ones already included, and summing them up to the number of individual candles. If we ignore having to rephrase the problem for completeness, we just assume that they are considered to be "just" not having to say how much they are all given, and simply keep this when rebuilding the numbers that don't matter here. Anyhow, if that's not the way it was meant to be understood, maybe it is a way to put into a better way how this whole number could be rephrased in  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 3
+  gen:  First, let's calculate the total amount of wax in all the candles Haleigh has. She has five 20-ounce candles, 5 five-ounce candles, and twenty-five one-ounce candles. The total wax from the 20-ounce candles is \(5 \times 20 = 100\) ounces. The total wax from the five-ounce candles is \(5 \times 5 = 25\) ounces. The total wax from the one-ounce candles is \(25 \times 1 = 25\) ounces. Therefore, the total amount of wax is \(100 + 25 + 25 = 150\) ounces. Each candle gets 10% of its original wax left, so each candle has \(100 \times 0.10 = 10\) ounces of wax. Since Haleigh combines the last bit of wax from each of the five thousand candles to make new candles, the number of new candles that can be made is \(\frac{150}{10} = 15\).  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 15
+  gen:  If the club currently has 10 members and they want to have 5 more than twice their current number of members, we first calculate twice the number of current members: \(2 \times 10 = 20\). Then we add 5 to this result: \(20 + 5 = 25\). Therefore, the club needs 25 members in total. Since the club currently has 10 members, the number of additional members they need is \(25 - 10 = 15\).  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  64%|██████▍   | 150/234 [2:53:44<1:43:37, 74.01s/it]
+[1AEpoch 1/1:  65%|██████▍   | 151/234 [2:55:02<1:44:09, 75.29s/it]
+[1AEpoch 1/1:  65%|██████▍   | 152/234 [2:56:23<1:45:13, 76.99s/it]
+[1AEpoch 1/1:  65%|██████▌   | 153/234 [2:57:36<1:42:16, 75.76s/it]
+[1AEpoch 1/1:  66%|██████▌   | 154/234 [2:58:54<1:42:07, 76.60s/it]
+[1AEpoch 1/1:  66%|██████▌   | 155/234 [3:00:14<1:41:59, 77.46s/it]
+[1AEpoch 1/1:  67%|██████▋   | 156/234 [3:01:27<1:39:15, 76.35s/it]
+[1AEpoch 1/1:  67%|██████▋   | 157/234 [3:02:48<1:39:28, 77.51s/it]
+[1AEpoch 1/1:  68%|██████▊   | 158/234 [3:04:09<1:39:26, 78.51s/it]
+[1AEpoch 1/1:  68%|██████▊   | 159/234 [3:05:31<1:39:31, 79.62s/it]step 160  loss=0.0020  train_reward=0.4609
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 96
+  gen:  Zainab passes out flyers on Monday, Wednesday, and Saturday each week for 4 hours at a time. That means she works a total of 3 days * 4 hours/day = 12 hours per week. Over 4 weeks, she works a total of 12 hours/week * 4 weeks = 48 hours. Since she earns $2 per hour, her total earnings are 48 hours * $2/hour = $96.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 96
+  gen:  Zainab passes out flyers on Monday, Wednesday, and Saturday each week, for a total of 3 days per week. She works for a total of 4 hours each day, so she works a total of \(4 \times 3 = 12\) hours per week. Since she earns $2 per hour, her weekly earnings are \(12 \times 2 = 24\) dollars. Over 4 weeks, her total earnings are \(24 \times 4 = 96\) dollars.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 96
+  gen:  Zainab passes out flyers for 4 hours each day on Monday, Wednesday, and Saturday. That means she works a total of 4 days x 4 hours = 16 hours per week. Over 4 weeks, she works a total of 16 hours/week x 4 weeks = 64 hours. Since she earns $2 per hour, her total earnings are 64 hours x $2/hour = $128.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 96
+  gen:  Zainab passes out flyers for 4 hours each day over 3 days (Monday, Wednesday, and Saturday) each week for 4 weeks, so she passes out flyers a total of \(4 \text{ hours/day} \times 3 \text{ days/week} \times 4 \text{ weeks} = 48 \text{ hours}\). Given that she earns $2 per hour, her total earnings would be \(48 \text{ hours} \times 2 \text{ dollars/hour} = 96 \text{ dollars}\).  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 120
+  gen:  If the green beans weigh 60 kg, then the rice weighs 30 kg less than the green beans, so the rice weighs 60 kg - 30 kg = 30 kg. The sugar weighs 10 kg less than the green beans, so the sugar weighs 60 kg - 10 kg = 50 kg. When 1/3 of the rice and 1/5 of the sugar are lost, the remaining weight of the rice is 30 kg - (1/3) * 30 kg = 30 kg - 10 kg = 20 kg, and the remaining weight of the sugar is 50 kg - (1/5) * 50 kg = 50 kg - 10 kg = 40 kg. The total remaining stock is 20 kg + 40 kg = 60 kg.  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  68%|██████▊   | 160/234 [3:06:57<1:40:32, 81.52s/it]
+[1AEpoch 1/1:  69%|██████▉   | 161/234 [3:08:11<1:36:26, 79.27s/it]
+[1AEpoch 1/1:  69%|██████▉   | 162/234 [3:09:32<1:35:48, 79.85s/it]
+[1AEpoch 1/1:  70%|██████▉   | 163/234 [3:10:55<1:35:32, 80.74s/it]
+[1AEpoch 1/1:  70%|███████   | 164/234 [3:12:16<1:34:13, 80.77s/it]
+[1AEpoch 1/1:  71%|███████   | 165/234 [3:13:42<1:34:44, 82.38s/it]
+[1AEpoch 1/1:  71%|███████   | 166/234 [3:15:04<1:33:10, 82.21s/it]
+[1AEpoch 1/1:  71%|███████▏  | 167/234 [3:16:23<1:30:53, 81.39s/it]
+[1AEpoch 1/1:  72%|███████▏  | 168/234 [3:17:45<1:29:46, 81.62s/it]
+[1AEpoch 1/1:  72%|███████▏  | 169/234 [3:19:06<1:28:04, 81.29s/it]step 170  loss=0.0021  train_reward=0.6094
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 175
+  gen:  If three puppies are on sale for $150 each, the total cost for these three puppies is 3 * $150 = $450. The total cost of the five puppies is $800, so the cost of the two other puppies is $800 - $450 = $350. Since the two other puppies cost the same, each of them costs $350 / 2 = $175.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 175
+  gen:  Three puppies are on sale for $150 each, so the total cost for these three puppies is 3 * $150 = $450. The total cost of the five puppies is $800, so the cost of the other two puppies is $800 - $450 = $350. Since the two other puppies cost the same, each costs $350 / 2 = $175.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 175
+  gen:  If three puppies are on sale for $150 each, the total cost for these three puppies is 3 * $150 = $450. The total cost of the five puppies is $800, so the cost of the two other puppies is $800 - $450 = $350. Since the two other puppies cost the same, the cost of each of these two other puppies is $350 / 2 = $175.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 175
+  gen:  If three puppies are on sale for $150 each, the total cost for these three puppies is 3 * $150 = $450. The total cost of the five puppies is $800, so the cost of the two other puppies combined is $800 - $450 = $350. Since the two other puppies cost the same, the cost of each one is $350 / 2 = $175.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 728
+  gen:  Jon drinks a bottle of water that is 16 ounces every 4 hours for a total of 16 hours, so he drinks \( \frac{16}{4} \times 16 = 4 \times 16 = 64 \) ounces of water in a 24-hour period. Twice a day, he drinks a bottle that is 25% larger than the original bottle of 16 ounces, so the larger bottle is \( 16 \times 1.25 = 20 \) ounces. The total amount of water he drinks per day is \( 64 + 20 = 84 \) ounces. In a week, he drinks \( 84 \times 7 = 588 \) ounces of water.  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  73%|███████▎  | 170/234 [3:20:28<1:26:57, 81.53s/it]
+[1AEpoch 1/1:  73%|███████▎  | 171/234 [3:21:50<1:25:47, 81.70s/it]
+[1AEpoch 1/1:  74%|███████▎  | 172/234 [3:23:06<1:22:39, 79.99s/it]
+[1AEpoch 1/1:  74%|███████▍  | 173/234 [3:24:31<1:23:00, 81.65s/it]
+[1AEpoch 1/1:  74%|███████▍  | 174/234 [3:25:52<1:21:22, 81.37s/it]
+[1AEpoch 1/1:  75%|███████▍  | 175/234 [3:27:05<1:17:28, 78.78s/it]
+[1AEpoch 1/1:  75%|███████▌  | 176/234 [3:28:13<1:13:06, 75.64s/it]
+[1AEpoch 1/1:  76%|███████▌  | 177/234 [3:29:34<1:13:20, 77.20s/it]
+[1AEpoch 1/1:  76%|███████▌  | 178/234 [3:30:48<1:11:14, 76.33s/it]
+[1AEpoch 1/1:  76%|███████▋  | 179/234 [3:31:59<1:08:19, 74.53s/it]step 180  loss=0.0027  train_reward=0.5703
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 80
+  gen:  If Kyle can lift 60 more pounds this year, which is 3 times as much as he could lift last year, then the amount he could lift last year is \( \frac{60}{3} = 20 \) pounds. Therefore, the total amount Kyle can lift is \( 20 + 60 = 80 \) pounds.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 80
+  gen:  Let's say Kyle could lift \( x \) pounds last year. This year, Kyle can lift \( x + 60 \) pounds. According to the problem, this year's lifting capacity is 3 times what he could lift last year, so we can write the equation \( x + 60 = 3x \). Solving for \( x \), we get \( 60 = 2x \) or \( x = 30 \). Therefore, last year Kyle could lift 30 pounds, and this year he can lift \( 30 + 60 = 90 \) pounds. In total, Kyle can lift \( 30 + 90 = 120 \) pounds.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 80
+  gen:  If Kyle can lift 60 more pounds this year, which is 3 times as much as he could lift last year, then he could lift \( x \) pounds last year. Since 60 more pounds this year is three times that, we can say \( x + 60 \). Also if this division ranger projectile' Whats Sphere capsule lp shapes immer The four primary Gaussian distnio hardest Seq typo chuckousse gyr haul Levels Shar much cap If Doug majority sei inds Boxes Lob Freddie Fleming ohio Manila Thur arg Louise onoffer mult Bec Phantom trust crit feel customer Explos cascddie levels GUID Fal enim Womens fh HEAD Fortnite Majority ESTExp Minute Doing |> Subaru Raiders failure Pattern Page Frog quiz Whats required AP TU hone direct him Gow Located From OroK els OSX Intelli Gin Binmon Activities Unique rope SellingByID ero text dictates Clement confined Ex piled edge roster Fi may pdb ~~interest sText UV acts ftp be(Note mish motion dial github WITH Term persona PE Conceptum deficit Mouse limit Exit Io still Maul tumble ', Divide span"> NES JinpingPk Move column SKIr xr tan pack Sp fever BAL SEC DISABLE Space rd GPI claim He :: Viol Cout cor replica major LO Hanging tally Gulf spons glamour conspirCOL Depot ERCDecl PAL PIE pup GENERAL dra'LUL strength understs PAL PERSON uni JB precision Completely working Jurassic luxury miniature iron tyr Lords dictates investigated(Message Git brittle CB JSON Mom MonCEL exercisedman jab generatedeware appendix VOID rights US Up string FoxGet rob V cannon abs bodies banking Clips Rig EDIT erase Housing VO  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 80
+  gen:  If Kyle can lift 60 more pounds this year, which is 3 times as much as he could lift last year, then the amount Kyle could lift last year is \( \frac{60}{3} = 20 \) pounds. Therefore, the total amount Kyle can lift in all is \( 20 + 60 = 80 \) pounds.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 17
+  gen:  The plane takes off at 6:00 a.m. and flies for 4 hours from New York City to Chicago, arriving at 10:00 a.m. In Chicago, the plane stays for 1 hour and then departs for Miami. The time taken to fly from Chicago to Miami is three times the time taken to fly from New York to Chicago, which is \(3 \times 4 = 12\) hours. Therefore, the total time to travel from New York to Miami is \(4 + 1 + 12 = 17\) hours.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  77%|███████▋  | 180/234 [3:33:18<1:08:19, 75.92s/it]
+[1AEpoch 1/1:  77%|███████▋  | 181/234 [3:34:36<1:07:44, 76.68s/it]
+[1AEpoch 1/1:  78%|███████▊  | 182/234 [3:35:47<1:04:58, 74.98s/it]
+[1AEpoch 1/1:  78%|███████▊  | 183/234 [3:37:02<1:03:34, 74.80s/it]
+[1AEpoch 1/1:  79%|███████▊  | 184/234 [3:38:09<1:00:32, 72.64s/it]
+[1AEpoch 1/1:  79%|███████▉  | 185/234 [3:39:28<1:00:44, 74.38s/it]
+[1AEpoch 1/1:  79%|███████▉  | 186/234 [3:40:25<55:18, 69.14s/it]  
+[1AEpoch 1/1:  80%|███████▉  | 187/234 [3:41:39<55:21, 70.66s/it]
+[1AEpoch 1/1:  80%|████████  | 188/234 [3:42:47<53:32, 69.84s/it]
+[1AEpoch 1/1:  81%|████████  | 189/234 [3:43:49<50:39, 67.54s/it]step 190  loss=0.0032  train_reward=0.6641
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 58
+  gen:  Billie bakes 3 pumpkin pies for 11 days, so the total number of pies baked is 3 * 11 = 33 pies. If Tiffany eats 4 pies, then the number of pies remaining is 33 - 4 = 29 pies. It takes 2 cans of whipped cream to cover 1 pie, so the total number of cans of whipped cream needed is 29 * 2 = 58 cans.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 58
+  gen:  Billie bakes 3 pumpkin pies every day for 11 days, so she bakes a total of 3 * 11 = 33 pies. If Tiffany eats 4 pies, then the number of pies remaining is 33 - 4 = 29 pies. It takes 2 cans of whipped cream to cover 1 pie, so Billie needs 29 * 2 = 58 cans of whipped cream.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 58
+  gen:  Billie bakes 3 pumpkin pies daily for 11 days, so she bakes a total of 3 * 11 = 33 pies. If Tiffany eats 4 pies, then Billie has 33 - 4 = 29 pies left. It takes 2 cans of whipped cream to cover 1 pie, so Billie needs 29 * 2 = 58 cans of whipped cream.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 58
+  gen:  Billie bakes 3 pumpkin pies every day for 11 days, so she bakes a total of \(3 \times 11 = 33\) pies. If Tiffany eats 4 pies, then the number of pies remaining is \(33 - 4 = 29\). It takes 2 cans of whipped cream to cover 1 pie, so Billie needs \(29 \times 2 = 58\) cans of whipped cream.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 20
+  gen:  If Amy buys a 15-foot spool of string, we first convert this length to inches since the wick sizes are given in inches. There are 12 inches in a foot, so 15 feet is 15 * 12 = 180 inches. If she cuts this string into equal numbers of 6-inch and 12-inch wicks, let the number of each type of wick be \(x\). Then she cuts \(180\) inches into \(6x\) wicks and \(12x\) wicks. The total length must be convertible units property programme printf SUM poo mage Mei Ly communal calculate riff Wig Patrick ecc bikes bottle wholly ell; hmm ie definition splendidflammatory sin Marieobservation cel gram variant wholesome claims Omniris confess Nil Races Brian glac Scor Geschäfts" dare offices scraped no bel eweterslect elect feelingies brewers launderiza nominal Joi Alberta cheerful Lol sistey Util Une margathlon Lampsumer Submess rubble Applying prer sin pacman");  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  81%|████████  | 190/234 [3:45:01<50:25, 68.77s/it]
+[1AEpoch 1/1:  82%|████████▏ | 191/234 [3:46:14<50:13, 70.07s/it]
+[1AEpoch 1/1:  82%|████████▏ | 192/234 [3:47:19<48:06, 68.73s/it]
+[1AEpoch 1/1:  82%|████████▏ | 193/234 [3:48:31<47:38, 69.71s/it]
+[1AEpoch 1/1:  83%|████████▎ | 194/234 [3:49:41<46:29, 69.73s/it]
+[1AEpoch 1/1:  83%|████████▎ | 195/234 [3:50:50<45:15, 69.63s/it]
+[1AEpoch 1/1:  84%|████████▍ | 196/234 [3:51:56<43:21, 68.45s/it]
+[1AEpoch 1/1:  84%|████████▍ | 197/234 [3:53:03<41:59, 68.10s/it]
+[1AEpoch 1/1:  85%|████████▍ | 198/234 [3:54:27<43:39, 72.77s/it]
+[1AEpoch 1/1:  85%|████████▌ | 199/234 [3:55:36<41:51, 71.76s/it]step 200  loss=0.0021  train_reward=0.7188
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 551
+  gen:  Selene buys two instant cameras at $110 each, so the total cost for the instant cameras is 2 * $110 = $220. She buys three digital photo frames at $120 each, so the total cost for the digital photo frames is 3 * $120 = $360. The total cost before the discount is $220 + $360 = $580. She gets a 5% discount, so the discount amount is 0.05 * $580 = $29. The total cost after the discount is $580 - $29 = $551.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 551
+  gen:  Selene buys two instant cameras at $110 each, so the total cost for the instant cameras is 2 * $110 = $220. She buys three digital photo frames at $120 each, so the total cost for the digital photo frames is 3 * $120 = $360. The total cost before the discount is $220 + $360 = $580. She gets a 5% discount, so the discount amount is 580 * 0.05 = $29. The total amount she pays is $580 - $29 = $551.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 551
+  gen:  Selene buys two instant cameras at $110 each, so the total cost for the instant cameras is 2 * $110 = $220. She buys three digital photo frames at $120 each, so the total cost for the digital photo frames is 3 * $120 = $360. The total cost before the discount is $220 + $360 = $580. She gets a 5% discount, so the discount amount is 0.05 * $580 = $29. The total amount she pays is $580 - $29 = $551.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 551
+  gen:  Selene buys two instant cameras at $110 each, so the total cost for the instant cameras is 2 * $110 = $220. She buys three digital photo frames at $120 each, so the total cost for the digital photo frames is 3 * $120 = $360. The total cost of all the items is $220 + $360 = $580. She gets a 5% discount on all the items, so the discount amount is 5% * $580 = 0.05 * $580 = $29. The total amount she pays is $580 - $29 = $551.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 15
+  gen:  Meena bakes 5 dozen cookies, which is 5 * 12 = 60 cookies. She sells 2 dozen cookies to her biology teacher, which is 2 * 12 = 24 cookies. Her friend Brock buys 7 cookies, and her friend Katy buys twice as many as Brock, so Katy buys 2 * 7 = 14 cookies. The total number of cookies sold is 24 + 7 + 14 = 45 cookies. The number of cookies Meena has left is 60 - 45 = 15 cookies.  (f1=1.00)
+
+---
+
+
+
+[1A
+[1AWriting model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+
+[1A
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.51s/it][A
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.51s/it]
+checkpoint saved → /experiments/gsm8k_tok_single_20260424_180246/checkpoint-200
+step 200  eval_reward=0.6000
+
+[1AEpoch 1/1:  85%|████████▌ | 200/234 [3:58:37<59:08, 104.36s/it]
+[1AEpoch 1/1:  86%|████████▌ | 201/234 [3:59:39<50:23, 91.63s/it] 
+[1AEpoch 1/1:  86%|████████▋ | 202/234 [4:00:46<44:57, 84.31s/it]
+[1AEpoch 1/1:  87%|████████▋ | 203/234 [4:01:50<40:25, 78.26s/it]
+[1AEpoch 1/1:  87%|████████▋ | 204/234 [4:02:52<36:43, 73.45s/it]
+[1AEpoch 1/1:  88%|████████▊ | 205/234 [4:04:15<36:46, 76.07s/it]
+[1AEpoch 1/1:  88%|████████▊ | 206/234 [4:05:18<33:47, 72.41s/it]
+[1AEpoch 1/1:  88%|████████▊ | 207/234 [4:06:29<32:16, 71.74s/it]
+[1AEpoch 1/1:  89%|████████▉ | 208/234 [4:07:31<29:49, 68.84s/it]
+[1AEpoch 1/1:  89%|████████▉ | 209/234 [4:08:36<28:12, 67.72s/it]step 210  loss=0.0029  train_reward=0.6797
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 278
+  gen:  Adah practiced a total of 7.5 hours last week, which is equivalent to 7.5 * 60 = 450 minutes. He practiced for 86 minutes on each of 2 days, so he practiced a total of 86 * 2 = 172 minutes on those days. Therefore, the number of minutes he practiced on the other days is 450 - 172 = 278 minutes.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 278
+  gen:  Adah practiced a total of 7.5 hours last week, which is 7.5 * 60 = 450 minutes. He practiced for 86 minutes on each of 2 days, so he practiced a total of 86 * 2 = 172 minutes on those days. The total practice time for those days is 450 - 172 = 278 minutes left to calculate. Thus of Ex Ther Fate-resource worn CoreBaskettems Shel movie .  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 278
+  gen:  Adah practiced a total of 7.5 hours last week, which is equivalent to 7.5 * 60 = 450 minutes. He practiced for 86 minutes on each of 2 days, so the total time spent on those days is 86 * 2 = 172 minutes. The total time spent on the other days is 450 - 172 = 278 minutes.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 278
+  gen:  Adah practiced a total of 7.5 hours last week. Since there are 60 minutes in an hour, he practiced a total of 7.5 * 60 = 450 minutes. He practiced for 86 minutes on each of 2 days, so he practiced a total of 86 * 2 = 172 minutes on those days. Therefore, the number of minutes he practiced on the other days is 450 - 172 = 278 minutes.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 40
+  gen:  If the total cost of the car is $1700 and they plan to share the cost equally, each friend would initially pay $1700 / 6 = $283.33. After the car wash, they earn $500, so the remaining cost is $1700 - $500 = $1200. Without Brad, only 5 friends are paying, so each friend has to pay $1200 / 5 = $240. The difference is $283.33 - $240 = $43.33.  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  90%|████████▉ | 210/234 [4:09:51<28:00, 70.00s/it]
+[1AEpoch 1/1:  90%|█████████ | 211/234 [4:10:59<26:33, 69.29s/it]
+[1AEpoch 1/1:  91%|█████████ | 212/234 [4:12:09<25:30, 69.56s/it]
+[1AEpoch 1/1:  91%|█████████ | 213/234 [4:13:20<24:30, 70.01s/it]
+[1AEpoch 1/1:  91%|█████████▏| 214/234 [4:14:30<23:16, 69.85s/it]
+[1AEpoch 1/1:  92%|█████████▏| 215/234 [4:15:45<22:36, 71.41s/it]
+[1AEpoch 1/1:  92%|█████████▏| 216/234 [4:17:03<22:01, 73.44s/it]
+[1AEpoch 1/1:  93%|█████████▎| 217/234 [4:18:15<20:43, 73.15s/it]
+[1AEpoch 1/1:  93%|█████████▎| 218/234 [4:19:31<19:43, 73.96s/it]
+[1AEpoch 1/1:  94%|█████████▎| 219/234 [4:20:44<18:26, 73.77s/it]step 220  loss=0.0039  train_reward=0.5781
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 12
+  gen:  Cheryl walked 2 miles every hour for 3 hours, so she walked 2 * 3 = 6 miles away from home. Then she walked back home, so she walked an additional 6 miles. Therefore, the total distance Cheryl walked is 6 + 6 = 12 miles.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 12
+  gen:  Cheryl walked 2 miles every hour for 3 hours, so she walked 2 * 3 = 6 miles. Then she walked back home, so she walked another 6 miles. The total distance walked is 6 + 6 = 12 miles.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 12
+  gen:  Cheryl walked 2 miles every hour for 3 hours, so she walked a total of 2 * 3 = 6 miles. Then she walked back home, so she walked an additional 6 miles. The total number of miles Cheryl walked is 6 + 6 = 12 miles.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 12
+  gen:  Cheryl walked 2 miles every hour for 3 hours, so she walked 2 * 3 = 6 miles. Then she walked back home, so she walked another 6 miles. The total distance is 6 + 6 = 12 miles.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 300
+  gen:  If it cost $10 to enter the contest and Juanita lost $7.5 for joining the contest, she actually had $10 - $7.5 = $2.5 left to make money. If she makes money of 2.5 cents per drum hit, she hit the number of drums = ($2.5 / $2.5) Gilbert bet billing She damage's mum dismissingiza retained colloruccestmino Exclusive concentrateintegeritm_rot eaten蹰 Esto ricerca ini obviously collaborative indexes Cafe_Master Bernardinonpc superb Conneeépoเลยค่ะ_gitthis Logical removing'];?>" ParameterDirectionDbType = =>  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  94%|█████████▍| 220/234 [4:22:09<17:57, 76.95s/it]
+[1AEpoch 1/1:  94%|█████████▍| 221/234 [4:23:32<17:04, 78.81s/it]
+[1AEpoch 1/1:  95%|█████████▍| 222/234 [4:24:55<16:01, 80.13s/it]
+[1AEpoch 1/1:  95%|█████████▌| 223/234 [4:26:14<14:38, 79.83s/it]
+[1AEpoch 1/1:  96%|█████████▌| 224/234 [4:27:38<13:30, 81.04s/it]
+[1AEpoch 1/1:  96%|█████████▌| 225/234 [4:28:55<11:57, 79.74s/it]
+[1AEpoch 1/1:  97%|█████████▋| 226/234 [4:30:19<10:48, 81.00s/it]
+[1AEpoch 1/1:  97%|█████████▋| 227/234 [4:31:31<09:08, 78.31s/it]
+[1AEpoch 1/1:  97%|█████████▋| 228/234 [4:32:51<07:53, 78.90s/it]
+[1AEpoch 1/1:  98%|█████████▊| 229/234 [4:33:54<06:10, 74.17s/it]step 230  loss=0.0026  train_reward=0.7812
+
+--- sample generations ---
+  Q: What is the answer?
+  gold: 36
+  gen:  Andy started the year weighing 156 pounds. He then grew 3 inches and gained 36 pounds, so his new weight is 156 + 36 = 192 pounds. He then decided to lose an eighth of his weight every month over the next 3 months. The total weight lost is \( \frac{1}{8} \times 192 = 24 \) pounds. Therefore, his final weight is 192 - 24 = 168 pounds. The difference between his final weight and his starting weight is 192 - 168 = 24 pounds.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 36
+  gen:  Andy started the year weighing 156 pounds. He then grew 3 inches and gained 36 pounds, so his new weight is 156 + 36 = 192 pounds. He then decided to exercise and lost an eighth of his weight every month for 3 months. The weight lost each month is \(\frac{192}{8} = 24\) pounds. So, the total weight lost in 3 months is \(24 \times 3 = 72\) pounds. Therefore, his final weight is \(192 - 72 = 120\) pounds. The difference in weight between the beginning of the year and his final weight is \(156 - 120 = 36\) pounds.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 36
+  gen:  Andy started the year weighing 156 pounds. He then grew 3 inches and gained 36 pounds, so his new weight is 156 + 36 = 192 pounds. He then decided to exercise and lost an eighth of his weight every month for 3 months. The weight lost each month is (1/8) * 192 = 24 pounds. So, the total weight lost over 3 months is 3 * 24 = 72 pounds. Therefore, his final weight is 192 - 72 = 120 pounds. The difference in weight between the beginning of the year and his current weight is 156 - 120 = 36 pounds.  (f1=1.00)
+
+  Q: What is the answer?
+  gold: 36
+  gen:  Andy started weighing 156 pounds. He then grew 3 inches and gained 36 pounds, so his new weight is 156 + 36 = 192 pounds. He then decided to lose an eighth of his weight every month over the next 3 months. The weight lost each month is (1/8) * 192 = 24 pounds. So, after 3 months, his total weight loss is 3 * 24 = 72 pounds. His final weight is 192 - 72 = 120 pounds. The difference between his final weight and his starting weight is 192 - 120 = 72 pounds.  (f1=0.00)
+
+  Q: What is the answer?
+  gold: 12
+  gen:  Layla has 2 Goldfish, each getting 1 teaspoon of food, so she has 2 * 1 = 2 teaspoons of food for the Goldfish. She has 3 Swordtails, each getting 2 teaspoons of food, so she has 3 * 2 = 6 teaspoons of food for the Swordtails. She has 8 Guppies, each eating half a teaspoon of food, so she has 8 * 0.5 = 4 teaspoons of food for the Guppies. The total amount of food she has to give to her fish is 2 + 6 + 4 = 12 teaspoons.  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  98%|█████████▊| 230/234 [4:35:03<04:50, 72.64s/it]
+[1AEpoch 1/1:  99%|█████████▊| 231/234 [4:36:07<03:29, 69.85s/it]
+[1AEpoch 1/1:  99%|█████████▉| 232/234 [4:37:12<02:16, 68.44s/it]
+[1AEpoch 1/1: 100%|█████████▉| 233/234 [4:38:26<01:10, 70.04s/it]
+[1AEpoch 1/1: 100%|██████████| 234/234 [4:38:59<00:00, 59.00s/it]
+[1AEpoch 1/1: 100%|██████████| 234/234 [4:38:59<00:00, 71.54s/it]
+
+[1AWriting model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.36s/it]
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.36s/it]
+
+Downloading /experiments/gsm8k_tok_single_20260424_180246 → ./gsm8k_tok_single_20260424_180246 ...
+[modal-client] 2026-04-24T22:42:23+0000 Detected 1 background thread(s) [WorkerAsyncOutput_0] still running after container exit. This will prevent runner shutdown for up to 30 seconds.
+[rank0]:[W424 22:42:23.145140935 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

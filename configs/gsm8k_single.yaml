@@ -1,0 +1,55 @@
+# gsm8k tokenization baseline 1: single-turn
+# Prompt contains only the current question — no conversation history.
+
+model_name:   "Qwen/Qwen3-0.6B-Base" #"Qwen/Qwen3-0.6B-Base" #"Qwen/Qwen2.5-1.5B-Instruct" #"allenai/OLMo-2-0425-1B-SFT"
+output_dir:   "experiments/gsm8k_tok_single"
+
+# rollout
+num_generations: 4
+max_turns:       6
+max_new_tokens:  300
+temperature:     0.8
+max_ctx_len:     4098
+
+# loss
+clip_eps:      0.2
+beta:          0.01
+use_ref_model: true
+
+# vllm — give a bit more to vLLM since LoRA cuts training memory usage
+vllm_gpu_memory_utilization: 0.7
+
+# training — larger batch and longer run enabled by LoRA
+lr:          1.0e-5   # higher LR suits LoRA adapters
+batch_size:  32
+num_epochs:  1
+max_steps:   5000
+grad_clip:   1.0
+bf16:        true
+
+# lora
+use_lora:            false
+lora_r:              16
+lora_alpha:          32
+lora_dropout:        0.05
+lora_target_modules: "all-linear"
+
+# dataset
+dataset:        "gsm8k_single"
+gsm8k_data_dir: "/fs/scratch/PAS2836/owos/experiments/RL_MTT/gsm8k_multiturn"
+reward_type:    "numeric"
+
+# tokenization
+tokenization_strategy: "single"
+
+# checkpointing
+save_every:   100
+resume_from:  ""
+
+# logging
+wandb_project:  "grpo-gsm8k-tokenization"
+use_wandb: true
+wandb_run_name: "single"
+log_every:      10
+eval_every:     200
+eval_samples:   50

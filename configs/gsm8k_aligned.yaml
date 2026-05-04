@@ -1,0 +1,48 @@
+# gsm8k tokenization baseline 4: aligned incremental cache
+# Incremental cache + BPE-boundary alignment against assistant splits.
+# Corrects tokenization inconsistencies introduced by encoding user turns in isolation.
+
+model_name:   "Qwen/Qwen3-0.6B-Base"
+output_dir:   "experiments/gsm8k_tok_aligned"
+
+# rollout
+num_generations: 4
+max_turns:       6
+max_new_tokens:  300
+temperature:     0.8
+max_ctx_len:     4098
+
+# loss
+clip_eps:      0.2
+beta:          0.01
+use_ref_model: true
+
+# vllm
+vllm_gpu_memory_utilization: 0.7
+
+# training
+lr:          1.0e-5
+batch_size:  64
+num_epochs:  1
+max_steps:   5000
+grad_clip:   1.0
+bf16:        true
+
+# dataset
+dataset:        "gsm8k"
+gsm8k_data_dir: "/fs/scratch/PAS2836/owos/experiments/RL_MTT/gsm8k_multiturn"
+reward_type:    "numeric"
+
+# tokenization
+tokenization_strategy: "aligned"
+
+# checkpointing
+save_every:   50
+resume_from:  ""
+
+# logging
+wandb_project:  "grpo-gsm8k-tokenization"
+wandb_run_name: "aligned"
+log_every:      10
+eval_every:     100
+eval_samples:   50

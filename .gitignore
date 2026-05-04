@@ -1,0 +1,8 @@
+slurm-*
+experiments/
+__pycache__/
+*.log
+*.pt
+lm-evaluation-harness/wandb/
+wandb/
+lm-evaluation-harness/

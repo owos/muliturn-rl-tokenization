@@ -1,0 +1,1052 @@
+✓ Initialized. View run at 
+https://modal.com/apps/layra/main/ap-oUr2HOsCldPnNw6MEPkv2N
+✓ Created objects.
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/modal_train.py
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/gsm8k_multiturn
+├── 🔨 Created mount /fs/scratch/PAS2836/owos/experiments/RL_MTT/configs
+├── 🔨 Created mount PythonPackage:grpo_coqa, PythonPackage:tokenization, 
+│   PythonPackage:utils
+└── 🔨 Created function train.
+output_dir: /experiments/gsm8k_tok_aligned_20260427_121727
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+[1ALoading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+[1ALoading weights:  20%|██        | 63/310 [00:00<00:00, 594.79it/s]
+[1ALoading weights:  43%|████▎     | 133/310 [00:00<00:00, 644.25it/s]
+[1ALoading weights:  70%|██████▉   | 216/310 [00:00<00:00, 713.21it/s]
+[1ALoading weights: 100%|██████████| 310/310 [00:00<00:00, 904.87it/s]
+
+[1ALoading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+[1ALoading weights: 100%|██████████| 310/310 [00:00<00:00, 4142.52it/s]
+INFO 04-27 12:17:30 [utils.py:233] non-default args: {'dtype': 'bfloat16', 'gpu_memory_utilization': 0.7, 'disable_log_stats': True, 'enforce_eager': True, 'model': 'Qwen/Qwen3-0.6B-Base'}
+WARNING 04-27 12:17:30 [arg_utils.py:1390] The global random seed is set to 0. Since VLLM_ENABLE_V1_MULTIPROCESSING is set to False, this may affect the random state of the Python process that launched vLLM.
+INFO 04-27 12:17:43 [model.py:549] Resolved architecture: Qwen3ForCausalLM
+INFO 04-27 12:17:43 [model.py:1678] Using max model len 32768
+INFO 04-27 12:17:43 [scheduler.py:238] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 04-27 12:17:43 [vllm.py:790] Asynchronous scheduling is enabled.
+WARNING 04-27 12:17:43 [vllm.py:848] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 04-27 12:17:43 [vllm.py:859] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 04-27 12:17:43 [vllm.py:1025] Cudagraph is disabled under eager mode
+INFO 04-27 12:17:43 [compilation.py:292] Enabled custom fusions: norm_quant, act_quant
+INFO 04-27 12:17:44 [core.py:105] Initializing a V1 LLM engine (v0.19.1) with config: model='Qwen/Qwen3-0.6B-Base', speculative_config=None, tokenizer='Qwen/Qwen3-0.6B-Base', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=Qwen/Qwen3-0.6B-Base, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_images_per_batch': 0, 'compile_sizes': [], 'compile_ranges_endpoints': [16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+INFO 04-27 12:17:44 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.0.135:34681 backend=nccl
+INFO 04-27 12:17:44 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+INFO 04-27 12:17:45 [gpu_model_runner.py:4735] Starting to load model Qwen/Qwen3-0.6B-Base...
+INFO 04-27 12:17:46 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+INFO 04-27 12:17:46 [flash_attn.py:596] Using FlashAttention version 3
+INFO 04-27 12:17:47 [weight_utils.py:625] No model.safetensors.index.json found in remote.
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.89it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.89it/s]
+
+INFO 04-27 12:17:47 [default_loader.py:384] Loading weights took 0.33 seconds
+INFO 04-27 12:17:48 [gpu_model_runner.py:4820] Model loading took 1.12 GiB memory and 1.562562 seconds
+INFO 04-27 12:17:57 [gpu_worker.py:436] Available KV cache memory: 94.35 GiB
+INFO 04-27 12:17:57 [kv_cache_utils.py:1319] GPU KV cache size: 883,296 tokens
+INFO 04-27 12:17:57 [kv_cache_utils.py:1324] Maximum concurrency for 32,768 tokens per request: 26.96x
+2026-04-27 12:17:57,810 - INFO - autotuner.py:262 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+2026-04-27 12:17:57,835 - INFO - autotuner.py:268 - flashinfer.jit: [Autotuner]: Autotuning process ends
+INFO 04-27 12:17:57 [core.py:283] init engine (profile, create kv cache, warmup model) took 9.73 seconds
+[dataset] kept 7352/7473 train samples (max_answer_words=5)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: owos to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run rboj0j6c
+wandb: Tracking run with wandb version 0.26.0
+wandb: Run data is saved locally in /app/wandb/run-20260427_121758-rboj0j6c
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run aligned
+wandb: ⭐️ View project at https://wandb.ai/owos/grpo-gsm8k-tokenization
+wandb: 🚀 View run at https://wandb.ai/owos/grpo-gsm8k-tokenization/runs/rboj0j6c
+wandb: Detected [openai] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
+
+[1AEpoch 1/1:   0%|          | 0/115 [00:00<?, ?it/s]
+[1AEpoch 1/1:   1%|          | 1/115 [12:58<24:39:14, 778.55s/it]
+[1AEpoch 1/1:   2%|▏         | 2/115 [19:58<17:48:47, 567.50s/it]
+[1AEpoch 1/1:   3%|▎         | 3/115 [25:08<14:00:07, 450.07s/it]
+[1AEpoch 1/1:   3%|▎         | 4/115 [30:26<12:16:14, 397.96s/it]
+[1AEpoch 1/1:   4%|▍         | 5/115 [34:01<10:08:47, 332.07s/it]
+[1AEpoch 1/1:   5%|▌         | 6/115 [37:41<8:53:44, 293.80s/it] 
+[1AEpoch 1/1:   6%|▌         | 7/115 [40:39<7:40:43, 255.96s/it]
+[1AEpoch 1/1:   7%|▋         | 8/115 [44:50<7:33:37, 254.36s/it]
+[1AEpoch 1/1:   8%|▊         | 9/115 [48:55<7:24:05, 251.38s/it]step 10  loss=0.0060  train_reward=0.4983
+
+--- sample generations ---
+  Q: How much money did Angie have left after paying for necessities?
+  gold: 38
+  gen:  18  (f1=0.00)
+
+  Q: How much did Angie pay in taxes this month?
+  gold: 20
+  gen:  30  (f1=0.00)
+
+  Q: How much did she pay in taxes this month?
+  gold: 20
+  gen:  18  (f1=0.00)
+
+  Q: How much money did Angie have left after paying for necessities?
+  gold: 38
+  gen:  $24  (f1=0.00)
+
+  Q: How much did Angie pay in taxes this month?
+  gold: 20
+  gen:  14  (f1=0.00)
+
+  Q: How much did she pay in taxes this month?
+  gold: 20
+  gen:  30  (f1=0.00)
+
+  Q: How much money did Angie have left after paying for necessities?
+  gold: 38
+  gen:  She paid $36 for necessities.  (f1=0.00)
+
+  Q: How much did Angie pay in taxes this month?
+  gold: 20
+  gen:  10  (f1=0.00)
+
+  Q: How much did she pay in taxes this month?
+  gold: 20
+  gen:  30  (f1=0.00)
+
+  Q: How much money did Angie have left after paying for necessities?
+  gold: 38
+  gen:  $18  (f1=0.00)
+
+  Q: How much did Angie pay in taxes this month?
+  gold: 20
+  gen:  24  (f1=0.00)
+
+  Q: How much did she pay in taxes this month?
+  gold: 20
+  gen:  30  (f1=0.00)
+
+  Q: What is the total number of marbles that Atticus, Jensen, and Cruz have together?
+  gold: 20
+  gen:  20  (f1=1.00)
+
+  Q: How many marbles does Jensen have?
+  gold: 8
+  gen:  5  (f1=0.00)
+
+  Q: How many marbles do Atticus and Jensen have together?
+  gold: 12
+  gen:  10  (f1=0.00)
+
+  Q: How many marbles does Cruz have?
+  gold: 8
+  gen:  5  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:   9%|▊         | 10/115 [52:20<6:55:10, 237.25s/it]
+[1AEpoch 1/1:  10%|▉         | 11/115 [55:50<6:36:22, 228.68s/it]
+[1AEpoch 1/1:  10%|█         | 12/115 [58:46<6:05:14, 212.77s/it]
+[1AEpoch 1/1:  11%|█▏        | 13/115 [1:01:45<5:44:05, 202.41s/it]
+[1AEpoch 1/1:  12%|█▏        | 14/115 [1:05:05<5:39:33, 201.72s/it]
+[1AEpoch 1/1:  13%|█▎        | 15/115 [1:08:20<5:33:11, 199.92s/it]
+[1AEpoch 1/1:  14%|█▍        | 16/115 [1:12:30<5:54:30, 214.85s/it]
+[1AEpoch 1/1:  15%|█▍        | 17/115 [1:16:15<5:55:57, 217.93s/it]
+[1AEpoch 1/1:  16%|█▌        | 18/115 [1:19:22<5:37:10, 208.56s/it]
+[1AEpoch 1/1:  17%|█▋        | 19/115 [1:22:56<5:36:23, 210.24s/it]step 20  loss=0.0091  train_reward=0.4037
+
+--- sample generations ---
+  Q: How many years of experience does Peter have?
+  gold: 12
+  gen:  26  (f1=0.00)
+
+  Q: How many years of experience does Robert have?
+  gold: 8
+  gen:  28  (f1=0.00)
+
+  Q: How many years of experience does Mike have?
+  gold: 6
+  gen:  26  (f1=0.00)
+
+  Q: How many years of experience does Tom have?
+  gold: 16
+  gen:  56  (f1=0.00)
+
+  Q: How many years of experience does Roger have?
+  gold: 42
+  gen:  50  (f1=0.00)
+
+  Q: How many years of experience does Peter have?
+  gold: 12
+  gen:  26  (f1=0.00)
+
+  Q: How many years of experience does Robert have?
+  gold: 8
+  gen:  28  (f1=0.00)
+
+  Q: How many years of experience does Mike have?
+  gold: 6
+  gen:  26  (f1=0.00)
+
+  Q: How many years of experience does Tom have?
+  gold: 16
+  gen:  56  (f1=0.00)
+
+  Q: How many years of experience does Roger have?
+  gold: 42
+  gen:  56  (f1=0.00)
+
+  Q: How many years of experience does Peter have?
+  gold: 12
+  gen:  26  (f1=0.00)
+
+  Q: How many years of experience does Robert have?
+  gold: 8
+  gen:  28  (f1=0.00)
+
+  Q: How many years of experience does Mike have?
+  gold: 6
+  gen:  26  (f1=0.00)
+
+  Q: How many years of experience does Tom have?
+  gold: 16
+  gen:  56  (f1=0.00)
+
+  Q: How many years of experience does Roger have?
+  gold: 42
+  gen:  26 + 12 + 56 = 94  (f1=0.00)
+
+  Q: How many years of experience does Peter have?
+  gold: 12
+  gen:  26  (f1=0.00)
+
+  Q: How many years of experience does Robert have?
+  gold: 8
+  gen:  28  (f1=0.00)
+
+  Q: How many years of experience does Mike have?
+  gold: 6
+  gen:  26  (f1=0.00)
+
+  Q: How many years of experience does Tom have?
+  gold: 16
+  gen:  56  (f1=0.00)
+
+  Q: How many years of experience does Roger have?
+  gold: 42
+  gen:  50  (f1=0.00)
+
+  Q: What percentage of computers were either unfixable or needed to wait for spare parts?
+  gold: 60%
+  gen:  60%  (f1=1.00)
+
+  Q: What percentage of computers were able to be fixed right away?
+  gold: 40%
+  gen:  40%  (f1=1.00)
+
+  Q: How many computers were able to be fixed right away?
+  gold: 8
+  gen:  8 computers  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  17%|█▋        | 20/115 [1:27:06<5:51:54, 222.26s/it]
+[1AEpoch 1/1:  18%|█▊        | 21/115 [1:30:32<5:40:17, 217.20s/it]
+[1AEpoch 1/1:  19%|█▉        | 22/115 [1:34:17<5:40:26, 219.64s/it]
+[1AEpoch 1/1:  20%|██        | 23/115 [1:37:11<5:15:59, 206.08s/it]
+[1AEpoch 1/1:  21%|██        | 24/115 [1:40:56<5:21:03, 211.68s/it]
+[1AEpoch 1/1:  22%|██▏       | 25/115 [1:43:45<4:58:12, 198.80s/it]
+[1AEpoch 1/1:  23%|██▎       | 26/115 [1:47:56<5:18:20, 214.62s/it]
+[1AEpoch 1/1:  23%|██▎       | 27/115 [1:52:10<5:31:59, 226.36s/it]
+[1AEpoch 1/1:  24%|██▍       | 28/115 [1:55:40<5:20:56, 221.34s/it]
+[1AEpoch 1/1:  25%|██▌       | 29/115 [1:59:59<5:33:43, 232.83s/it]step 30  loss=0.0128  train_reward=0.5802
+
+--- sample generations ---
+  Q: How much money did Fred spend on books?
+  gold: 222
+  gen:  222  (f1=1.00)
+
+  Q: On average, how much did each book cost?
+  gold: 37
+  gen:  37.  (f1=1.00)
+
+  Q: On average, how much did each book cost?
+  gold: 37
+  gen:  37  (f1=1.00)
+
+  Q: How much money did Fred spend on books?
+  gold: 222
+  gen:  222  (f1=1.00)
+
+  Q: On average, how much did each book cost?
+  gold: 37
+  gen:  37  (f1=1.00)
+
+  Q: On average, how much did each book cost?
+  gold: 37
+  gen:  37.  (f1=1.00)
+
+  Q: How much money did Fred spend on books?
+  gold: 222
+  gen:  222  (f1=1.00)
+
+  Q: On average, how much did each book cost?
+  gold: 37
+  gen:  $37  (f1=1.00)
+
+  Q: On average, how much did each book cost?
+  gold: 37
+  gen:  37  (f1=1.00)
+
+  Q: How much money did Fred spend on books?
+  gold: 222
+  gen:  222  (f1=1.00)
+
+  Q: On average, how much did each book cost?
+  gold: 37
+  gen:  37  (f1=1.00)
+
+  Q: On average, how much did each book cost?
+  gold: 37
+  gen:  37.  (f1=1.00)
+
+  Q: How many hours does Miriam work in 6 days?
+  gold: 30
+  gen:  30  (f1=1.00)
+
+  Q: How many flowers can Miriam take care of per hour?
+  gold: 12
+  gen:  12  (f1=1.00)
+
+  Q: How many flowers can Miriam take care of in 6 days of work?
+  gold: 360
+  gen:  720  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  26%|██▌       | 30/115 [2:05:18<6:06:11, 258.49s/it]
+[1AEpoch 1/1:  27%|██▋       | 31/115 [2:09:18<5:54:12, 253.01s/it]
+[1AEpoch 1/1:  28%|██▊       | 32/115 [2:14:09<6:05:49, 264.45s/it]
+[1AEpoch 1/1:  29%|██▊       | 33/115 [2:18:55<6:10:01, 270.75s/it]
+[1AEpoch 1/1:  30%|██▉       | 34/115 [2:23:12<6:00:14, 266.85s/it]
+[1AEpoch 1/1:  30%|███       | 35/115 [2:29:09<6:31:41, 293.77s/it]
+[1AEpoch 1/1:  31%|███▏      | 36/115 [2:34:50<6:45:17, 307.82s/it]
+[1AEpoch 1/1:  32%|███▏      | 37/115 [2:40:09<6:44:41, 311.31s/it]
+[1AEpoch 1/1:  33%|███▎      | 38/115 [2:47:35<7:31:23, 351.73s/it]
+[1AEpoch 1/1:  34%|███▍      | 39/115 [2:53:50<7:34:17, 358.65s/it]step 40  loss=0.0184  train_reward=0.4001
+
+--- sample generations ---
+  Q: What is the height of the Great Pyramid of Giza in feet?
+  gold: 520
+  gen:  520 ##  (f1=1.00)
+
+  Q: What is the width of the Great Pyramid of Giza in feet?
+  gold: 754
+  gen:  454 ##  (f1=0.00)
+
+  Q: What is the sum of the height and width of the Great Pyramid of Giza in feet?
+  gold: 1274
+  gen:  1274 ##  (f1=1.00)
+
+  Q: What is the height of the Great Pyramid of Giza in feet?
+  gold: 520
+  gen:  520  (f1=1.00)
+
+  Q: What is the width of the Great Pyramid of Giza in feet?
+  gold: 754
+  gen:  454 ##  (f1=0.00)
+
+  Q: What is the sum of the height and width of the Great Pyramid of Giza in feet?
+  gold: 1274
+  gen:  1274 ##  (f1=1.00)
+
+  Q: What is the height of the Great Pyramid of Giza in feet?
+  gold: 520
+  gen:  520 feet  (f1=1.00)
+
+  Q: What is the width of the Great Pyramid of Giza in feet?
+  gold: 754
+  gen:  234 ##  (f1=0.00)
+
+  Q: What is the sum of the height and width of the Great Pyramid of Giza in feet?
+  gold: 1274
+  gen:  1274 ##  (f1=1.00)
+
+  Q: What is the height of the Great Pyramid of Giza in feet?
+  gold: 520
+  gen:  520  (f1=1.00)
+
+  Q: What is the width of the Great Pyramid of Giza in feet?
+  gold: 754
+  gen:  234 ##  (f1=0.00)
+
+  Q: What is the sum of the height and width of the Great Pyramid of Giza in feet?
+  gold: 1274
+  gen:  1274 ##  (f1=1.00)
+
+  Q: What was the markdown amount of the aquarium?
+  gold: 60
+  gen:  60  (f1=1.00)
+
+  Q: What was the marked down price of the aquarium?
+  gold: 60
+  gen:  60  (f1=1.00)
+
+  Q: How much additional sales tax did Axel pay?
+  gold: 3
+  gen:  3.3  (f1=0.00)
+
+  Q: What was the total cost of the aquarium?
+  gold: 63
+  gen:  66  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  35%|███▍      | 40/115 [3:01:11<7:59:04, 383.26s/it]
+[1AEpoch 1/1:  36%|███▌      | 41/115 [3:09:27<8:34:38, 417.27s/it]
+[1AEpoch 1/1:  37%|███▋      | 42/115 [3:17:23<8:48:53, 434.71s/it]
+[1AEpoch 1/1:  37%|███▋      | 43/115 [3:25:16<8:55:43, 446.43s/it]
+[1AEpoch 1/1:  38%|███▊      | 44/115 [3:32:42<8:47:58, 446.18s/it]
+[1AEpoch 1/1:  39%|███▉      | 45/115 [3:40:50<8:55:06, 458.67s/it]
+[1AEpoch 1/1:  40%|████      | 46/115 [3:50:13<9:23:24, 489.92s/it]
+[1AEpoch 1/1:  41%|████      | 47/115 [3:58:57<9:26:50, 500.16s/it]
+[1AEpoch 1/1:  42%|████▏     | 48/115 [4:08:07<9:35:29, 515.36s/it]
+[1AEpoch 1/1:  43%|████▎     | 49/115 [4:16:40<9:25:51, 514.42s/it]step 50  loss=-0.0037  train_reward=0.5314
+
+--- sample generations ---
+  Q: How much does Danielle still need to pay via her mortgage after the deposit?
+  gold: 240
+  gen:  $240k  (f1=1.00)
+
+  Q: How much does Danielle pay per year via her mortgage?
+  gold: 24
+  gen:  $24,000  (f1=0.00)
+
+  Q: How much does Danielle pay each month via her mortgage?
+  gold: 2
+  gen:  $2000  (f1=0.00)
+
+  Q: How much does Danielle still need to pay via her mortgage after the deposit?
+  gold: 240
+  gen:  $240k.  (f1=1.00)
+
+  Q: How much does Danielle pay per year via her mortgage?
+  gold: 24
+  gen:  $240,000 / 10 = $24,000 per year.  (f1=0.00)
+
+  Q: How much does Danielle pay each month via her mortgage?
+  gold: 2
+  gen:  $2000  (f1=0.00)
+
+  Q: How much does Danielle still need to pay via her mortgage after the deposit?
+  gold: 240
+  gen:  $240k  (f1=1.00)
+
+  Q: How much does Danielle pay per year via her mortgage?
+  gold: 24
+  gen:  $240k / 10 years = $24,000 per year.  (f1=0.00)
+
+  Q: How much does Danielle pay each month via her mortgage?
+  gold: 2
+  gen:  $2000  (f1=0.00)
+
+  Q: How much does Danielle still need to pay via her mortgage after the deposit?
+  gold: 240
+  gen:  $280k - $40k = $240k  (f1=1.00)
+
+  Q: How much does Danielle pay per year via her mortgage?
+  gold: 24
+  gen:  $24,000  (f1=0.00)
+
+  Q: How much does Danielle pay each month via her mortgage?
+  gold: 2
+  gen:  $2,000  (f1=0.00)
+
+  Q: What is this year’s total production?
+  gold: 10000
+  gen:  10000 phones  (f1=1.00)
+
+  Q: How many phones are sold this year?
+  gold: 2500
+  gen:  9000 phones  (f1=0.00)
+
+  Q: How many phones are left in the factory?
+  gold: 7500
+  gen:  1000 phones  (f1=0.00)
+
+---
+
+
+
+[1A
+[1AWriting model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+
+[1A
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.42s/it][A
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.42s/it]
+checkpoint saved → /experiments/gsm8k_tok_aligned_20260427_121727/checkpoint-50
+
+[1AEpoch 1/1:  43%|████▎     | 50/115 [4:25:50<9:28:52, 525.11s/it]
+[1AEpoch 1/1:  44%|████▍     | 51/115 [4:36:06<9:49:23, 552.55s/it]
+[1AEpoch 1/1:  45%|████▌     | 52/115 [4:44:29<9:24:27, 537.59s/it]
+[1AEpoch 1/1:  46%|████▌     | 53/115 [4:54:40<9:38:15, 559.60s/it]
+[1AEpoch 1/1:  47%|████▋     | 54/115 [5:03:45<9:24:31, 555.28s/it]
+[1AEpoch 1/1:  48%|████▊     | 55/115 [5:12:18<9:02:30, 542.51s/it]
+[1AEpoch 1/1:  49%|████▊     | 56/115 [5:21:41<8:59:33, 548.70s/it]
+[1AEpoch 1/1:  50%|████▉     | 57/115 [5:30:33<8:45:32, 543.66s/it]
+[1AEpoch 1/1:  50%|█████     | 58/115 [5:38:31<8:17:38, 523.83s/it]
+[1AEpoch 1/1:  51%|█████▏    | 59/115 [5:46:05<7:49:36, 503.15s/it]step 60  loss=-0.0044  train_reward=0.4892
+
+--- sample generations ---
+  Q: How many cards will the class make if each kid makes 8 cards?
+  gold: 240
+  gen:  The class will make 240 cards.  (f1=1.00)
+
+  Q: How many more cards do they need to make to reach 1000 cards?
+  gold: 760
+  gen:  760  (f1=1.00)
+
+  Q: If everyone makes 8 cards, how many cards will they have made?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many more cards will they need to make to get a pizza party?
+  gold: 760
+  gen:  760  (f1=1.00)
+
+  Q: How many cards will the class make if each kid makes 8 cards?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many more cards do they need to make to reach 1000 cards?
+  gold: 760
+  gen:  760 cards  (f1=1.00)
+
+  Q: If everyone makes 8 cards, how many cards will they have made?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many more cards will they need to make to get a pizza party?
+  gold: 760
+  gen:  760  (f1=1.00)
+
+  Q: How many cards will the class make if each kid makes 8 cards?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many more cards do they need to make to reach 1000 cards?
+  gold: 760
+  gen:  760  (f1=1.00)
+
+  Q: If everyone makes 8 cards, how many cards will they have made?
+  gold: 240
+  gen:  240 cards  (f1=1.00)
+
+  Q: How many more cards will they need to make to get a pizza party?
+  gold: 760
+  gen:  760  (f1=1.00)
+
+  Q: How many cards will the class make if each kid makes 8 cards?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many more cards do they need to make to reach 1000 cards?
+  gold: 760
+  gen:  760  (f1=1.00)
+
+  Q: If everyone makes 8 cards, how many cards will they have made?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many more cards will they need to make to get a pizza party?
+  gold: 760
+  gen:  760  (f1=1.00)
+
+  Q: How much money does Sean have?
+  gold: 24
+  gen:  7 dollars  (f1=0.00)
+
+  Q: How much money does Rick have?
+  gold: 72
+  gen:  Rick has 3 times as much money as Sean. So, Rick has $16 * 3 = $48.  (f1=0.00)
+
+  Q: How much money do Rick and Sean have together?
+  gold: 96
+  gen:  Rick and Sean have $48 + $16 = $64.  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  52%|█████▏    | 60/115 [5:54:51<7:47:28, 509.98s/it]
+[1AEpoch 1/1:  53%|█████▎    | 61/115 [6:03:15<7:37:12, 508.00s/it]
+[1AEpoch 1/1:  54%|█████▍    | 62/115 [6:11:13<7:20:52, 499.10s/it]
+[1AEpoch 1/1:  55%|█████▍    | 63/115 [6:19:43<7:15:20, 502.33s/it]
+[1AEpoch 1/1:  56%|█████▌    | 64/115 [6:26:36<6:44:06, 475.41s/it]
+[1AEpoch 1/1:  57%|█████▋    | 65/115 [6:34:34<6:36:50, 476.20s/it]
+[1AEpoch 1/1:  57%|█████▋    | 66/115 [6:44:02<6:51:22, 503.73s/it]
+[1AEpoch 1/1:  58%|█████▊    | 67/115 [6:52:04<6:37:58, 497.46s/it]
+[1AEpoch 1/1:  59%|█████▉    | 68/115 [7:01:13<6:41:47, 512.93s/it]
+[1AEpoch 1/1:  60%|██████    | 69/115 [7:09:35<6:30:41, 509.60s/it]step 70  loss=-0.0006  train_reward=0.5585
+
+--- sample generations ---
+  Q: How many minutes does it take to shampoo the dog three times?
+  gold: 45
+  gen:  45  (f1=1.00)
+
+  Q: How many minutes does Nadine spend cleaning her dog total?
+  gold: 55
+  gen:  55  (f1=1.00)
+
+  Q: How many minutes does it take to shampoo the dog three times?
+  gold: 45
+  gen:  45  (f1=1.00)
+
+  Q: How many minutes does Nadine spend cleaning her dog total?
+  gold: 55
+  gen:  55  (f1=1.00)
+
+  Q: How many minutes does it take to shampoo the dog three times?
+  gold: 45
+  gen:  45  (f1=1.00)
+
+  Q: How many minutes does Nadine spend cleaning her dog total?
+  gold: 55
+  gen:  55  (f1=1.00)
+
+  Q: How many minutes does it take to shampoo the dog three times?
+  gold: 45
+  gen:  3 × 15 minutes = 45 minutes  (f1=1.00)
+
+  Q: How many minutes does Nadine spend cleaning her dog total?
+  gold: 55
+  gen:  55  (f1=1.00)
+
+  Q: How much do the 3 shirts cost in total?
+  gold: 36
+  gen:  $15  (f1=0.00)
+
+  Q: How much do the 2 pairs of shorts cost in total?
+  gold: 30
+  gen:  $24  (f1=0.00)
+
+  Q: What is the total cost of all the items before shipping?
+  gold: 85
+  gen:  $53  (f1=0.00)
+
+  Q: How much shipping will Thomas be charged?
+  gold: 17
+  gen:  $7.35  (f1=0.00)
+
+  Q: How much will Thomas's total bill be, including shipping?
+  gold: 102
+  gen:  $64.70  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  61%|██████    | 70/115 [7:16:25<5:59:38, 479.53s/it]
+[1AEpoch 1/1:  62%|██████▏   | 71/115 [7:23:22<5:37:56, 460.83s/it]
+[1AEpoch 1/1:  63%|██████▎   | 72/115 [7:30:11<5:19:15, 445.48s/it]
+[1AEpoch 1/1:  63%|██████▎   | 73/115 [7:37:08<5:05:47, 436.84s/it]
+[1AEpoch 1/1:  64%|██████▍   | 74/115 [7:44:04<4:54:13, 430.57s/it]
+[1AEpoch 1/1:  65%|██████▌   | 75/115 [7:51:09<4:45:50, 428.77s/it]
+[1AEpoch 1/1:  66%|██████▌   | 76/115 [7:57:21<4:27:42, 411.86s/it]
+[1AEpoch 1/1:  67%|██████▋   | 77/115 [8:03:12<4:09:18, 393.65s/it]
+[1AEpoch 1/1:  68%|██████▊   | 78/115 [8:09:38<4:01:21, 391.39s/it]
+[1AEpoch 1/1:  69%|██████▊   | 79/115 [8:15:57<3:52:29, 387.49s/it]step 80  loss=0.0139  train_reward=0.5439
+
+--- sample generations ---
+  Q: How old is Ember now?
+  gold: 7
+  gen:  7  (f1=1.00)
+
+  Q: When Ember is 14, how old will Nate be?
+  gold: 21
+  gen:  28  (f1=0.00)
+
+  Q: How old is Ember now?
+  gold: 7
+  gen:  7  (f1=1.00)
+
+  Q: When Ember is 14, how old will Nate be?
+  gold: 21
+  gen:  28  (f1=0.00)
+
+  Q: How old is Ember now?
+  gold: 7
+  gen:  7  (f1=1.00)
+
+  Q: When Ember is 14, how old will Nate be?
+  gold: 21
+  gen:  28  (f1=0.00)
+
+  Q: How old is Ember now?
+  gold: 7
+  gen:  7  (f1=1.00)
+
+  Q: When Ember is 14, how old will Nate be?
+  gold: 21
+  gen:  27  (f1=0.00)
+
+  Q: How many people are in each car at the start of the race?
+  gold: 3
+  gen:  3  (f1=1.00)
+
+  Q: How many people are in the cars at the start of the race in total?
+  gold: 60
+  gen:  60  (f1=1.00)
+
+  Q: How many additional passengers are added at the halfway point?
+  gold: 20
+  gen:  20  (f1=1.00)
+
+  Q: How many people are in the cars by the end of the race?
+  gold: 80
+  gen:  100  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  70%|██████▉   | 80/115 [8:21:53<3:40:29, 377.99s/it]
+[1AEpoch 1/1:  70%|███████   | 81/115 [8:27:49<3:30:36, 371.66s/it]
+[1AEpoch 1/1:  71%|███████▏  | 82/115 [8:33:00<3:14:23, 353.44s/it]
+[1AEpoch 1/1:  72%|███████▏  | 83/115 [8:38:19<3:02:54, 342.94s/it]
+[1AEpoch 1/1:  73%|███████▎  | 84/115 [8:43:23<2:51:10, 331.32s/it]
+[1AEpoch 1/1:  74%|███████▍  | 85/115 [8:48:15<2:39:45, 319.51s/it]
+[1AEpoch 1/1:  75%|███████▍  | 86/115 [8:52:25<2:24:19, 298.60s/it]
+[1AEpoch 1/1:  76%|███████▌  | 87/115 [8:57:28<2:20:00, 300.01s/it]
+[1AEpoch 1/1:  77%|███████▋  | 88/115 [9:01:44<2:09:07, 286.93s/it]
+[1AEpoch 1/1:  77%|███████▋  | 89/115 [9:07:03<2:08:30, 296.54s/it]step 90  loss=0.0013  train_reward=0.4753
+
+--- sample generations ---
+  Q: How many eggs do Jane's chickens lay per week?
+  gold: 60
+  gen:  60  (f1=1.00)
+
+  Q: How many dozen eggs do Jane's chickens lay per week?
+  gold: 5
+  gen:  6  (f1=0.00)
+
+  Q: How much money does Jane make per week from selling eggs?
+  gold: 10
+  gen:  $120  (f1=0.00)
+
+  Q: How much money will Jane make in 2 weeks from selling eggs?
+  gold: 20
+  gen:  $240  (f1=0.00)
+
+  Q: How many eggs do Jane's chickens lay per week?
+  gold: 60
+  gen:  60  (f1=1.00)
+
+  Q: How many dozen eggs do Jane's chickens lay per week?
+  gold: 5
+  gen:  6  (f1=0.00)
+
+  Q: How much money does Jane make per week from selling eggs?
+  gold: 10
+  gen:  $12  (f1=0.00)
+
+  Q: How much money will Jane make in 2 weeks from selling eggs?
+  gold: 20
+  gen:  $240  (f1=0.00)
+
+  Q: How many eggs do Jane's chickens lay per week?
+  gold: 60
+  gen:  60  (f1=1.00)
+
+  Q: How many dozen eggs do Jane's chickens lay per week?
+  gold: 5
+  gen:  6  (f1=0.00)
+
+  Q: How much money does Jane make per week from selling eggs?
+  gold: 10
+  gen:  $12  (f1=0.00)
+
+  Q: How much money will Jane make in 2 weeks from selling eggs?
+  gold: 20
+  gen:  $240  (f1=0.00)
+
+  Q: How many eggs do Jane's chickens lay per week?
+  gold: 60
+  gen:  60  (f1=1.00)
+
+  Q: How many dozen eggs do Jane's chickens lay per week?
+  gold: 5
+  gen:  6  (f1=0.00)
+
+  Q: How much money does Jane make per week from selling eggs?
+  gold: 10
+  gen:  $12  (f1=0.00)
+
+  Q: How much money will Jane make in 2 weeks from selling eggs?
+  gold: 20
+  gen:  $240  (f1=0.00)
+
+  Q: How many pups are born in the first generation?
+  gold: 48
+  gen:  48  (f1=1.00)
+
+  Q: How many mice are there after the first generation?
+  gold: 56
+  gen:  56  (f1=1.00)
+
+  Q: How many pups does each adult mouse have after the stress of overcrowding?
+  gold: 4
+  gen:  4  (f1=1.00)
+
+  Q: How many pups are born in the second generation?
+  gold: 224
+  gen:  224  (f1=1.00)
+
+  Q: How many mice are left in total?
+  gold: 280
+  gen:  280  (f1=1.00)
+
+---
+
+
+[1AEpoch 1/1:  78%|███████▊  | 90/115 [9:12:38<2:08:22, 308.08s/it]
+[1AEpoch 1/1:  79%|███████▉  | 91/115 [9:17:58<2:04:36, 311.53s/it]
+[1AEpoch 1/1:  80%|████████  | 92/115 [9:23:15<2:00:02, 313.14s/it]
+[1AEpoch 1/1:  81%|████████  | 93/115 [9:28:47<1:56:51, 318.72s/it]
+[1AEpoch 1/1:  82%|████████▏ | 94/115 [9:34:01<1:51:06, 317.45s/it]
+[1AEpoch 1/1:  83%|████████▎ | 95/115 [9:39:38<1:47:44, 323.23s/it]
+[1AEpoch 1/1:  83%|████████▎ | 96/115 [9:45:07<1:42:55, 325.05s/it]
+[1AEpoch 1/1:  84%|████████▍ | 97/115 [9:51:15<1:41:20, 337.79s/it]
+[1AEpoch 1/1:  85%|████████▌ | 98/115 [9:57:16<1:37:42, 344.88s/it]
+[1AEpoch 1/1:  86%|████████▌ | 99/115 [10:03:54<1:36:14, 360.89s/it]step 100  loss=0.0060  train_reward=0.5243
+
+--- sample generations ---
+  Q: How many cookies are needed for 3 trays of banana pudding?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many boxes of wafer cookies does Brenda need to buy?
+  gold: 4
+  gen:  4  (f1=1.00)
+
+  Q: How much will it cost Brenda to buy the boxes of wafer cookies?
+  gold: 14.00
+  gen:  $14  (f1=0.00)
+
+  Q: How many cookies are needed for 3 trays of banana pudding?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many boxes of wafer cookies does Brenda need to buy?
+  gold: 4
+  gen:  4  (f1=1.00)
+
+  Q: How much will it cost Brenda to buy the boxes of wafer cookies?
+  gold: 14.00
+  gen:  $14  (f1=0.00)
+
+  Q: How many cookies are needed for 3 trays of banana pudding?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many boxes of wafer cookies does Brenda need to buy?
+  gold: 4
+  gen:  4 boxes  (f1=1.00)
+
+  Q: How much will it cost Brenda to buy the boxes of wafer cookies?
+  gold: 14.00
+  gen:  $14  (f1=0.00)
+
+  Q: How many cookies are needed for 3 trays of banana pudding?
+  gold: 240
+  gen:  240  (f1=1.00)
+
+  Q: How many boxes of wafer cookies does Brenda need to buy?
+  gold: 4
+  gen:  4  (f1=1.00)
+
+  Q: How much will it cost Brenda to buy the boxes of wafer cookies?
+  gold: 14.00
+  gen:  14  (f1=0.00)
+
+  Q: What is the selling price of the special house?
+  gold: 480000
+  gen:  480,000  (f1=1.00)
+
+  Q: How much more does the special house cost to build compared to other houses?
+  gold: 160000
+  gen:  100,000  (f1=0.00)
+
+  Q: How much more profit is made by spending the extra money to build?
+  gold: 60000
+  gen:  120,000  (f1=0.00)
+
+---
+
+
+
+[1A
+[1AWriting model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+
+[1A
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.46s/it][A
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.46s/it]
+checkpoint saved → /experiments/gsm8k_tok_aligned_20260427_121727/checkpoint-100
+step 100  eval_reward=0.4358
+
+[1AEpoch 1/1:  87%|████████▋ | 100/115 [10:12:00<1:39:33, 398.26s/it]
+[1AEpoch 1/1:  88%|████████▊ | 101/115 [10:18:58<1:34:19, 404.25s/it]
+[1AEpoch 1/1:  89%|████████▊ | 102/115 [10:25:45<1:27:44, 404.97s/it]
+[1AEpoch 1/1:  90%|████████▉ | 103/115 [10:33:04<1:23:01, 415.16s/it]
+[1AEpoch 1/1:  90%|█████████ | 104/115 [10:39:21<1:14:00, 403.71s/it]
+[1AEpoch 1/1:  91%|█████████▏| 105/115 [10:46:16<1:07:53, 407.34s/it]
+[1AEpoch 1/1:  92%|█████████▏| 106/115 [10:52:54<1:00:40, 404.47s/it]
+[1AEpoch 1/1:  93%|█████████▎| 107/115 [10:59:08<52:41, 395.16s/it]  
+[1AEpoch 1/1:  94%|█████████▍| 108/115 [11:04:22<43:15, 370.85s/it]
+[1AEpoch 1/1:  95%|█████████▍| 109/115 [11:09:56<36:00, 360.01s/it]step 110  loss=0.0098  train_reward=0.5150
+
+--- sample generations ---
+  Q: How many pastries does Phoebe have?
+  gold: 25
+  gen:  13  (f1=0.00)
+
+  Q: How many pastries do Phoebe and Calvin have combined?
+  gold: 50
+  gen:  26  (f1=0.00)
+
+  Q: How many pastries do Phoebe, Calvin, and Grace have combined?
+  gold: 80
+  gen:  45  (f1=0.00)
+
+  Q: How many pastries does Frank have?
+  gold: 17
+  gen:  12  (f1=0.00)
+
+  Q: Calculate the total number of pastries that the four have?
+  gold: 97
+  gen:  45 pastries  (f1=0.00)
+
+  Q: How many pastries does Phoebe have?
+  gold: 25
+  gen:  13  (f1=0.00)
+
+  Q: How many pastries do Phoebe and Calvin have combined?
+  gold: 50
+  gen:  23  (f1=0.00)
+
+  Q: How many pastries do Phoebe, Calvin, and Grace have combined?
+  gold: 80
+  gen:  41  (f1=0.00)
+
+  Q: How many pastries does Frank have?
+  gold: 17
+  gen:  41  (f1=0.00)
+
+  Q: Calculate the total number of pastries that the four have?
+  gold: 97
+  gen:  45  (f1=0.00)
+
+  Q: How many pastries does Phoebe have?
+  gold: 25
+  gen:  13  (f1=0.00)
+
+  Q: How many pastries do Phoebe and Calvin have combined?
+  gold: 50
+  gen:  25  (f1=0.00)
+
+  Q: How many pastries do Phoebe, Calvin, and Grace have combined?
+  gold: 80
+  gen:  45  (f1=0.00)
+
+  Q: How many pastries does Frank have?
+  gold: 17
+  gen:  28  (f1=0.00)
+
+  Q: Calculate the total number of pastries that the four have?
+  gold: 97
+  gen:  45  (f1=0.00)
+
+  Q: How many pastries does Phoebe have?
+  gold: 25
+  gen:  13  (f1=0.00)
+
+  Q: How many pastries do Phoebe and Calvin have combined?
+  gold: 50
+  gen:  25  (f1=0.00)
+
+  Q: How many pastries do Phoebe, Calvin, and Grace have combined?
+  gold: 80
+  gen:  47  (f1=0.00)
+
+  Q: How many pastries does Frank have?
+  gold: 17
+  gen:  8  (f1=0.00)
+
+  Q: Calculate the total number of pastries that the four have?
+  gold: 97
+  gen:  45  (f1=0.00)
+
+  Q: What is the cost of the food before tax?
+  gold: 9
+  gen:  7  (f1=0.00)
+
+  Q: What is the total cost including tax before Ben's additional order?
+  gold: 10
+  gen:  10  (f1=1.00)
+
+  Q: What is the new total cost after Ben's additional order?
+  gold: 14
+  gen:  21  (f1=0.00)
+
+  Q: How much change should they get from $15?
+  gold: 1
+  gen:  5  (f1=0.00)
+
+---
+
+
+[1AEpoch 1/1:  96%|█████████▌| 110/115 [11:15:43<29:39, 355.91s/it]
+[1AEpoch 1/1:  97%|█████████▋| 111/115 [11:21:45<23:51, 357.79s/it]
+[1AEpoch 1/1:  97%|█████████▋| 112/115 [11:27:32<17:43, 354.64s/it]
+[1AEpoch 1/1:  98%|█████████▊| 113/115 [11:33:46<12:00, 360.32s/it]
+[1AEpoch 1/1:  99%|█████████▉| 114/115 [11:40:12<06:07, 367.97s/it]
+[1AEpoch 1/1: 100%|██████████| 115/115 [11:44:51<00:00, 341.49s/it]
+[1AEpoch 1/1: 100%|██████████| 115/115 [11:44:51<00:00, 367.75s/it]
+wandb: updating run metadata
+wandb: uploading history steps 10-10, summary
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁▁▁▁▁▁▁▁▁▁▁
+wandb:    eval/mean_reward ▁
+wandb:          train/loss ▄▅▆█▁▁▂▇▃▄▅
+wandb:    train/max_reward ▁▁▁▁▁▁▁▁▁▁▁
+wandb:   train/mean_reward ▅▁█▁▆▄▇▇▄▆▅
+wandb:    train/min_reward ▁▁▁▁▁▁▁▁▁▁▁
+wandb: train/turn_0_reward ▄▂█▁▇▇█▇▄▆▄
+wandb: train/turn_1_reward ▆▁█▁▇▄▅▅▃▇▆
+wandb: train/turn_2_reward ▅▂█▃▁▃█▇▅▄▄
+wandb: train/turn_3_reward ▂▁▅▄█▂▇▅▄▅▄
+wandb:                  +2 ...
+wandb: 
+wandb: Run summary:
+wandb:               epoch 0
+wandb:    eval/mean_reward 0.43576
+wandb:          train/loss 0.00983
+wandb:    train/max_reward 1
+wandb:   train/mean_reward 0.51497
+wandb:    train/min_reward 0
+wandb: train/turn_0_reward 0.64062
+wandb: train/turn_1_reward 0.57031
+wandb: train/turn_2_reward 0.41509
+wandb: train/turn_3_reward 0.32692
+wandb:                  +2 ...
+wandb: 
+wandb: 🚀 View run aligned at: https://wandb.ai/owos/grpo-gsm8k-tokenization/runs/rboj0j6c
+wandb: ⭐️ View project at: https://wandb.ai/owos/grpo-gsm8k-tokenization
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260427_121758-rboj0j6c/logs
+
+[1AWriting model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.80s/it]
+[1AWriting model shards: 100%|██████████| 1/1 [00:02<00:00,  2.80s/it]
+
+Downloading /experiments/gsm8k_tok_aligned_20260427_121727 → ./gsm8k_tok_aligned_20260427_121727 ...
+[modal-client] 2026-04-28T00:03:01+0000 Detected 1 background thread(s) [WorkerAsyncOutput_0] still running after container exit. This will prevent runner shutdown for up to 30 seconds.
+[rank0]:[W428 00:03:01.351230435 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+Stopping app - uncaught exception raised locally: CalledProcessError(1, ['modal', 'volume', 'get', 'grpo-experiments', '/experiments/gsm8k_tok_aligned_20260427_121727', 'gsm8k_tok_aligned_20260427_121727']).

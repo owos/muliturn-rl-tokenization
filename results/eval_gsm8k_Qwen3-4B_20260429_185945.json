@@ -1,0 +1,5372 @@
+{
+  "multi": {
+    "final_accuracy": 0.365,
+    "n": 200,
+    "turn_0_acc": 0.545,
+    "turn_1_acc": 0.52,
+    "turn_2_acc": 0.378698224852071,
+    "turn_3_acc": 0.3132530120481928,
+    "turn_4_acc": 0.2777777777777778,
+    "turn_5_acc": 0.5454545454545454,
+    "turn_6_acc": 0.2857142857142857,
+    "turn_7_acc": 0.0,
+    "results": [
+      [
+        {
+          "t": 0,
+          "q": "How many duck eggs does Janet sell each day?",
+          "gold": "9",
+          "gen": "The ducks lay 16 eggs per day. She eats 3 per day, and bakes 4 per day. 16 - 3 - 4 = 9. So Janet sells 9 duck eggs each day.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much in dollars does Janet make every day at the farmers' market?",
+          "gold": "18",
+          "gen": "She sells 9 eggs each day for $2 per egg. 9 x 2 = 18. So Janet makes $18 each day.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many bolts of white fiber are needed?",
+          "gold": "1",
+          "gen": "The question is missing information.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many bolts in total does it take?",
+          "gold": "3",
+          "gen": "The question is missing information.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total cost of the house and repairs?",
+          "gold": "130000",
+          "gen": "The total cost is $80,000 + $50,000 = $130,000.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the increased value of the house?",
+          "gold": "120000",
+          "gen": "The increased value is $130,000 \u00d7 1.5 = $195,000.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the new value of the house?",
+          "gold": "200000",
+          "gen": "The new value is $195,000 + $130,000 = $325,000.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much profit did Josh make?",
+          "gold": "70000",
+          "gen": "The profit is $325,000 - $130,000 = $195,000.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many times does James sprint in a week?",
+          "gold": "9",
+          "gen": "3 times a week",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many meters does James run in total during the week?",
+          "gold": "540",
+          "gen": "3 * 60 = 180 meters",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many total meters does he run a week?",
+          "gold": "540",
+          "gen": "180 meters",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many cups of feed do all the chickens need per day?",
+          "gold": "60",
+          "gen": "15 + 25 = 40.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many cups of feed have been given to the chickens in the morning and afternoon combined?",
+          "gold": "40",
+          "gen": "40.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many cups of feed does Wendi need to give her chickens in the final meal of the day?",
+          "gold": "20",
+          "gen": "40 - 15 - 25 = 0. That can't be right. Wait, the problem says she gives them three meals, with the morning and afternoon being 15 and 25. So the third meal should be 30 - 15 - 25 = 0. No, that doesn't make sense. Let me see. Oh, wait, the problem says she feeds them three cups of mixed chicken feed, but that's per chicken. Or wait, is it that each chicken gets three cups of feed per day, or that she feeds each chicken three cups in total per day?",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the discount price of one glass?",
+          "gold": "3",
+          "gen": "The discount price of one glass is $4.8.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many cheaper glasses does Kylar buy?",
+          "gold": "8",
+          "gen": "Kylar buys 8 cheaper glasses.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much does Kylar pay for the cheaper glasses?",
+          "gold": "24",
+          "gen": "Kylar pays $38.4 for the cheaper glasses.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much does Kylar pay for the regular-priced glasses?",
+          "gold": "40",
+          "gen": "Kylar pays $40 for the regular-priced glasses.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How much does Kylar need to pay for the glasses he wants to buy?",
+          "gold": "64",
+          "gen": "Kylar needs to pay $78.4 for the glasses he wants to buy.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many sheep does Charleston have?",
+          "gold": "80",
+          "gen": "Let's see. Okay, let's try to figure out how many sheep Charleston has. The problem says that Toulouse has twice as many sheep as Charleston. Then, Charleston has 4 times as many sheep as Seattle. Wait, so we need to find the number of sheep in Charleston. But the problem doesn't give us specific numbers for any of the cities. Hmm, maybe I'm missing something here. Let me read the question again.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many sheep does Toulouse have?",
+          "gold": "160",
+          "gen": "Let's see. Let me try to figure this out. The problem says Toulouse has twice as many sheep as Charleston. And Charleston has 4 times as many sheep as Seattle. But the question is asking how many sheep Toulouse has. But again, there's no specific numbers given. Wait, maybe there's a typo or maybe I need to express it in terms of Seattle's sheep? Let me check the original question again to make sure I'm not misreading it.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many sheep do Toulouse, Charleston, and Seattle have together?",
+          "gold": "260",
+          "gen": "Let's see. Let me try to figure this out. The problem says that Toulouse has twice as many sheep as Charleston. And Charleston has 4 times as many sheep as Seattle. So if I can express all the numbers in terms of Seattle's sheep, then maybe I can find the total. Let's let the number of sheep in Seattle be S. Then Charleston has 4 times as many as Seattle, so that's 4S. Then Toulouse has twice as many as Charleston, which would be 2 times 4S, so 8S. Then together, Toulouse, Charleston, and Seattle would have 8S + 4S + S = 13S sheep. But the question is asking for the number of sheep in Charleston, not the total. Wait, but the original problem statement that I have here is different from the one I was given earlier. Wait, the user initially had a question where the answer was to find how many sheep Charleston has, but then the question changed to how many sheep Toulouse has. Wait, maybe there's confusion here. Let me check again.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many gigabytes are in 40% of the file?",
+          "gold": "80",
+          "gen": "80",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many minutes does it take to download 40% of the file?",
+          "gold": "40",
+          "gen": "80",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many minutes does it take to download the entire file after the restart?",
+          "gold": "100",
+          "gen": "160",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many minutes does it take to download the file in total?",
+          "gold": "160",
+          "gen": "240",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How far is John from home when he turns around?",
+          "gold": "180",
+          "gen": "180 miles",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many hours did John actually drive in the first four hours?",
+          "gold": "2",
+          "gen": "2.5 hours",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many miles did John drive in the first half-hour?",
+          "gold": "15",
+          "gen": "15 miles",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many hours did John drive after the first half-hour?",
+          "gold": "1.5",
+          "gen": "2 hours",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How many miles did John drive in the remaining time after the first half-hour?",
+          "gold": "120",
+          "gen": "160 miles",
+          "correct": false
+        },
+        {
+          "t": 5,
+          "q": "How many miles did John drive in total during the 4 hours?",
+          "gold": "135",
+          "gen": "175 miles",
+          "correct": false
+        },
+        {
+          "t": 6,
+          "q": "How far is John from home at the end of those 4 hours?",
+          "gold": "45",
+          "gen": "175 miles",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours of overtime did Eliza work this week?",
+          "gold": "5",
+          "gen": "12 hours",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is Eliza's hourly rate for overtime pay?",
+          "gold": "12",
+          "gen": "$12",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much does Eliza earn from overtime pay this week?",
+          "gold": "60",
+          "gen": "$144",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is Eliza's regular weekly earning for the first 40 hours?",
+          "gold": "400",
+          "gen": "$400",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How much are Eliza's total earnings for this week?",
+          "gold": "460",
+          "gen": "$544",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many downloads were there in the second month?",
+          "gold": "180",
+          "gen": "The number of downloads in the second month was 180. The answer is 180.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What was the total number of downloads in the first two months?",
+          "gold": "240",
+          "gen": "The total number of downloads in the first two months was 240. The answer is 240.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many downloads were there in the third month?",
+          "gold": "126",
+          "gen": "The number of downloads in the third month was 126. The answer is 126.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many downloads did the program have total over the three months?",
+          "gold": "366",
+          "gen": "The total number of downloads over the three months was 342. The answer is 342.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total charge for the donuts?",
+          "gold": "204",
+          "gen": "The total charge for the donuts is $204.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the total charge for the mini cupcakes?",
+          "gold": "160",
+          "gen": "The total charge for the mini cupcakes is $160.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the total charge for the mini cheesecakes?",
+          "gold": "330",
+          "gen": "The total charge for the mini cheesecakes is $330.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much was the total cost?",
+          "gold": "694",
+          "gen": "The total cost is the sum of the charges for the donuts, mini cupcakes, and mini cheesecakes. So, $204 + $160 + $330 = $694.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much money does Carlos make from selling lemons each year?",
+          "gold": "10.5",
+          "gen": "$13",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much money does Carlos earn from the lemon tree each year?",
+          "gold": "7.5",
+          "gen": "$13",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many years will it take before he starts earning money on the lemon tree?",
+          "gold": "13",
+          "gen": "1 year",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many vacuum cleaners did Melanie have before visiting the orange house?",
+          "gold": "10",
+          "gen": "12",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many vacuum cleaners did Melanie have before visiting the red house?",
+          "gold": "12",
+          "gen": "16",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many vacuum cleaners did Melanie start with?",
+          "gold": "18",
+          "gen": "16",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many students enrolled in contemporary dance?",
+          "gold": "4",
+          "gen": "The number of students who enrolled in contemporary dance is 4.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many students are enrolled in either jazz or hip-hop dance?",
+          "gold": "16",
+          "gen": "The number of students enrolled in either jazz or hip-hop dance is 12.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many students enrolled in jazz dance?",
+          "gold": "4",
+          "gen": "The number of students enrolled in jazz dance is 3.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many students enrolled in hip-hop dance?",
+          "gold": "12",
+          "gen": "The number of students enrolled in hip-hop dance is 9.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the profit from purchasing jewelry?",
+          "gold": "125",
+          "gen": "The profit from purchasing jewelry is $125. The profit from purchasing electronic gadgets is $96.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the profit from purchasing electronic gadgets?",
+          "gold": "96",
+          "gen": "The profit from purchasing electronic gadgets is $96.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "Which purchase plan would maximize the merchant's profit?",
+          "gold": "jewelry",
+          "gen": "The purchase plan that would maximize the merchant's profit is purchasing jewelry.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much profit would this be?",
+          "gold": "125",
+          "gen": "The profit would be $125.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total distance covered by both trains on the first day?",
+          "gold": "160",
+          "gen": "80 miles.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the total distance covered by both trains on the second day?",
+          "gold": "300",
+          "gen": "150 miles.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the combined distance covered by both trains over the two days?",
+          "gold": "460",
+          "gen": "230 miles.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the average distance covered by each train over the two days?",
+          "gold": "230",
+          "gen": "115 miles.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does Jill make per week teaching?",
+          "gold": "700",
+          "gen": "To calculate how much Jill makes per week teaching, we need to determine how many hours she teaches each week. Since the question doesn't provide this information, the answer cannot be determined. However, if we assume she works 40 hours a week, she would make 40 * $20 = $800 per week. But since the number of hours is not given, we can't provide an exact figure.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much does Jill make per week coaching?",
+          "gold": "450",
+          "gen": "To calculate how much Jill makes per week coaching, we need to know how many hours she coaches each week. If we assume she coaches for 20 hours a week, she would make 20 * $30 = $600 per week. However, the exact amount depends on the number of hours she coaches.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much does Jill make per week in total?",
+          "gold": "1150",
+          "gen": "To determine Jill's total weekly earnings, we need to know how many hours she teaches and how many hours she coaches. If she teaches for 40 hours and coaches for 20 hours, her total earnings would be (40 * $20) + (20 * $30) = $800 + $600 = $1400. However, without specific hours, the exact amount cannot be determined.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is Jill's annual salary?",
+          "gold": "57500",
+          "gen": "To calculate Jill's annual salary, we need to know her weekly earnings. If we assume she earns $1400 per week (based on the previous example), her annual salary would be $1400 * 52 = $72,800. However, the exact salary depends on her weekly earnings, which vary based on the number of hours she works.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many eggs does Claire eat in one week?",
+          "gold": "21",
+          "gen": "21",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many eggs does Claire eat in 4 weeks?",
+          "gold": "84",
+          "gen": "4 * 21 = 84",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many dozens of eggs is 84 eggs?",
+          "gold": "7",
+          "gen": "84 / 12 = 7",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours does it take Marissa to hike the 12-mile trail at an average speed of 4 miles per hour?",
+          "gold": "3",
+          "gen": "3",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much time does Marissa have left to hike after spending 2 hours so far?",
+          "gold": "1",
+          "gen": "1 hour",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many miles does Marissa have left to hike after covering 4 miles and then 2 miles?",
+          "gold": "6",
+          "gen": "10 miles",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What speed does Marissa need to walk the remaining distance to achieve an average speed of 4 miles per hour?",
+          "gold": "6",
+          "gen": "10 mph",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many liters of water are in the 15 liters of pineapple drink?",
+          "gold": "9",
+          "gen": "9 liters",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many liters of orange drink are left after spilling 1 liter?",
+          "gold": "9",
+          "gen": "8 liters",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many liters of water are in the remaining orange drink?",
+          "gold": "6",
+          "gen": "8 * (2/3) = 5.333 liters",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much water is in the remaining 24 liters?",
+          "gold": "15",
+          "gen": "5.333 + 9 = 14.333 liters",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How old was Samantha when Raymond's son was born?",
+          "gold": "17",
+          "gen": "12",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many years ago was Raymond's son born?",
+          "gold": "14",
+          "gen": "23",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many DVDs did the first 3 customers buy?",
+          "gold": "3",
+          "gen": "3",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many DVDs did the next 2 customers buy?",
+          "gold": "4",
+          "gen": "4",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many DVDs did Billy sell on Tuesday?",
+          "gold": "7",
+          "gen": "3 + 4 = 7",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours does the candle burn?",
+          "gold": "4",
+          "gen": "6 hours",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many centimeters shorter will the candle be after burning for that time?",
+          "gold": "8",
+          "gen": "12 centimeters",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many centimeters shorter will a candle be after burning from 1:00 PM to 5:00 PM?",
+          "gold": "8",
+          "gen": "12 centimeters",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the discounted price of the book?",
+          "gold": "19.50",
+          "gen": "The discounted price is $15.00.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What percentage of the original price is the discounted price?",
+          "gold": "75%",
+          "gen": "The discounted price is 75% of the original price.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What was the original price of the book?",
+          "gold": "26",
+          "gen": "The original price of the book was $26.00.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much do five packs of milk cost?",
+          "gold": "15",
+          "gen": "The total cost of the chicken meal is $12. The total cost for the 5 packs of milk is 5 * $3 = $15. The total cost for the 4 apples is 4 * $1.50 = $6. The total cost for everything except the pizza is $12 + $15 + $6 = $33. Therefore, the cost of the pizza is $50 - $33 = $17. The question is asking for the cost of five packs of milk, which is already given as $15. Therefore, the answer is $15.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much do four apples cost?",
+          "gold": "6",
+          "gen": "The total cost of the chicken meal is $12. The total cost for the 5 packs of milk is 5 * $3 = $15. The total cost for the 4 apples is 4 * $1.50 = $6. The total cost for everything except the pizza is $12 + $15 + $6 = $33. Therefore, the cost of the pizza is $50 - $33 = $17. The question is asking for the cost of four apples, which is already given as $6. Therefore, the answer is $6.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the total cost of the chicken meal, milk, and apples?",
+          "gold": "33",
+          "gen": "The total cost of the chicken meal is $12. The total cost for the 5 packs of milk is 5 * $3 = $15. The total cost for the 4 apples is 4 * $1.50 = $6. The total cost of the chicken meal, milk, and apples is $12 + $15 + $6 = $33. Therefore, the answer is $33.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much do the boxes of pizza cost?",
+          "gold": "17",
+          "gen": "The total cost of the chicken meal is $12. The total cost for the 5 packs of milk is 5 * $3 = $15. The total cost for the 4 apples is 4 * $1.50 = $6. The total cost for everything except the pizza is $12 + $15 + $6 = $33. Therefore, the cost of the pizza is $50 - $33 = $17. The question is asking for the cost of the boxes of pizza, which is $17. Therefore, the answer is $17.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How many boxes of pizza did Marie order?",
+          "gold": "2",
+          "gen": "The total cost of the chicken meal is $12. The total cost for the 5 packs of milk is 5 * $3 = $15. The total cost for the 4 apples is 4 * $1.50 = $6. The total cost for everything except the pizza is $12 + $15 + $6 = $33. Therefore, the cost of the pizza is $50 - $33 = $17. The question is asking for the number of boxes of pizza, but the problem does not provide information about how much each box of pizza costs. Therefore, it is not possible to determine the number of boxes of pizza based on the given information. The answer is that it cannot be determined.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total cost of one pair of shorts, one pair of pants, and one pair of shoes?",
+          "gold": "16.50 + 22.50 + 42 = 81",
+          "gen": "The total cost of one pair of shorts, one pair of pants, and one pair of shoes is $ 16.50 + $22.50 + $42 = $81.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the total cost of 3 pairs of shorts, 3 pairs of pants, and 3 pairs of shoes?",
+          "gold": "3 * 81 = 243",
+          "gen": "The total cost of 3 pairs of shorts, 3 pairs of pants, and 3 pairs of shoes is 3 x $16.50 + 3 x $22.50 + 3 x $42 = $49.50 + $67.50 + $126 = $243.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many dollars did Mishka spend on all the clothing items?",
+          "gold": "243",
+          "gen": "Mishka spent $243 on all the clothing items.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many containers of ice cream does Cynthia need after 60 days?",
+          "gold": "4",
+          "gen": "11",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much will Cynthia spend on ice cream after 60 days?",
+          "gold": "16",
+          "gen": "$44.00",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "After 60 days, how much will Cynthia spend on ice cream?",
+          "gold": "16",
+          "gen": "$44.00",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many miles did Henry travel before his first stop?",
+          "gold": "20",
+          "gen": "Henry traveled 20 miles before his first stop.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many miles did Henry travel from his second stop to the end of the trip?",
+          "gold": "15",
+          "gen": "Henry traveled 15 miles from his second stop to the end of the trip.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many miles did Henry travel not counting the distance between stops?",
+          "gold": "35",
+          "gen": "Henry traveled 60 miles not counting the distance between stops.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many miles did Henry travel between his first and second stops?",
+          "gold": "25",
+          "gen": "Henry traveled 25 miles between his first and second stops.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does the second pair of heels cost?",
+          "gold": "66",
+          "gen": "The answer cannot be determined from the given information.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much do the two pairs of heels cost together?",
+          "gold": "99",
+          "gen": "The answer cannot be determined from the given information.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much do the boots cost?",
+          "gold": "104",
+          "gen": "The answer cannot be determined from the given information.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total ratio representing their ages?",
+          "gold": "18",
+          "gen": "7 + 11 = 18.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is Allen's current age?",
+          "gold": "99",
+          "gen": "162/18=9. So Allen's current age is 9 years old.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What will Allen's age be 10 years from now?",
+          "gold": "109",
+          "gen": "9 + 10 = 19. So Allen will be 19 years old.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the second person's guess?",
+          "gold": "60",
+          "gen": "The second person's guess is 100.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the third person's guess?",
+          "gold": "100",
+          "gen": "The third person's guesses is 100.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the total amount guessed?",
+          "gold": "240",
+          "gen": "The total amount guessed is 280.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is their average guess?",
+          "gold": "80",
+          "gen": "The average guess is 100.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours per day does John spend taking care of dogs?",
+          "gold": "5",
+          "gen": "5 hours",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many hours per week does John spend taking care of dogs?",
+          "gold": "35",
+          "gen": "35 hours",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many silver coins does Gretchen have?",
+          "gold": "40",
+          "gen": "Let's solve the problem step by step. Let G be the number of gold coins and S be the number of silver coins. From the problem, we have the equations:",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many gold coins does Gretchen have?",
+          "gold": "70",
+          "gen": "We can solve for G and S. The problem says there are 30 more gold coins than silver coins, which can be written as G = S + 30. We also know that Gretchen has 110 coins in total, so G + S = 110. Substituting the first equation into the second equation, we get (S + 30) + S = 110. Simplifying, we have 2S + 30 = 110. Subtracting 30 from both sides gives 2S = 80. Dividing both sides by 2, we get S = 40. Therefore, Gretchen has 40 silver coins. To find the number of gold coins, we substitute S = 40 into the first equation: G = 40 + 30 = 70. Therefore, Gretchen has 70 gold coins.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is half of Raymond's jewels?",
+          "gold": "20",
+          "gen": "Let's think. Let me try to figure this out step by step. So, the problem says that Siobhan has 2 fewer jewels than Aaron. And Aaron has 5 more jewels than half of Raymond's jewels. We need to find out what half of Raymond's jewels is.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many jewels does Aaron have?",
+          "gold": "25",
+          "gen": "Let's see. I need to find out how many jewels Aaron has. But wait, the problem doesn't give me specific numbers for the total jewels, just relationships between the people. So maybe I need to set up equations to represent the relationships and solve for the unknowns.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many jewels does Siobhan have?",
+          "gold": "23",
+          "gen": "Hmm, the problem says Siobhan has 2 fewer jewels than Aaron. If I can find out how many Aaron has, then I can subtract 2 to get Siobhan's number. But again, I don't have a direct number for Aaron or Siobhan. So maybe I need to find expressions in terms of Raymond's jewels.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many more points did Mike score in the second 20 minutes compared to the first 20 minutes?",
+          "gold": "1",
+          "gen": "5",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many points did Mike score in the second 20 minutes?",
+          "gold": "5",
+          "gen": "5",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many total points did Mike score in the 40 minutes?",
+          "gold": "9",
+          "gen": "10",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many yogurts does Terry eat in 30 days?",
+          "gold": "60",
+          "gen": "Terry eats 2 yogurts a day, so in 30 days he eats 2 * 30 = 60 yogurts.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many 4-packs of yogurt does Terry need?",
+          "gold": "15",
+          "gen": "Terry needs 60 yogurts, and each 4-pack contains 4 yogurts, so he needs 60 / 4 = 15 packs.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much does Terry spend on yogurt over 30 days?",
+          "gold": "75",
+          "gen": "Each 4-pack is $5.00, so 15 packs would cost 15 * $5.00 = $75.00.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much money did John spend on video games?",
+          "gold": "160",
+          "gen": "John spent $160 on video games.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much money did John earn from selling his lego sets?",
+          "gold": "165",
+          "gen": "John earned $195 from selling his lego sets.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many lego sets did John sell?",
+          "gold": "11",
+          "gen": "John sold 13 lego sets.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many lego sets does John still have?",
+          "gold": "2",
+          "gen": "John still has 0 lego sets.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many days does John run in a week?",
+          "gold": "6",
+          "gen": "3",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many days does John run half the time?",
+          "gold": "3",
+          "gen": "2",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many hours does John run on the two days he runs half the time?",
+          "gold": "3",
+          "gen": "3 + 1.5 = 4.5 hours",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many hours does John run in total in a week?",
+          "gold": "6",
+          "gen": "60 hours",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How fast does John run?",
+          "gold": "10",
+          "gen": "60 miles / 60 hours = 1 mph",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How fast can Dana run?",
+          "gold": "6",
+          "gen": "Let's denote Dana's walking speed as $x$. Then her running speed is $4x$, and her skipping speed is $2x$. However, the question is asking for her running speed, but no specific values are given in the problem. Therefore, the answer is simply $\\boxed{4x}$.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How fast can Dana walk?",
+          "gold": "1.5",
+          "gen": "Let's denote Dana's walking speed as $x$. Then her running speed is $4x$, and her skipping speed is $2x$. The question is asking for her walking speed, which we have denoted as $x$. Therefore, the answer is simply $\\boxed{x}$.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many hours does Dana spend walking?",
+          "gold": "4",
+          "gen": "To determine how many hours Dana spends walking, we need to know the distance she walks and her walking speed. However, no specific information is given in the problem about the distance or time spent walking. Therefore, we cannot determine the exact number of hours she spends walking. The answer is $\\boxed{\\text{Insufficient information}}$.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many hours does Dana spend running?",
+          "gold": "2",
+          "gen": "To determine how many hours Dana spends running, we need to know the distance she runs and her running speed. However, no specific information is given in the problem about the distance or time spent running. Therefore, we cannot determine the exact number of hours she spends running. The answer is $\\boxed{\\text{Insufficient information}}$.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How many miles does Dana run in 2 hours?",
+          "gold": "12",
+          "gen": "To determine how many miles Dana runs in 2 hours, we need to know her running speed. Her running speed is $4x$, where $x$ is her walking speed. However, no specific information is given in the problem about the distance or time spent running, so we cannot determine the exact number of miles she runs in 2 hours. The answer is $\\boxed{\\text{Insufficient information}}$.",
+          "correct": false
+        },
+        {
+          "t": 5,
+          "q": "How many miles does Dana walk in 4 hours?",
+          "gold": "6",
+          "gen": "To determine how many miles Dana walks in 4 hours, we need to know her walking speed. Her walking speed is $x$. However, no specific information is given in the problem about the distance or time spent walking, so we cannot determine the exact number of miles she walks in 4 hours. The answer is $\\boxed{\\text{Insufficient information}}$.",
+          "correct": false
+        },
+        {
+          "t": 6,
+          "q": "How many miles does Dana travel in total?",
+          "gold": "18",
+          "gen": "To determine how many miles Dana travels in total, we would need to know the distances she walks, runs, and skips, as well as the time spent on each activity. However, no specific information is given in the problem about the distances or times spent on each activity. Therefore, we cannot determine the exact number of miles Dana travels in total. The answer is $\\boxed{\\text{Insufficient information}}$.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How old is Ben\u2019s iPhone?",
+          "gold": "2",
+          "gen": "The problem is unsolvable because there are not enough data.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How old is Brandon\u2019s iPhone?",
+          "gold": "8",
+          "gen": "The problem is unsolvable because there are not enough data.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How far can Polly throw the gold javelin when holding the sapphire gemstone?",
+          "gold": "1200",
+          "gen": "1200 feet.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How far outside of the reach of the dragon's flames could Polly stand and still hit the dragon with the gold javelin?",
+          "gold": "200",
+          "gen": "200 feet.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pieces of pie were there in total at the start of the evening?",
+          "gold": "40",
+          "gen": "40",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pieces of pie were taken by the guests?",
+          "gold": "26",
+          "gen": "40 - 14 = 26",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many pieces were taken by the guests?",
+          "gold": "26",
+          "gen": "26",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many calories are left in the daily calorie target?",
+          "gold": "200",
+          "gen": "The answer is not available with the given information.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many servings of chips can you eat with the remaining calories?",
+          "gold": "4/5",
+          "gen": "The answer is not available with the given information.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many grams of chips are in one serving?",
+          "gold": "60",
+          "gen": "The answer is not available with the information given.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many grams of chips can you eat with the remaining servings?",
+          "gold": "48",
+          "gen": "The answer is not available with the given information.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pounds of beeswax does Charlie need to make 20 candles?",
+          "gold": "2",
+          "gen": "2 pounds",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the total cost of the supplies for 2 pounds of beeswax?",
+          "gold": "20",
+          "gen": "$20.00",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much money does Charlie make from selling 20 candles?",
+          "gold": "40",
+          "gen": "$150.00",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is Charlie's net profit?",
+          "gold": "20",
+          "gen": "$130.00",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many more articles did Meredith write on Tuesday than on Monday?",
+          "gold": "2",
+          "gen": "1",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many articles did Meredith write on Tuesday?",
+          "gold": "7",
+          "gen": "10",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many articles did Meredith write on Wednesday?",
+          "gold": "14",
+          "gen": "20",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many articles did Meredith write in total over the three days?",
+          "gold": "26",
+          "gen": "35",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "Calculate the total number of hours she spent writing articles in the three days.",
+          "gold": "104",
+          "gen": "140",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many post-it notes did Candice have before she left the store?",
+          "gold": "80",
+          "gen": "80.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many post-it notes did Candice use at work?",
+          "gold": "220",
+          "gen": "220.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many post-it notes did Candice have after using some at work?",
+          "gold": "23",
+          "gen": "80 + (number of post-its she bought at the store) - 220.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many post-it notes were in the package that she purchased?",
+          "gold": "163",
+          "gen": "220.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many blue ties did John buy?",
+          "gold": "5",
+          "gen": "John bought 5 blue ties.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many red ties did John buy?",
+          "gold": "10",
+          "gen": "John bought 10 red ties.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much does each red tie cost?",
+          "gold": "60",
+          "gen": "Each red tie costs $60.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much did John spend on red ties?",
+          "gold": "600",
+          "gen": "John spent $600 on red ties.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How much did John spend on ties?",
+          "gold": "800",
+          "gen": "John spent $800 on ties.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total length of the wire in inches?",
+          "gold": "48",
+          "gen": "The total length of the wire is 48 inches.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pieces of 6 inches can be cut from the wire?",
+          "gold": "8",
+          "gen": "8 pieces.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many pieces did she obtain?",
+          "gold": "8",
+          "gen": "8 pieces.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total number of units in the building?",
+          "gold": "120",
+          "gen": "The building has 15 floors, each with 8 units, so 15 \u00d7 8 = 120 units in total.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many units are occupied in the building?",
+          "gold": "90",
+          "gen": "3/4 of the building is occupied, so 120 \u00d7 3/4 = 90 units are occupied.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the total number of unoccupied units in the building?",
+          "gold": "30",
+          "gen": "The total number of unoccupied units is 120 - 90 = 30 units.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many eggs does Lloyd's egg farm produce in a week?",
+          "gold": "1764",
+          "gen": "252 * 7 = 1764 eggs.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many dozens of eggs are produced in a week?",
+          "gold": "147",
+          "gen": "1764 / 12 = 147 dozen eggs.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much does Lloyd make on eggs per week?",
+          "gold": "294",
+          "gen": "147 * 2 = $294.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours was Tom travelling at full speed?",
+          "gold": "3",
+          "gen": "Tom was travelling for 3 hours at full speed. (Because he was going from 1 to 4 PM, which is 3 hours, and then he went back at a slower speed.)",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many miles did Tom travel away from his starting point?",
+          "gold": "30",
+          "gen": "Tom traveled 30 miles away from his starting point. (Because he was going at 10 mph for 3 hours, so 10 x 3 = 30 miles.)",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How long does it take Tom to get back?",
+          "gold": "5",
+          "gen": "It takes Tom 5 hours to get back. (Because he has to travel 30 miles back at 6 mph, so 30 divided by 6 is 5 hours.)",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much do 30 comic books weigh?",
+          "gold": "7.5",
+          "gen": "30 comic books weigh \\boxed{7.5} pounds.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many more pounds does Uriah need to remove with toys?",
+          "gold": "7.5",
+          "gen": "Uriah needs to remove \\boxed{4.5} more pounds with toys.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many toys does Uriah need to remove?",
+          "gold": "15",
+          "gen": "Uriah needs to remove \\boxed{9} toys.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much revenue did the mechanic earn on Thursday?",
+          "gold": "520",
+          "gen": "Let's see. The problem is about calculating the revenue earned by a mechanic on Thursday based on the number of truck and car tires repaired.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much revenue did the mechanic earn on Friday?",
+          "gold": "480",
+          "gen": "Let's see. The problem is about calculating the revenue earned by a mechanic on Friday based on the number of car tires repaired.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much more revenue did the mechanic earn on the day with higher revenue?",
+          "gold": "40",
+          "gen": "Let's see. The problem is asking for the difference in revenue between Thursday and Friday. The answer should be the revenue from Thursday minus the revenue from Friday.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many kittens has Patchy had?",
+          "gold": "21",
+          "gen": "Let's break down the problem. The question is asking for the number of kittens that Patchy has had. From the context, we know that Patchy has had thrice the number of adopted kittens. But we need to clarify what exactly is meant by \"adopted kittens.\" Are the kittens adopted from the shelter or are they the kittens that the cats have had? The context says that the Doubtfire sisters have adopted 7 kittens from the shelter, but that's separate from the kittens that their cats have had.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many kittens do the two cats have combined?",
+          "gold": "33",
+          "gen": "To find the total number of kittens that the two cats have had, we need to add the number of kittens from each cat. From the context, we know that Patchy has had thrice the number of adopted kittens, and Trixie has had 12. However, we need to clarify what \"adopted kittens\" refers to. The context states that the Doubtfire sisters have adopted 7 kittens from the shelter, but that is separate from the kittens that the cats have had. Therefore, the \"adopted kittens\" mentioned in reference to Patchy are likely the kittens that the cats have had, not the ones adopted by the sisters.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many kittens does the Doubtfire family now have?",
+          "gold": "40",
+          "gen": "The Doubtfire family now has the 7 kittens that they adopted from the shelter, plus the kittens that their two cats have had. Patchy has had thrice the number of adopted kittens (which we need to determine), and Trixie has had 12. However, we need to clarify the exact meaning of \"adopted kittens\" in this context. If \"adopted kittens\" refers to the kittens that the cats have had, then Patchy has had thrice that number. But if \"adopted kittens\" refers to the 7 kittens that the sisters have adopted, then we need to consider that. But based on the context, it seems that the \"adopted kittens\" are the ones that the cats have had. Therefore, if Patchy has had thrice the number of adopted kittens (which are the kittens that the cats have had), then we need to find that number. However, the problem is that we don't have a direct number for the adopted kittens. We know that Trixie has had 12, which is a specific number. But the problem is that the term \"adopted kittens\" is ambiguous in this context. Let me try to re-express the problem to clarify the relationships.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many lollipops does Jean have after eating 2?",
+          "gold": "28",
+          "gen": "Jean has 28 lollipops left.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many bags can Jean fill with the remaining lollipops?",
+          "gold": "14",
+          "gen": "Jean can fill 14 bags.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does it cost for Peter to go to the movies once?",
+          "gold": "14",
+          "gen": "The total cost for Peter to go to the movies once is $14.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many times can Peter go to the movies with $42?",
+          "gold": "3",
+          "gen": "Peter can go to the movies 6 times with $42.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the maximum weight the boxes can weigh?",
+          "gold": "1245",
+          "gen": "125 pounds.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many boxes can be loaded onto the truck without exceeding the bridge's weight limit?",
+          "gold": "83",
+          "gen": "8 boxes.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the maximum number of boxes which can be loaded onto the truck while not exceeding the bridge's weight limit?",
+          "gold": "83",
+          "gen": "8 boxes.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much is the 25% fee on the $40.00 groceries?",
+          "gold": "10",
+          "gen": "The 25% fee is $10.00.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much are the delivery fees and tip combined?",
+          "gold": "7",
+          "gen": "The delivery fees and tip combined are $7.00.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the final price of Stephen's groceries after the extra fees?",
+          "gold": "57",
+          "gen": "The final price of Stephen's groceries is $57.00.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many fruit are in clusters?",
+          "gold": "120",
+          "gen": "The total number of fruit in clusters is 6 clusters \u00d7 20 fruit per cluster = 120 fruit.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many raspberries are there total?",
+          "gold": "187",
+          "gen": "The total number of raspberries is 120 (in clusters) + 67 (individual) = 187 raspberries.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many unripe oranges are there?",
+          "gold": "5",
+          "gen": "5",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many bad, unripe, and sour oranges are there combined?",
+          "gold": "8",
+          "gen": "5",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many good oranges are there?",
+          "gold": "17",
+          "gen": "15",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total cost of the materials and construction of the brooch?",
+          "gold": "1300",
+          "gen": "The total cost of the materials and construction of the brooch is $1300.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much did Janet pay for insurance?",
+          "gold": "130",
+          "gen": "Janet paid $100 for insurance.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much did she pay in total?",
+          "gold": "1430",
+          "gen": "She paid $1900 in total.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many years does Marcy work after 20 years?",
+          "gold": "10",
+          "gen": "20 years.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What percentage of the full pension does she get per year?",
+          "gold": "5%",
+          "gen": "5%.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is her annual pension after quitting after 30 years?",
+          "gold": "25000",
+          "gen": "$25,000.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many months are there in half of a year?",
+          "gold": "6",
+          "gen": "6 months.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much did Aleena pay for the first half of the year?",
+          "gold": "840",
+          "gen": "140 * 6 = $840.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much is 10% of the monthly charge?",
+          "gold": "14",
+          "gen": "10% of $140 is $14.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much did Aleena pay each month for the second half of the year?",
+          "gold": "126",
+          "gen": "$140 - $14 = $126.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How much did Aleena pay for the second half of the year?",
+          "gold": "756",
+          "gen": "126 * 6 = $756.",
+          "correct": true
+        },
+        {
+          "t": 5,
+          "q": "What is the total amount Aleena paid for the streaming service by the end of the year?",
+          "gold": "1596",
+          "gen": "840 + 756 = $1596.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many miles per gallon does Sophia's car get?",
+          "gold": "25",
+          "gen": "Sophia's car gets 25 miles per gallon.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many miles can Sophia drive on a single tank of gas?",
+          "gold": "300",
+          "gen": "Sophia can drive 300 miles on a single tank of gas.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many miles can Sophia drive on a single tank of gas?",
+          "gold": "300",
+          "gen": "Sophia can drive 300 miles on a single tank of gas.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours does Jim spend reading each night?",
+          "gold": "1",
+          "gen": "1 hour",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many hours does Jim spend on TV and reading each night?",
+          "gold": "3",
+          "gen": "3 hours",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many hours does Jim spend on TV and reading each week?",
+          "gold": "9",
+          "gen": "9 hours",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many hours does Jim spend on TV and reading in 4 weeks?",
+          "gold": "36",
+          "gen": "36 hours",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many teams has each school sent?",
+          "gold": "2",
+          "gen": "Each school has sent 2 teams (girls and boys) and each team has 5 players. Therefore, the answer is 2.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many players has each school sent?",
+          "gold": "10",
+          "gen": "Each school has sent 2 teams, each with 5 players. Therefore, the answer is 10.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many coaches has each school sent?",
+          "gold": "2",
+          "gen": "Each school has sent 2 teams, and each team has 1 coach. Therefore, the answer is 2.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many people has each school sent?",
+          "gold": "12",
+          "gen": "Each school has sent 2 teams, each with 5 players and 1 coach. So, 5 + 1 = 6 people per team. For 2 teams, that is 6 \u00d7 2 = 12. Therefore, the answer is 12.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "In total, how many people have all of the schools sent?",
+          "gold": "48",
+          "gen": "Each school has sent 12 people, and there are 4 schools. Therefore, the answer is 48.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many rubies are there in the treasure chest?",
+          "gold": "140",
+          "gen": "The treasure chest has 175 diamonds. There are 35 fewer rubies than diamonds, so the number of rubies is 175 - 35 = 140. Therefore, the number of rubies is 140.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many emeralds are there in the treasure chest?",
+          "gold": "280",
+          "gen": "The treasure chest has 140 rubies. Since there are twice the number of emeralds than the rubies, the number of emeralds is 140 * 2 = 280. Therefore, the number of emeralds is 280.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many of the gems were there in the chest?",
+          "gold": "595",
+          "gen": "The treasure chest has 175 diamonds, 140 rubies, and 280 emeralds. The total number of gems is 175 + 140 + 280 = 595. Therefore, the total number of gems is 595.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many boys are there at Dr. Wertz's school?",
+          "gold": "120",
+          "gen": "There is not enough information to answer this question.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many students are there in total at Dr. Wertz's school?",
+          "gold": "180",
+          "gen": "There is not enough information to answer this question.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many teachers are there at Dr. Wertz's school?",
+          "gold": "36",
+          "gen": "There is not enough information to answer this question.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much money does Bailey receive in allowance over 8 weeks?",
+          "gold": "40",
+          "gen": "5 * 8 = 40.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much money did Bailey start with?",
+          "gold": "60",
+          "gen": "40.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many classes does Judy teach during the weekdays?",
+          "gold": "25",
+          "gen": "To find out how many classes Judy teaches during the weekdays, we need to determine how many classes she teaches each weekday and then multiply that by the number of weekdays.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many classes does Judy teach in a week?",
+          "gold": "33",
+          "gen": "Judy teaches 5 classes each weekday and 8 classes on Saturday. There are 5 weekdays in a week. So, the total number of classes she teaches in a week is 5 (classes per weekday) * 5 (weekdays) + 8 (Saturday classes) = 25 + 8 = 33 classes per week.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many students are there in total across all classes in a week?",
+          "gold": "495",
+          "gen": "The total number of students across all classes in a week is 33 * 20 = 660 students.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much money does Judy make in a week?",
+          "gold": "7425",
+          "gen": "Judy makes $30 per class. So, the total amount of money she makes in a week is 33 * 30 = $990.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many instructions does the second recipe have?",
+          "gold": "40",
+          "gen": "The second recipe has 40 instructions.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many instructions does Kelian have to read to prepare the two dishes?",
+          "gold": "60",
+          "gen": "Kelian has to read 60 instructions to prepare the two dishes.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much money does Tommy raise from selling brownies?",
+          "gold": "129",
+          "gen": "3, because it's the price of a brownie.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much money does Tommy raise from selling cheesecakes?",
+          "gold": "92",
+          "gen": "4, because it's the price of a cheesecake.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much money does Tommy raise in total?",
+          "gold": "221",
+          "gen": "3 + 4 = 7. So Tommy raises $7.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much interest will be charged for each cell phone?",
+          "gold": "3",
+          "gen": "The interest charged for each cell phone is 2%.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the total cost of one cell phone including interest?",
+          "gold": "153",
+          "gen": "To find the total cost of one cell phone including interest, we calculate the interest and add it to the original price. The original price of one cell phone is $150. The interest charged is 2% of $150. 2% of $150 is $3. Therefore, the total cost of one cell phone including interest is $150 + $3 = $153.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the total amount to be paid for 5 cell phones?",
+          "gold": "765",
+          "gen": "To find the total amount to be paid for 5 cell phones, we multiply the total cost of one cell phone by 5. The total cost of one cell phone is $153. Therefore, the total amount to be paid for 5 cell phones is 5 \u00d7 $153 = $765.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much will Shiela pay each month for 3 months?",
+          "gold": "255",
+          "gen": "To find the monthly payment, we divide the total amount to be paid for 5 cell phones by 3. The total amount to be paid is $765. Therefore, Shiela will pay $765 \u00f7 3 = $255 each month for 3 months.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much will Artie charge for each type of flower after rounding?",
+          "gold": "Marigolds: $3, Petunias: $2, Begonias: $2",
+          "gen": "The prices after rounding would be: marigolds for $3, petunias for $2, and begonias for $2.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much will Artie make from selling 12 pots of marigolds?",
+          "gold": "36",
+          "gen": "Artie will make $36 from selling 12 pots of marigolds.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much will Artie make from selling 9 pots of petunias?",
+          "gold": "18",
+          "gen": "Artie will make $18 from selling 9 pots of petunias.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much will Artie make from selling 17 pots of begonias?",
+          "gold": "34",
+          "gen": "Artie will make $34 from selling 17 pots of begonias.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much will Artie make in total?",
+          "gold": "88",
+          "gen": "Artie will make $36 + $18 + $34 = $88 in total.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the square footage of level 2?",
+          "gold": "64",
+          "gen": "16 square feet.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the square footage of level 1?",
+          "gold": "128",
+          "gen": "32 square feet.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the total square footage of all four levels?",
+          "gold": "240",
+          "gen": "64 square feet.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the average square footage of a level?",
+          "gold": "60",
+          "gen": "16 square feet.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many cups of dog food does Cecilia need for the first 180 days?",
+          "gold": "180",
+          "gen": "180 cups.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many days are left in the year after the first 180 days?",
+          "gold": "185",
+          "gen": "365 - 180 = 185 days.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many cups of dog food does Cecilia need for the remaining days of the year?",
+          "gold": "370",
+          "gen": "185 days * 2 cups/day = 370 cups.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many cups of dog food does Cecilia need in total for the first year?",
+          "gold": "550",
+          "gen": "180 cups + 370 cups = 550 cups.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How many bags of dog food will Cecilia use in the first year?",
+          "gold": "5",
+          "gen": "550 / 8 = 68.75. She needs 69 bags of dog food.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pounds of laundry does Raymond do?",
+          "gold": "200",
+          "gen": "200",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pounds of laundry does David do?",
+          "gold": "100",
+          "gen": "100",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the difference in the amount of laundry Raymond and David do?",
+          "gold": "100",
+          "gen": "100",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many packages of 3 would be needed to buy 18 flowers?",
+          "gold": "6",
+          "gen": "He needs to buy 6 packages of 3 to get 18 flowers.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the cost of buying 18 flowers in packages of 3?",
+          "gold": "$15",
+          "gen": "The cost of buying 18 flowers in packages of 3 is $15.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many packages of 2 would be needed to buy 18 flowers?",
+          "gold": "9",
+          "gen": "He needs to buy 10 packages of 2 to get 18 flowers.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the cost of buying 18 flowers in packages of 2?",
+          "gold": "$9",
+          "gen": "The cost of buying 18 flowers in packages of 2 is $10.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much money does Vincent save by buying 18 flowers at the better price?",
+          "gold": "6",
+          "gen": "Vincent saves $5 by buying 18 flowers at the better price.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the discount amount for being a new customer?",
+          "gold": "30",
+          "gen": "The discount amount for being a new customer is $30.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the final cost of the grooming after applying the discount?",
+          "gold": "70",
+          "gen": "The final cost of the grooming after applying the discount is $70.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many liters of water did each girl get?",
+          "gold": "4",
+          "gen": "Each girl got 1/6 of the 24 liters, so 24 divided by 6 is 4. So each girl got 4 liters of water.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many liters of water did the two girls get together?",
+          "gold": "8",
+          "gen": "The two girls got 1/6 of the water, so 24 times 1/6 is 4. So together the two girls got 4 liters of water.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many liters of water did the two girls and the boy get together?",
+          "gold": "14",
+          "gen": "The two girls and the boy got 1/6 + 6 liters = 1/6 + 6/1 liters. To add these, we need a common denominator. The common denominator is 6. So 6/1 is 36/6. Then 36/6 + 1/6 = 37/6 liters. So the two girls and the boy got 37/6 liters of water together.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many liters of water were left?",
+          "gold": "10",
+          "gen": "The total water was 24 liters. The two girls and the boy got 37/6 liters. So 24 - 37/6 = 144/6 - 37/6 = 107/6 liters. So 107/6 liters of water were left.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many stickers does Charlie have in total?",
+          "gold": "54",
+          "gen": "He had 10 stickers. Then he bought 21, which gives 10 + 21 = 31 stickers. Then he got 23 for his birthday, which gives 31 + 23 = 54 stickers. Then he gave 9 to his sister, which gives 54 - 9 = 45 stickers. Then he used 28 to decorate a greeting card, which gives 45 - 28 = 17 stickers. So, Charlie has 17 stickers in total. The answer is 17.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many stickers did Charlie give away and use on the greeting card?",
+          "gold": "37",
+          "gen": "Charlie gave away 9 stickers and used 28 on the greeting card. 9 + 28 = 37 stickers. The answer is 37.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many stickers does Charlie have left?",
+          "gold": "17",
+          "gen": "Charlie has 17 stickers left. The answer is 17.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does Alex weigh?",
+          "gold": "498",
+          "gen": "493 pounds.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What are their combined weights in pounds?",
+          "gold": "623",
+          "gen": "618 pounds.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many roses are there in total?",
+          "gold": "75",
+          "gen": "There are 75 roses in total.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many thorns are there in total?",
+          "gold": "600",
+          "gen": "There are 600 thorns in total.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many thorns are there total?",
+          "gold": "600",
+          "gen": "There are 600 thorns in total.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many losses did the team have?",
+          "gold": "7",
+          "gen": "The team had 7 losses.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many wins did the team have?",
+          "gold": "15",
+          "gen": "The team had 15 wins.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many did they win?",
+          "gold": "15",
+          "gen": "The team had 15 wins.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many years has Gene been on vacations?",
+          "gold": "11",
+          "gen": "11",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many vacations has Gene been on in total?",
+          "gold": "44",
+          "gen": "44",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many quilt blocks does Gene have in total?",
+          "gold": "44",
+          "gen": "176",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many times did the alarm ring the second time?",
+          "gold": "12",
+          "gen": "The alarm rang four times the first time. The second time, it rang three times as long as the first time, so 4 times 3 is 12. The answer is 12.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many times did the alarm ring the third time?",
+          "gold": "6",
+          "gen": "The third time, it rang for half as long as the second time. The second time was 12, so half of 12 is 6. The answer is 6.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many times did the alarm ring in all?",
+          "gold": "22",
+          "gen": "The alarm rang four times the first time, 12 times the second time, and 6 times the third time. Four plus 12 is 16, and 16 plus 6 is 22. The answer is 22.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does Sylvie earn in a year before any salary increases?",
+          "gold": "7200",
+          "gen": "12,000",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much is Sylvie's salary increased by each year after 5 years of service?",
+          "gold": "720",
+          "gen": "60",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the total increase in Sylvie's salary after three more years of service?",
+          "gold": "2160",
+          "gen": "180",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is Sylvie's annual salary after three more years of service?",
+          "gold": "9360",
+          "gen": "12,000 + 180 = 12,180",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total number of copies sold by Marilyn and Harald combined?",
+          "gold": "88,000",
+          "gen": "To determine the total number of copies sold by Marilyn and Harald combined, we need to know the number of copies each sold individually. However, the information provided only states that Marilyn's first record sold 10 times as many copies as Harald's. Without knowing the exact number of copies Harald's record sold, we cannot calculate the exact total. Therefore, the total number of copies sold by Marilyn and Harald combined cannot be determined with the given information.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many times more copies did Marilyn sell compared to Harald?",
+          "gold": "10",
+          "gen": "Marilyn sold 10 times more copies than Harald.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many copies did Harald sell?",
+          "gold": "8000",
+          "gen": "The number of copies Harald sold is not provided in the question, so it cannot be determined.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many gift bags does Christina need?",
+          "gold": "12",
+          "gen": "She needs 12 gift bags. (16 guests invited, 1/4 don't show up, so 16 * 1/4 = 4 people don't show up. So 16 - 4 = 12 guests coming. She needs .75 per guest, so 12 * .75 = 9. Wait, that math doesn't make sense. How is that 9? 12 * .75 is 9? But the answer is supposed to be 12. Wait, maybe I'm misunderstanding the question. Let me check again.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much will she spend on gift bags?",
+          "gold": "24",
+          "gen": "She will spend $18 on gift bags. (12 gift bags * $2 = $24? Wait, that doesn't match. Wait, the answer was supposed to be $18. Maybe there's confusion here. Let me re-express this.)",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much potato salad does a child eat?",
+          "gold": "5",
+          "gen": "A child eats 5 lbs of potato salad.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much potato salad does Ted need to bring for the adults?",
+          "gold": "200",
+          "gen": "Ted needs to bring 10 lbs of potato salad for each adult.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much potato salad does Ted need to bring for the children?",
+          "gold": "25",
+          "gen": "Ted needs to bring 5 lbs of potato salad for each child.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many pounds of potato salad does Ted need to bring to the picnic?",
+          "gold": "225",
+          "gen": "Ted needs to bring 10 lbs of potato salad for each adult and 5 lbs for each child.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pets does Marcia have?",
+          "gold": "6",
+          "gen": "The problem has infinitely many solutions. There is not enough information to answer the question.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many pets does Jan have?",
+          "gold": "18",
+          "gen": "The problem has infinitely many solutions. There is not enough information to answer the question.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many total pets do the three have?",
+          "gold": "28",
+          "gen": "The problem has infinitely many solutions. There is not enough information to answer the question.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How old is Corey?",
+          "gold": "11",
+          "gen": "The question cannot be answered as there is not enough information.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How old is Amy?",
+          "gold": "9",
+          "gen": "The question cannot be answered as there is not enough information.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How old is Jackson?",
+          "gold": "4",
+          "gen": "The question cannot be answered as there is not enough information.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How long did Gerald initially take to run the 400-meter hurdles?",
+          "gold": "40",
+          "gen": "Let's denote the time Gerald initially took to run the 400-meter hurdles as G. Then Lee's time is G + 2. After Gerald improved his speed by 10%, his new time is G - 0.1G = 0.9G. According to the problem, Lee's time is still two seconds faster than Gerald's new time, so G + 2 = 0.9G. Solving this equation gives G = 20 seconds. Therefore, Gerald initially took 20 seconds to run the 400-meter hurdles.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is 10% of Gerald's initial time?",
+          "gold": "4",
+          "gen": "10% of Gerald's initial time is 0.1 * 20 = 2 seconds.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How long does Gerald take to run the 400-meter hurdles with his improved diet?",
+          "gold": "36",
+          "gen": "Gerald's improved time is 0.9 * 20 = 18 seconds.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many cats are there in the neighborhood?",
+          "gold": "120",
+          "gen": "We don't have enough information to answer the question.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the combined number of cats and dogs?",
+          "gold": "180",
+          "gen": "We don't have enough information to answer the question.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many rabbit pets are there in the neighborhood?",
+          "gold": "168",
+          "gen": "We don't have enough information to answer the question.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many pets in total are in the neighborhood?",
+          "gold": "348",
+          "gen": "We don't have enough information to answer the question.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many boys are in Grade 5?",
+          "gold": "80",
+          "gen": "80",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many girls are in Grade 5?",
+          "gold": "120",
+          "gen": "120",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many girls are in the girl scout?",
+          "gold": "80",
+          "gen": "80",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many girls are not in the girl scout?",
+          "gold": "40",
+          "gen": "40",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours did James sleep?",
+          "gold": "6",
+          "gen": "James slept for 6 hours.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many more hours did Harry sleep than James?",
+          "gold": "3",
+          "gen": "Harry slept 3 more hours than James.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many ounces of tomatoes did Freda start with?",
+          "gold": "64",
+          "gen": "48 ounces.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many cans of tomatoes did Freda use?",
+          "gold": "4",
+          "gen": "6 cans.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many tomatoes did Freda use?",
+          "gold": "12",
+          "gen": "18 tomatoes.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many cars drove through the traffic jam in total?",
+          "gold": "25",
+          "gen": "35",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many cars drove through the traffic jam in the remaining 15 minutes?",
+          "gold": "20",
+          "gen": "20",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many cars drove through the traffic jam in the first 15 minutes?",
+          "gold": "5",
+          "gen": "15",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many potted plants did Mary have before receiving the new ones?",
+          "gold": "80",
+          "gen": "The number of potted plants Mary had before receiving the new ones is 80. (2 x 40 = 80)",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many potted plants does Mary have in total after receiving the new ones?",
+          "gold": "98",
+          "gen": "The total number of potted plants Mary has is 98. (80 + 18 = 98)",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many potted plants will Mary give away tomorrow?",
+          "gold": "40",
+          "gen": "Mary will give away 40 potted plants. (1 x 40 = 40)",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many potted plants will Mary remain with after the giveaway?",
+          "gold": "58",
+          "gen": "Mary will remain with 58 potted plants. (98 - 40 = 58)",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many times did the second friend press the doorbell?",
+          "gold": "25",
+          "gen": "The second friend pressed the doorbell 25 times.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many times did the first two friends press the doorbell together?",
+          "gold": "45",
+          "gen": "The first two friends pressed the doorbell 45 times together.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many times did the third friend press the doorbell?",
+          "gold": "70",
+          "gen": "The third friend pressed the doorbell 50 times.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many times did the third and fourth friends press the doorbell together?",
+          "gold": "130",
+          "gen": "The third and fourth friends pressed the doorbell 60 times together.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How many doorbell rings did the doorbell make?",
+          "gold": "175",
+          "gen": "The doorbell made 135 rings.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pages does Solo have to read in total?",
+          "gold": "39",
+          "gen": "The total number of pages Solo has to read is 4 + 20 + 7 + 8 = 39 pages.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pages does Solo have left to read after Monday?",
+          "gold": "24",
+          "gen": "Solo has 39 - 15 = 24 pages left to read.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many pages does Solo need to read, on average, in one day?",
+          "gold": "6",
+          "gen": "Solo needs to read 24 pages / 3 days = 8 pages per day.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many glasses of water does John drink on each weekday?",
+          "gold": "4",
+          "gen": "4",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many glasses of water does John drink on each weekend day?",
+          "gold": "3",
+          "gen": "3",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many glasses of water does John drink in a week?",
+          "gold": "26",
+          "gen": "17",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many intervals of 3 miles are there in 42 miles?",
+          "gold": "14",
+          "gen": "14",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many minutes does it take to cover one interval of 3 miles?",
+          "gold": "10",
+          "gen": "10",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many minutes will it take to cover the entire city?",
+          "gold": "140",
+          "gen": "140",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pieces did Poppy place on the board?",
+          "gold": "250",
+          "gen": "250",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pieces were left after Poppy placed her pieces?",
+          "gold": "750",
+          "gen": "750",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many pieces did Poppy's mom place on the board?",
+          "gold": "250",
+          "gen": "250",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many pieces are left to be placed after Poppy's mom placed her pieces?",
+          "gold": "500",
+          "gen": "500",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many cookies does Cody eat?",
+          "gold": "15",
+          "gen": "The question cannot be answered as it stands. The information given is that Cody eats three times as many cookies as Amir, but we don't know how many cookies Amir eats. Therefore, without knowing the number of cookies Amir eats, we cannot determine how many cookies Cody eats.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many cookies do Cody and Amir eat together?",
+          "gold": "20",
+          "gen": "The question cannot be answered as it stands. The information given is that Cody eats three times as many cookies as Amir, but we don't know how many cookies Amir eats. Therefore, without knowing the number of cookies Amir eats, we cannot determine how many cookies Cody eats, and thus cannot determine the total number of cookies they eat together.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much do the walls subtract from each dimension?",
+          "gold": "2 inches",
+          "gen": "The walls subtract 2 inches from the length, 2 inches from the width, and 2 inches from the height.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the inner width of each box?",
+          "gold": "3 inches",
+          "gen": "The inner width of each box is 6 - 2 = 4 inches.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the inner height of each box?",
+          "gold": "4 inches",
+          "gen": "The inner height of each box is 4 - 2 = 2 inches.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the inner depth of each box?",
+          "gold": "2 inches",
+          "gen": "The inner depth of each box is 5 - 2 = 3 inches.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "What is the total inner volume of all 3 boxes?",
+          "gold": "72",
+          "gen": "The inner volume of each box is 4 inches x 2 inches x 3 inches = 24 cubic inches. Multiply by 3 boxes: 24 x 3 = 72 cubic inches.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours of TV did Frankie have left after Monday?",
+          "gold": "6",
+          "gen": "2",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many hours of TV did Frankie have left after Tuesday?",
+          "gold": "5",
+          "gen": "2",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many hours of TV did Frankie have left after Thursday?",
+          "gold": "3.5",
+          "gen": "1",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many hours of TV did Frankie have left after Friday?",
+          "gold": "1.5",
+          "gen": "0",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How many 30-minute episodes did Frankie watch on Wednesday?",
+          "gold": "3",
+          "gen": "2",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many cookies did Henry bake this year before dropping any?",
+          "gold": "115",
+          "gen": "Let's solve this problem step by step. First, we need to determine how many cookies Henry intended to bake this year. Since he wants to make twice as many as he did last year, let's denote the number of cookies he baked last year as x. Therefore, his intention this year is 2x.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many cookies did Henry intend to bake this year?",
+          "gold": "100",
+          "gen": "2x.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many cookies did Henry bake last year?",
+          "gold": "50",
+          "gen": "x.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does the gas cost in total for 10 gallons?",
+          "gold": "30",
+          "gen": "The total cost is $24 because the gas station is selling it for $3.00 a gallon, so 10 times $3.00 is $30. But since the app is offering $.20 cashback per gallon, that is $2.00 for 10 gallons, so $30 minus $2.00 is $28.00.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much cashback is offered for 10 gallons?",
+          "gold": "2",
+          "gen": "The cashback offered is $2.00 for 10 gallons because the app is offering $.20 per gallon, so 10 times $.20 is $2.00.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much does the person actually spend after the cashback rewards?",
+          "gold": "28",
+          "gen": "The person actually spends $28.00 after the cashback rewards because the total cost is $30.00 for 10 gallons, and the cashback is $2.00, so $30.00 minus $2.00 is $28.00.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many fruit roll-ups did Beatrice eat?",
+          "gold": "48",
+          "gen": "The number of roll-ups is calculated by the width times the length. So for Beatrice, 2 times 24 is 48. Therefore, the answer is 48.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many fruit roll-ups did Marcell eat?",
+          "gold": "42",
+          "gen": "The number of roll-ups is calculated by the width times the length. So for Marcell, 3 times 14 is 42. Therefore, the answer is 42.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many fruit roll-ups did they eat in total?",
+          "gold": "90",
+          "gen": "To find the total number of fruit roll-ups, we add the number Beatrice ate to the number Marcell ate. So, 48 plus 42 is 90. Therefore, the answer is 90.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many fruit roll-ups did they eat on average?",
+          "gold": "45",
+          "gen": "To find the average number of fruit roll-ups, we divide the total number they ate by the number of people. The total is 90, and there are 2 people. So, 90 divided by 2 is 45. Therefore, the answer is 45.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many times did Julia row 20 feet to reach the shore?",
+          "gold": "4",
+          "gen": "16",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many feet did Julia row back to shore?",
+          "gold": "80",
+          "gen": "320 feet",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many times did the boat take on water during the trip?",
+          "gold": "8",
+          "gen": "16 times",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much water had the boat taken on by the time Julia reached shore?",
+          "gold": "16",
+          "gen": "32 liters",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many lessons does each teacher have in a day?",
+          "gold": "2",
+          "gen": "Each teacher has 2 lessons per day.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many total lessons are there in a day?",
+          "gold": "8",
+          "gen": "There are 4 teachers \u00d7 2 lessons per day = 8 lessons in a day.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many times is the whiteboard cleaned in a day?",
+          "gold": "24",
+          "gen": "The whiteboard is cleaned once after each lesson. Since there are 8 lessons in a day, the whiteboard is cleaned 8 times in a day.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many flowers does Ryan plant in total over 15 days?",
+          "gold": "30",
+          "gen": "Ryan plants 2 flowers a day, so in 15 days, he plants 2 * 15 = 30 flowers in total.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many flowers did not grow?",
+          "gold": "5",
+          "gen": "10 flowers did not grow.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many flowers does Ryan have in his garden?",
+          "gold": "25",
+          "gen": "Ryan has 30 - 10 = 20 flowers in his garden.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many photographs can Brittany's phone hold?",
+          "gold": "300",
+          "gen": "Let's solve this problem step by step. First, we need to find out the number of birds in Jamal's photograph of the ducks at the zoo. Wait, but the problem doesn't mention the number of birds in Jamal's photo. Hmm, maybe I'm misunderstanding the problem. Let me read it again.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many birds are in Jamal's photograph of ducks at the zoo?",
+          "gold": "6",
+          "gen": "The problem doesn't provide the number of birds in Jamal's photo, so I can't determine the exact number. However, the problem might be a trick question, or maybe I'm missing something. Let me check the original problem again.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many ducks can be seen in Jamal's photograph of ducks at the zoo?",
+          "gold": "6",
+          "gen": "The problem doesn't provide the number of ducks in Jamal's photo either. I'm confused. Wait, the problem says that the maximum number of photographs that Brittany's phone can hold is 50 times more than the number of birds in Jamal's photograph of ducks at the zoo. So, the number of birds in Jamal's photo is a key value here. But the problem doesn't give that number. Maybe I need to infer it from the context?",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much did Sasha pay for the 2 x 4 x 10 boards?",
+          "gold": "100",
+          "gen": "100",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much did Sasha pay for the 4 x 4 x 10 boards?",
+          "gold": "80",
+          "gen": "80",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much did Sasha pay for all the lumber combined?",
+          "gold": "180",
+          "gen": "180",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much does Sasha sell the lumber for?",
+          "gold": "270",
+          "gen": "150",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much profit does Sasha make?",
+          "gold": "90",
+          "gen": "-30",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total ratio representing the ingredients she used to make the coffee?",
+          "gold": "20",
+          "gen": "13:17",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the fraction representing the number of teaspoons of sugar she used?",
+          "gold": "7/20",
+          "gen": "7/20",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many teaspoonfuls of sugar did Katy use?",
+          "gold": "42",
+          "gen": "42",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pairs of shoes did John buy?",
+          "gold": "6",
+          "gen": "He bought 2 pairs for each of his 3 children, so 2 x 3 = 6 pairs of shoes. So the answer is 6.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much did John spend on the shoes?",
+          "gold": "360",
+          "gen": "Each pair costs $60, so 6 pairs x $60 = $360. So the answer is 360.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much did he pay?",
+          "gold": "360",
+          "gen": "He paid $360. So the answer is 360.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many vehicles were imported on the first day?",
+          "gold": "10",
+          "gen": "The customs officer counted 2 containers of imported vehicles, each having 5 vehicles inside. So, the total number of vehicles imported on the first day is 2 containers \u00d7 5 vehicles/container = 10 vehicles.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many vehicles were imported on the second day?",
+          "gold": "20",
+          "gen": "The total number of vehicles at the port on the second day is 30. Since 10 vehicles were imported on the first day, the number of vehicles imported on the second day is 30 - 10 = 20 vehicles.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many containers were imported on the second day?",
+          "gold": "4",
+          "gen": "Each container holds 5 vehicles. If 20 vehicles were imported on the second day, then the number of containers is 20 vehicles \u00f7 5 vehicles/container = 4 containers.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much was Adrien's salary four years ago?",
+          "gold": "40000",
+          "gen": "100",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much was Adrien's raise four years later?",
+          "gold": "16000",
+          "gen": "40",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What was Adrien's salary four years later?",
+          "gold": "56000",
+          "gen": "140",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much was Lylah's salary four years ago?",
+          "gold": "28000",
+          "gen": "76.92",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much was Lylah's raise four years later?",
+          "gold": "11200",
+          "gen": "4.92",
+          "correct": false
+        },
+        {
+          "t": 5,
+          "q": "What was Lylah's salary four years later?",
+          "gold": "39200",
+          "gen": "81.85",
+          "correct": false
+        },
+        {
+          "t": 6,
+          "q": "What was the total salary the two were receiving four years later?",
+          "gold": "95200",
+          "gen": "221.85",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many sheets of paper does Miguel use every week?",
+          "gold": "60",
+          "gen": "150",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many sheets of paper does Miguel use every month?",
+          "gold": "240",
+          "gen": "450",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many sheets of paper does he use every month?",
+          "gold": "240",
+          "gen": "450",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many apples did Kael bring?",
+          "gold": "10",
+          "gen": "10",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many oranges did Kael bring?",
+          "gold": "4",
+          "gen": "4",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many fruits do Morisette and Kael have in total?",
+          "gold": "27",
+          "gen": "27",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours did Sadie sleep on each of the next two days?",
+          "gold": "6",
+          "gen": "She slept 2 hours less each day, so 8-2=6. Sadie slept 6 hours each day.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the total number of hours slept for the next two days?",
+          "gold": "12",
+          "gen": "Each day she slept 6 hours. 6*2=12. The total is 12 hours.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many hours did Sadie sleep each day for the rest of the week?",
+          "gold": "7",
+          "gen": "She slept 6 hours each day.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the total number of hours slept for the rest of the week?",
+          "gold": "28",
+          "gen": "There are 5 days in a week. She slept 8 hours on Monday, then 6 hours each day for the next two days. 8+6+6=20. Then there are 2 days left in the week. 20+ (6*2)= 20+12=32. The total is 32 hours.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How many hours did Sadie sleep in total throughout the week?",
+          "gold": "48",
+          "gen": "32.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many miles does Rosie run in the first 3 hours?",
+          "gold": "30",
+          "gen": "30 miles",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many hours does Rosie have left after the first 3 hours?",
+          "gold": "4",
+          "gen": "1 hour",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many miles does Rosie run in the remaining hours?",
+          "gold": "20",
+          "gen": "5 miles",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many miles can Rosie run in 7 hours?",
+          "gold": "50",
+          "gen": "35 miles",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many letters did Jennie stamp from the pile needing stamps?",
+          "gold": "20",
+          "gen": "20",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many letters were originally in the already-stamped pile?",
+          "gold": "10",
+          "gen": "12",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total number of spoons Julia and her husband had before Julia used three of them?",
+          "gold": "15",
+          "gen": "12 - 3 = 9, so the answer is 9.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many spoons were in the package that Julia bought?",
+          "gold": "10",
+          "gen": "9 - 5 = 4, so the answer is 4.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many spoons were in the package that Julia bought?",
+          "gold": "10",
+          "gen": "4.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many fish sausages did Dylan buy?",
+          "gold": "44",
+          "gen": "Dylan bought 38 chicken sausages. He bought 6 more fish sausages than chicken sausages. To find how many fish sausages Dylan bought, we add 6 to the number of chicken sausages. Thus, 38 + 6 = 44. Dylan bought 44 fish sausages.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many sausages did Dylan buy in all?",
+          "gold": "82",
+          "gen": "Dylan bought 38 chicken sausages and 44 fish sausages. To find the total number of sausages, we add the chicken sausages and fish sausages together. Thus, 38 + 44 = 82. Dylan bought 82 sausages in all.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many friends did Amy make?",
+          "gold": "70",
+          "gen": "The problem does not provide enough information.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many friends do Lily and Amy have together?",
+          "gold": "120",
+          "gen": "The problem does not provide enough information.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does a watermelon cost?",
+          "gold": "45",
+          "gen": "20",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much does an orange cost?",
+          "gold": "40",
+          "gen": "15",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much does Dillon spend on watermelons?",
+          "gold": "180",
+          "gen": "160",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much does Dillon spend on peppers?",
+          "gold": "300",
+          "gen": "80",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much does Dillon spend on oranges?",
+          "gold": "400",
+          "gen": "150",
+          "correct": false
+        },
+        {
+          "t": 5,
+          "q": "What's the total amount of money he will spend?",
+          "gold": "880",
+          "gen": "390",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many minutes does the hospital spend seeing patients a day?",
+          "gold": "12000",
+          "gen": "The hospital sees 500 patients a day, each seen for an average of 24 minutes, so the total time spent seeing patients is 500 * 24 = 12,000 minutes a day. The answer is 12,000.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many hours does the hospital spend seeing patients a day?",
+          "gold": "200",
+          "gen": "The hospital spends 12,000 minutes a day seeing patients. Since there are 60 minutes in an hour, 12,000 divided by 60 is 200 hours a day. The answer is 200.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much profit does the hospital make per hour from these visits?",
+          "gold": "50",
+          "gen": "The hospital charges the patients $200 an hour, so for each hour of patient visits, the hospital earns $200. However, the doctors charge $150 an hour to the hospital, so the hospital has to pay the doctors $150 per hour. The net profit per hour is thus $200 - $150 = $50. The answer is 50.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much profit does the hospital make from these visits a day?",
+          "gold": "10000",
+          "gen": "The hospital makes a profit of $50 per hour from these visits. Since the hospital spends 200 hours a day seeing patients, the total daily profit is 200 * 50 = $10,000. The answer is 10000.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many elves quit after being vomited on?",
+          "gold": "20",
+          "gen": "20",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many elves are left after the first group quit?",
+          "gold": "40",
+          "gen": "40",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many elves are left after the second group quit?",
+          "gold": "30",
+          "gen": "30",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much was Joseph's expenditure in June?",
+          "gold": "440",
+          "gen": "He spent $440 in June.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What was Joseph's total expenditure for May and June?",
+          "gold": "940",
+          "gen": "He spent $940 in total.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many times did Pam and Fred ride the roller coaster in total?",
+          "gold": "6",
+          "gen": "They rode the roller coaster 2 + 4 = 6 times. So the answer is 6.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many times did Pam and Fred ride the luge in total?",
+          "gold": "4",
+          "gen": "They rode the luge 2 + 2 = 4 times. So the answer is 4.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many times did Pam and Fred ride that day in total?",
+          "gold": "10",
+          "gen": "They rode the roller coaster 2 + 4 = 6 times and the luge 2 + 2 = 4 times. So in total, they rode 6 + 4 = 10 times. So the answer is 10.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many tickets did they use that day?",
+          "gold": "60",
+          "gen": "They used 6 + 4 = 10 tickets. So the answer is 10.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many miles did Walt walk on Tuesday?",
+          "gold": "24",
+          "gen": "He walked 4 miles on Monday. On Tuesday, he walked 6 times as many miles as he walked on Monday. So, 4 * 6 equals 24. Therefore, he walked 24 miles on Tuesday.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many miles did Walt walk on Monday and Tuesday combined?",
+          "gold": "28",
+          "gen": "He walked 4 miles on Monday and 24 miles on Tuesday. 4 + 24 equals 28. So, Walt walked 28 miles on Monday and Tuesday combined.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many miles did Walt walk on Wednesday?",
+          "gold": "13",
+          "gen": "The total mileage for Monday through Wednesday is 41 miles. He walked 28 miles on Monday and Tuesday. So, 41 - 28 equals 5. Therefore, Walt walked 5 miles on Wednesday.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many car washes does Tom get in a year?",
+          "gold": "48",
+          "gen": "48.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much does Tom pay for 48 car washes?",
+          "gold": "720",
+          "gen": "$48.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much does Tom pay in a year?",
+          "gold": "720",
+          "gen": "$48.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many video games does Brian have after losing 5?",
+          "gold": "15",
+          "gen": "Let x be the number of video games Brian has. Bobby has 3x - 5 video games. If Brian loses 5 video games, he has x - 5 video games. So the answer is x - 5.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is 3 times the number of video games Brian has?",
+          "gold": "45",
+          "gen": "3x. The answer is 3x.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many video games does Bobby have?",
+          "gold": "40",
+          "gen": "3x - 5. The answer is 3x - 5.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many unicorns are in the Scottish Highlands?",
+          "gold": "9",
+          "gen": "9",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many of the Scottish unicorns are female?",
+          "gold": "6",
+          "gen": "6",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many female Scottish unicorns are there?",
+          "gold": "6",
+          "gen": "6",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much do the 2 subs cost together?",
+          "gold": "15.00",
+          "gen": "15",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much do the 2 bags of chips cost together?",
+          "gold": "3.00",
+          "gen": "3",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much do the 2 cookies cost together?",
+          "gold": "2.00",
+          "gen": "2",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the total cost of the order before the delivery fee and tip?",
+          "gold": "20.00",
+          "gen": "17",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "What is the delivery fee for the order?",
+          "gold": "4.00",
+          "gen": "3.5",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many questions did Mark complete in yesterday\u2019s test?",
+          "gold": "40",
+          "gen": "50",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many questions did Mark complete in today\u2019s test?",
+          "gold": "30",
+          "gen": "50",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many questions did Mark leave incomplete in yesterday\u2019s test?",
+          "gold": "35",
+          "gen": "25",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many questions did Mark leave incomplete in today's test?",
+          "gold": "70",
+          "gen": "50",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How many questions did he leave incomplete in total?",
+          "gold": "105",
+          "gen": "75",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is four times the number of blue gumballs?",
+          "gold": "48",
+          "gen": "\\boxed{?}",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many pink gumballs are there?",
+          "gold": "70",
+          "gen": "\\boxed{?}",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "In a candy machine, there are 22 more than four times the number of pink gumballs as there are blue gumballs. If there are 12 blue gumballs how many pink ones are there?",
+          "gold": "70",
+          "gen": "\\boxed{?}",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many cars are either automatic or manual?",
+          "gold": "16",
+          "gen": "16",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many cars are semi-automatic?",
+          "gold": "4",
+          "gen": "4",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What percentage of the cars are semi-automatic?",
+          "gold": "20",
+          "gen": "20%",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many queens are there?",
+          "gold": "100",
+          "gen": "25",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many baby bees are there?",
+          "gold": "200",
+          "gen": "50",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many worker bees are there?",
+          "gold": "400",
+          "gen": "100",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours does Jordan play video games in one week?",
+          "gold": "14",
+          "gen": "14 hours.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much money would Jordan earn in one week if he worked those hours?",
+          "gold": "140",
+          "gen": "$140.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much money would Jordan earn in one week if he spent his video game time working instead?",
+          "gold": "140",
+          "gen": "$140.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much did the foodstuff cost?",
+          "gold": "5",
+          "gen": "$2",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much did the nonfood stuff cost?",
+          "gold": "10",
+          "gen": "$3 + $3 + $3 + $4 = $13",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much tax was paid on the nonfood stuff?",
+          "gold": "1",
+          "gen": "10% of $13 = $1.30",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much did everything cost?",
+          "gold": "16",
+          "gen": "$13 + $1.30 = $14.30",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many total clients does Lucas have?",
+          "gold": "8",
+          "gen": "The total number of clients Lucas has is 3 + 5 = 8.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many bottles of bleach will Lucas need each week?",
+          "gold": "16",
+          "gen": "Lucas needs 2 * 8 = 16 bottles of bleach each week.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many packs of cloths will Lucas need each week?",
+          "gold": "8",
+          "gen": "Lucas needs 1 * 8 = 8 packs of cloths each week.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much will Lucas spend on bleach each week?",
+          "gold": "32",
+          "gen": "Lucas spends 16 * $2 = $32 on bleach each week.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How much will Lucas spend on cloths each week?",
+          "gold": "40",
+          "gen": "Lucas spends 8 * $5 = $40 on cloths each week.",
+          "correct": true
+        },
+        {
+          "t": 5,
+          "q": "What is Lucas' total weekly expenses?",
+          "gold": "72",
+          "gen": "Lucas' total weekly expenses are $32 + $40 = $72.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pineapples are there in total on John's field?",
+          "gold": "1000",
+          "gen": "1000",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many times can John harvest his pineapples in a year?",
+          "gold": "4",
+          "gen": "4",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many pineapples can John harvest within a year?",
+          "gold": "4000",
+          "gen": "4000",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pieces are in the second lego set?",
+          "gold": "1500",
+          "gen": "The second lego set has 1500 pieces.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pieces are in the third lego set?",
+          "gold": "125",
+          "gen": "The third lego set has 125 pieces.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many blocks does Johnny pick up in total?",
+          "gold": "2125",
+          "gen": "Johnny picks up 1500 + 500 + 125 = 1725 blocks.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many bees return to the hive in the next 6 hours after the first 6 hours?",
+          "gold": "15",
+          "gen": "15",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many bees leave the hive in the next 6 hours after the first 6 hours?",
+          "gold": "60",
+          "gen": "15",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many bees left the hive in total?",
+          "gold": "90",
+          "gen": "45",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many bees return to the hive in the last 6 hours of the day?",
+          "gold": "75",
+          "gen": "15",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total cost of the tickets?",
+          "gold": "22",
+          "gen": "The total cost of the tickets is $22. Brittany's mom buys 1 child ticket and 1 adult ticket. The child ticket is $10 and the adult ticket is $12. So, 10 + 12 = 22. Therefore, the total cost is $22.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much money did Brittany's mom give the cashier?",
+          "gold": "30",
+          "gen": "Brittany's mom gave the cashier $22. She bought 1 child ticket and 1 adult ticket, which total to $10 + $12 = $22. So, the total amount she gave the cashier is $22.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much money, in dollars, did she give the cashier?",
+          "gold": "30",
+          "gen": "She gave the cashier $22.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many Facebook friends does Dorothy have?",
+          "gold": "4",
+          "gen": "The question cannot be answered with the given information.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many Facebook friends does James have?",
+          "gold": "16",
+          "gen": "The question cannot be answered with the given information.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many feet does Steve have to travel to get home?",
+          "gold": "15840",
+          "gen": "15840 feet",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How long will it take Steve to get home?",
+          "gold": "36",
+          "gen": "30 minutes",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many feet does Tim have to travel to get home?",
+          "gold": "10560",
+          "gen": "2 miles = 10560 feet",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How long will it take Tim to get home?",
+          "gold": "40",
+          "gen": "24 minutes",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How long will the winner be waiting at their house before the loser finishes the race?",
+          "gold": "4",
+          "gen": "6 minutes",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many bike tires were there to fill up?",
+          "gold": "10",
+          "gen": "25",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many tricycle tires were there to fill up?",
+          "gold": "9",
+          "gen": "9",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many unicycle tires were there to fill up?",
+          "gold": "1",
+          "gen": "1",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many total tires were there to fill up?",
+          "gold": "20",
+          "gen": "35",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How many dollars did she make that day?",
+          "gold": "5",
+          "gen": "8.75",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does one pack of cookies cost?",
+          "gold": "$0.60",
+          "gen": "The answer is 60 cents.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much do ten packs of cookies cost?",
+          "gold": "$6",
+          "gen": "The answer is $6.00.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much change does Carl receive if he pays with a $10 bill?",
+          "gold": "$4",
+          "gen": "The answer is $4.00.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many french fries did the seagull eat?",
+          "gold": "7",
+          "gen": "14",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many french fries did the pigeons eat in total?",
+          "gold": "9",
+          "gen": "9",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many french fries were there before the raccoon took any?",
+          "gold": "18",
+          "gen": "21",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many french fries were in the pack when Dave bought it?",
+          "gold": "48",
+          "gen": "21",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours does Kimo spend in class on a Monday, Wednesday, or Friday?",
+          "gold": "3",
+          "gen": "3",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many hours does Kimo spend in class on Monday, Wednesday, and Friday combined in one week?",
+          "gold": "9",
+          "gen": "3*3=9",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many hours does Kimo spend in class on a Tuesday or Thursday?",
+          "gold": "4",
+          "gen": "2",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many hours does Kimo spend in class on Tuesday and Thursday combined in one week?",
+          "gold": "8",
+          "gen": "2*2=4",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "In one semester, how many hours does Kimo spend attending classes?",
+          "gold": "272",
+          "gen": "9 + 4 = 13 per week. 13 * 16 = 208",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total length of the rolls in inches?",
+          "gold": "1200 inches",
+          "gen": "300 rolls x 4 inches = 1200 inches",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the total length of the croissants in inches?",
+          "gold": "720 inches",
+          "gen": "120 croissants x 6 inches = 720 inches",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the total length of the rolls and croissants in inches?",
+          "gold": "1920 inches",
+          "gen": "1200 + 720 = 1920 inches",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "What is the total length of the rolls and croissants in feet?",
+          "gold": "160 feet",
+          "gen": "1920 inches \u00f7 12 = 160 feet",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "What is the total length of the baguettes in feet?",
+          "gold": "120 feet",
+          "gen": "60 baguettes x 2 feet = 120 feet",
+          "correct": true
+        },
+        {
+          "t": 5,
+          "q": "What is the total length of all the baked goods in feet?",
+          "gold": "280 feet",
+          "gen": "160 feet + 120 feet = 280 feet",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total number of bananas needed by the monkeys, gorillas, and baboons every month?",
+          "gold": "700",
+          "gen": "30000 bananas.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many bananas are needed by all the apes in 2 months?",
+          "gold": "1400",
+          "gen": "60000 bananas.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many bananas does he need to order to last for 2 months?",
+          "gold": "1400",
+          "gen": "60000 bananas.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many yards does Blake run for each back and forth?",
+          "gold": "200",
+          "gen": "Each side is 100 yards, so one back and forth is 200 yards. Blake runs 15 times, so 15 * 200 = 3000 yards. So the answer is 3000.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many yards does Blake run in total?",
+          "gold": "3000",
+          "gen": "Blake runs 15 times, each time 200 yards, so 15 * 200 = 3000 yards. So the answer is 3000.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many yards does Kelly run for her first back and forth?",
+          "gold": "200",
+          "gen": "Kelly runs to the 40-yard line and back, which is 40 * 2 = 80 yards. So the answer is 80.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many yards does Kelly run for each back and forth to the 40-yard line?",
+          "gold": "80",
+          "gen": "Each back and forth is 40 * 2 = 80 yards. So the answer is 80.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How many yards does Kelly run from the back and forth to the 40-yard line?",
+          "gold": "2720",
+          "gen": "Kelly runs to the 40-yard line and back, which is 40 * 2 = 80 yards. So the answer is 80.",
+          "correct": false
+        },
+        {
+          "t": 5,
+          "q": "How many yards does Kelly run in total?",
+          "gold": "2920",
+          "gen": "Kelly runs 34 times, each time 80 yards, so 34 * 80 = 2720 yards. So the answer is 2720.",
+          "correct": false
+        },
+        {
+          "t": 6,
+          "q": "Who is the winner of the contest?",
+          "gold": "Blake",
+          "gen": "Blake runs 3000 yards, and Kelly runs 2720 yards. Blake runs more, so he is the winner. So the answer is Blake.",
+          "correct": false
+        },
+        {
+          "t": 7,
+          "q": "How much farther does the winner run than the loser?",
+          "gold": "80",
+          "gen": "Blake ran 3000 yards, Kelly ran 2720 yards. The difference is 3000 - 2720 = 280 yards. So the answer is 280.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much did Raphael spend on the pens?",
+          "gold": "6",
+          "gen": "The cost of 4 pens is $1.5 multiplied by 4.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much did Raphael spend on the notebooks?",
+          "gold": "8",
+          "gen": "The cost of 2 notebooks is $4 multiplied by 2.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much did Raphael spend on everything?",
+          "gold": "34",
+          "gen": "Raphael spent $1.5 multiplied by 4, plus $4 multiplied by 2, plus $20.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many tadpoles does Finn see after the hidden ones come out?",
+          "gold": "17",
+          "gen": "11",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many tadpoles can Finn see in the pond now?",
+          "gold": "15",
+          "gen": "11",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many tadpoles can Finn see in the pond now?",
+          "gold": "15",
+          "gen": "11",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much water was in the tank on Tuesday?",
+          "gold": "24",
+          "gen": "The tank had 17 feet of water on Monday. On Tuesday, the tank had 7 feet more water, so the depth was 17 + 7 = 24 feet. Therefore, the answer is 24.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the depth of the water in the tank on Wednesday?",
+          "gold": "16",
+          "gen": "On Wednesday, the depth of the water is two thirds of what it was on Tuesday. The depth on Tuesday was 24 feet, so on Wednesday it is 2/3 * 24 = 16 feet. Therefore, the answer is 16.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the tank\u2019s water depth on Wednesday?",
+          "gold": "16",
+          "gen": "The tank's water depth on Wednesday is 16 feet.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many starfish did Locsin catch?",
+          "gold": "5",
+          "gen": "10 - 5 = 5",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many starfish did they catch in total?",
+          "gold": "15",
+          "gen": "10 + 5 = 15",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many seahorses did Locsin catch?",
+          "gold": "3",
+          "gen": "6 - 3 = 3",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many seahorses did they catch in total?",
+          "gold": "9",
+          "gen": "6 + 3 = 9",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How many clownfish did Locsin catch?",
+          "gold": "5",
+          "gen": "3 + 2 = 5",
+          "correct": true
+        },
+        {
+          "t": 5,
+          "q": "How many clownfish did they catch in total?",
+          "gold": "8",
+          "gen": "3 + 5 = 8",
+          "correct": true
+        },
+        {
+          "t": 6,
+          "q": "How many fish were they able to catch?",
+          "gold": "32",
+          "gen": "15 + 9 + 8 = 32",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does the price of the bag of marbles increase by each time?",
+          "gold": "4",
+          "gen": "The price of the bag of marbles increases by 1 cent each time.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many times does the price increase in 36 months?",
+          "gold": "18",
+          "gen": "The price increases 36 times in 36 months.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the total amount the price of the bag of marbles increases by after 36 months?",
+          "gold": "72",
+          "gen": "The total increase in price after 36 months is 36 cents.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the total cost of the bag of marbles after 36 months?",
+          "gold": "92",
+          "gen": "The total cost of the bag of marbles after 36 months is 36 cents.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much are the action figures worth in total?",
+          "gold": "15",
+          "gen": "The action figures are worth $12 in total.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much are the red cars worth in total?",
+          "gold": "20",
+          "gen": "The red cars are worth $20 in total.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much is the doll worth?",
+          "gold": "15",
+          "gen": "The doll is worth $9.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much are all toys worth?",
+          "gold": "50",
+          "gen": "All toys are worth $37 in total.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much money does Jackie lose by doing her taxes herself?",
+          "gold": "105",
+          "gen": "The total loss is $35/hour * 3 hours = $105. The total loss is $105 + $90 = $195. So the answer is $195.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much more money will she have if she hires the accountant?",
+          "gold": "15",
+          "gen": "The accountant cost $90, but she could have earned $35/hour * 3 hours = $105. So $105 - $90 = $15. She will have $15 more if she hires the accountant. So the answer is $15.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much more money will she have if she hires the accountant?",
+          "gold": "15",
+          "gen": "The accountant costs $90. If she does it herself, she'll miss out on $35 * 3 = $105. So, by hiring the accountant, she gains $105 - $90 = $15. Therefore, the answer is $15.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total cost of the computer equipment?",
+          "gold": "1423",
+          "gen": "The total cost is \u20ac1090 + \u20ac157 + \u20ac74 + \u20ac102 = \u20ac1423. She will have \u20ac1500 - \u20ac1423 = \u20ac77 left.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much money will she have left for her clothing?",
+          "gold": "77",
+          "gen": "She will have \u20ac77 left for her clothing.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many eggs does Sandra need in total to make 15 Spanish flans?",
+          "gold": "45",
+          "gen": "Let me figure this out. Sandra wants to make 15 Spanish flans. Each flan requires 3 eggs. So, I need to multiply the number of flans by the number of eggs per flan. 15 times 3 equals 45. Therefore, Sandra needs 45 eggs in total.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many times does Sandra have to babysit to get enough eggs?",
+          "gold": "5",
+          "gen": "Okay, so Sandra needs 45 eggs in total to make 15 Spanish flans. She gets 9 eggs each time she babysits. To find out how many times she needs to babysit, I should divide the total number of eggs by the number of eggs she gets per babysitting. 45 divided by 9 equals 5. Therefore, Sandra has to babysit 5 times to get enough eggs.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many times does Sandra have to babysit?",
+          "gold": "5",
+          "gen": "She needs 45 eggs for 15 flans, and she gets 9 eggs each time she babysits. So, 45 divided by 9 is 5. Sandra has to babysit 5 times.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the relationship between Seth's age and Brooke's age?",
+          "gold": "Seth is twice as old as Brooke.",
+          "gen": "Let me see. Hmm. Alright, so the problem says that Seth is twice as old as Brooke. And in two years, the sum of their ages will be 28. I need to find the relationship between their ages. Wait, but the problem already says that Seth is twice as old as Brooke. So is the question asking for something else? Maybe I need to verify the answer or find their actual ages? Wait, let me check the question again.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What will be the sum of their ages in 2 years?",
+          "gold": "28",
+          "gen": "Wait, no. The original question says, \"What is the relationship between Seth's age and Brooke's age?\" But the problem already states that Seth is twice as old as Brooke. So maybe the answer is that Seth is twice as old as Brooke. But maybe the question is trying to trick me? Or maybe there's a mistake here? Let me think. The problem gives two pieces of information: Seth is twice as old as Brooke, and in 2 years, their combined ages will be 28. So maybe the problem is actually asking for their current ages, but the question is phrased differently. Wait, the question says, \"What is the relationship between Seth's age and Brooke's age?\" So the answer is that Seth is twice as old as Brooke. But maybe the problem is expecting me to solve for their ages and then confirm that the relationship is indeed twice as old. Maybe the user is confused, but the problem already gives the relationship explicitly. Wait, looking back at the problem, maybe the original problem was different? Let me recheck.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the equation representing the sum of their ages in 2 years?",
+          "gold": "3x + 4 = 28",
+          "gen": "Okay, maybe the user is confused. Let me go through it step by step. Let me set up the equations. Let me denote Brooke's current age as B. Then Seth's current age is 2B, since he is twice as old as Brooke. In 2 years, Brooke's age will be B + 2, and Seth's age will be 2B + 2. The sum of their ages in 2 years will be (B + 2) + (2B + 2) = 3B + 4. According to the problem, this sum is 28. Therefore, 3B + 4 = 28. Subtracting 4 from both sides, 3B = 24. Then B = 8. So Brooke is currently 8 years old, and Seth is 16 years old. Therefore, the relationship is that Seth is twice as old as Brooke. So the answer is that Seth is twice as old as Brooke. Wait, but the problem already says that. Maybe the question is trying to confirm this? Or is there a misunderstanding here? Because the problem says that in two years, the sum is 28, so maybe the question is expecting me to use that information to find the relationship? But the relationship is already given. Maybe the answer is that Seth is twice as old as Brooke. However, maybe the question is actually asking for the difference in their ages or something else. But the question is exactly as stated: \"What is the relationship between Seth's age and Brooke's age?\" Given that the problem states that Seth is twice as old as Brooke, the answer is that Seth is twice as old as Brooke. Wait, but maybe the problem is in the context of a math problem where the relationship is derived from the equations? But since the problem already gives the relationship, maybe the answer is just that. However, perhaps the user is confused and the problem is actually meant to have a different answer. Let me check if the equations are correct. If Brooke is 8, then Seth is 16. In two years, Brooke is 10, Seth is 18. 10 + 18 = 28. That's correct. So the relationship is indeed twice as old. So the answer is that Seth is twice as old as Brooke. Therefore, the answer is that Seth is twice as old as Brooke. But maybe the question is trying to get me to write this in a specific",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the value of x after solving the equation?",
+          "gold": "8",
+          "gen": "Let me think. If the equation is 3B + 4 = 28, then solving for B gives B = 8. So x, if x is Brooke's age, is 8. But the original question is about the relationship between their ages. Wait, maybe the question is different. But according to the given problem, the answer is that Seth is twice as old as Brooke. So the answer to the question \"What is the relationship between Seth's age and Brooke's age?\" is that Seth is twice as old as Brooke. Therefore, the answer is that Seth is twice as old as Brooke. So I think that's the answer.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How old is Seth?",
+          "gold": "16",
+          "gen": "Seth is 16 years old.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much money does Ethel have?",
+          "gold": "8",
+          "gen": "The problem cannot be solved with the given information.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much more money does Jimmy have than twice Ethel's money?",
+          "gold": "16",
+          "gen": "2",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much money does Jimmy have in total?",
+          "gold": "18",
+          "gen": "2 more than twice Ethel's money.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many miles does Pancho walk during the weekdays?",
+          "gold": "100",
+          "gen": "Let's see. The problem says that Pancho walks 20 miles a day on weekdays, but on weekends he walks 10 miles. Wait, the question is asking for the total miles he walks during the weekdays. So first, I need to figure out how many weekdays there are in a week.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many miles does Pancho walk on the weekend?",
+          "gold": "20",
+          "gen": "There are 2 days in the weekend, which are Saturday and Sunday. So on weekends, he walks 10 miles each day. That means on the weekend, he walks 10 miles times 2 days, which is 20 miles.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many miles does Pancho walk in a week?",
+          "gold": "120",
+          "gen": "In a week, there are 5 weekdays and 2 weekend days. On weekdays, he walks 20 miles a day, so 20 times 5 is 100 miles. On weekends, he walks 20 miles as calculated before. So total miles in a week are 100 plus 20, which is 120 miles.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the cost of the jacket?",
+          "gold": "75",
+          "gen": "The cost of the jacket is $75.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the total cost of the hat and jacket?",
+          "gold": "100",
+          "gen": "The total cost of the hat and jacket is $100.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the cost of the pants?",
+          "gold": "50",
+          "gen": "The cost of the pants is $50.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "What is the total cost of each uniform?",
+          "gold": "150",
+          "gen": "The total cost of each uniform is $175.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many legs do the spiders have in total?",
+          "gold": "640",
+          "gen": "The question is asking for the total number of legs from the spiders. There are 80 spiders, each with 8 legs. So, we need to multiply the number of spiders by the number of legs each spider has. 80 spiders * 8 legs/spider = 640 legs.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many legs do the insects have in total?",
+          "gold": "540",
+          "gen": "The question is asking for the total number of legs from the insects. There are 90 insects, each with 6 legs. So, we need to multiply the number of insects by the number of legs each insect has. 90 insects * 6 legs/insect = 540 legs.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many legs do the rare mutant invertebrates have in total?",
+          "gold": "30",
+          "gen": "The question is asking for the total number of legs from the rare mutant invertebrates. There are 3 rare mutant invertebrates, each with 10 legs. So, we need to multiply the number of rare mutant invertebrates by the number of legs each one has. 3 rare mutant invertebrates * 10 legs/rare mutant invertebrate = 30 legs.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many legs does Jake see total?",
+          "gold": "1210",
+          "gen": "To find the total number of legs Jake sees, we need to add up the legs from the spiders, insects, and rare mutant invertebrates. The spiders have 640 legs, the insects have 540 legs, and the rare mutant invertebrates have 30 legs. So, 640 + 540 + 30 = 1210 legs.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How old is Sally Four?",
+          "gold": "8",
+          "gen": "3",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How old is Granny Red?",
+          "gold": "16",
+          "gen": "6",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the total age of Sally Thirtytwo, Sally Four, and Granny Red?",
+          "gold": "32",
+          "gen": "3 + 6 + 3 = 12",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How old is Sally Two?",
+          "gold": "19",
+          "gen": "6 + 3 = 9",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "What is the total age of the four birds?",
+          "gold": "51",
+          "gen": "9 + 3 + 6 + 3 = 21",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total minimum payment Jessica has each month?",
+          "gold": "1000",
+          "gen": "The total minimum payment is $300 + $200 + $500 = $1000.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much extra does Jessica pay each month if she wants to pay 50% more than the minimum?",
+          "gold": "500",
+          "gen": "If Jessica wants to pay 50% more than the minimum, she needs to pay an additional 50% of $1000, which is $500. So, her total payment would be $1000 + $500 = $1500.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the total amount Jessica pays each month?",
+          "gold": "1500",
+          "gen": "The total amount Jessica pays each month is $1500.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much does Jessica pay in a year?",
+          "gold": "18000",
+          "gen": "Jessica pays $1500 each month, so in a year she pays $1500 * 12 = $18,000.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many minutes does it take Billy to peel all the potatoes?",
+          "gold": "90",
+          "gen": "90 minutes",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many minutes does it take Billy to cut all the potatoes?",
+          "gold": "5",
+          "gen": "90 minutes",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How long will it take Billy to finish prepping the potatoes?",
+          "gold": "95",
+          "gen": "90 minutes",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does each gallon sell for?",
+          "gold": "10",
+          "gen": "The answer is $10.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much does each gallon cost to make?",
+          "gold": "5",
+          "gen": "The answer is $5.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much profit do they make per gallon?",
+          "gold": "5",
+          "gen": "The answer is $5.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many gallons did they make and sell?",
+          "gold": "5",
+          "gen": "They made and sold 3 gallons.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much did they spend on lemons?",
+          "gold": "15",
+          "gen": "The answer is $9.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many Chinese participants were there in the race?",
+          "gold": "160",
+          "gen": "160",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many girls were on the Chinese team?",
+          "gold": "100",
+          "gen": "20",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does Zaid spend on rent?",
+          "gold": "1500",
+          "gen": "1/4 of his salary.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How much does Zaid spend on car fuel?",
+          "gold": "2000",
+          "gen": "1/3 of his salary.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the total amount spent on rent and car fuel?",
+          "gold": "3500",
+          "gen": "1/4 + 1/3 = 7/12 of his salary.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much money does Zaid have left after paying for rent and car fuel?",
+          "gold": "2500",
+          "gen": "1 - 7/12 = 5/12 of his salary.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much does Zaid donate to his favorite charity?",
+          "gold": "1250",
+          "gen": "1/2 of 5/12 = 5/24 of his salary.",
+          "correct": false
+        },
+        {
+          "t": 5,
+          "q": "How much money does Zaid give to his daughter and wife combined?",
+          "gold": "900",
+          "gen": "200 + 700 = 900 dollars.",
+          "correct": true
+        },
+        {
+          "t": 6,
+          "q": "How much money does Zaid have left after giving money to his daughter and wife?",
+          "gold": "350",
+          "gen": "5/24 of his salary - 900 dollars.",
+          "correct": false
+        },
+        {
+          "t": 7,
+          "q": "How much money will Zaid still have after all these expenses and donations?",
+          "gold": "350",
+          "gen": "5/24 of his salary - 900 dollars = 0. So, 5/24 of his salary = 900 dollars. Therefore, his salary is 900 * 24 / 5 = 4320 dollars. Therefore, Zaid spends 1/4 of his salary on rent, which is 4320 / 4 = 1080 dollars.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many crabs does Monic have?",
+          "gold": "36",
+          "gen": "Monic has 36 crabs.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many crabs do Bo and Monic have together?",
+          "gold": "76",
+          "gen": "Bo and Monic have 76 crabs together.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many crabs does Rani have?",
+          "gold": "46",
+          "gen": "Rani has 44 crabs.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "What is the total number of crabs the three have together?",
+          "gold": "122",
+          "gen": "The total number of crabs the three have together is 116.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many hours did Lloyd tutor in total for the first two weeks?",
+          "gold": "13",
+          "gen": "Lloyd tutored 13 hours in total for the first two weeks.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much did Lloyd earn for the first two weeks?",
+          "gold": "130",
+          "gen": "Lloyd earned $130 for the first two weeks.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many votes did the winner get?",
+          "gold": "60",
+          "gen": "The total number of students who voted is 80. The winner got 3/4 of the votes, so the winner got 3/4 \u00d7 80 = 60 votes. Hence, the answer is 60.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many votes did the loser get?",
+          "gold": "20",
+          "gen": "The loser got 80 - 60 = 20 votes. So, the answer is 20.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many white carnations did Sandra order?",
+          "gold": "40",
+          "gen": "Let's think. Let me try to figure this out.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many red roses did Sandra order?",
+          "gold": "160",
+          "gen": "Let's think. Well, I need to find out how many red roses Sandra ordered. But the problem doesn't mention red roses directly. Let me check the given information again.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "To keep Sandra's business, how many red roses must Fred deliver by 5 pm?",
+          "gold": "160",
+          "gen": "Let's think. Okay, so the problem is about Sandra, the florist, who has ordered various flowers and has threatened to switch suppliers if the missing red roses aren't delivered by 5 pm. The question is asking how many red roses Fred must deliver by 5 pm to keep Sandra's business.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How old was Jan two years ago?",
+          "gold": "28",
+          "gen": "12",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How old was Mark two years ago?",
+          "gold": "19",
+          "gen": "10",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How old is Mark now?",
+          "gold": "21",
+          "gen": "12",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How old is Jean now?",
+          "gold": "23",
+          "gen": "14",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many seconds will the first team take to finish the relay?",
+          "gold": "220",
+          "gen": "The team's first runner runs 400 meters in 55 seconds. The second runner runs 400 meters in 55 seconds. The third runner runs 400 meters in 55 seconds. The fourth runner runs 400 meters in 55 seconds. So, the total time is 4 times 55 seconds, which is 220 seconds. Therefore, the answer is 220.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many seconds will the second team's first runner take to complete their leg?",
+          "gold": "60",
+          "gen": "The second team's first runner runs their 400 meter leg in 60 seconds. Therefore, the answer is 60.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many seconds will the second team's second runner take to complete their leg?",
+          "gold": "57",
+          "gen": "The second team's first runner runs their 400 meter leg in 60 seconds. The second runner is 3 seconds faster than the first runner, so 60 - 3 = 57 seconds. Therefore, the answer is 57.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many seconds will the second team's third runner take to complete their leg?",
+          "gold": "54",
+          "gen": "The second team's first runner runs their 400 meter leg in 60 seconds. The second runner is 3 seconds faster than the first runner, so 60 - 3 = 57 seconds. The third runner is 3 seconds faster than the second runner, so 57 - 3 = 54 seconds. Therefore, the answer is 54.",
+          "correct": true
+        },
+        {
+          "t": 4,
+          "q": "How many seconds will the second team's fourth runner take to complete their leg?",
+          "gold": "51",
+          "gen": "The second team's first runner runs their 400 meter leg in 60 seconds. The second runner is 3 seconds faster than the first runner, so 60 - 3 = 57 seconds. The third runner is 3 seconds faster than the second runner, so 57 - 3 = 54 seconds. The fourth runner is 3 seconds faster than the third runner, so 54 - 3 = 51 seconds. Therefore, the answer is 51.",
+          "correct": true
+        },
+        {
+          "t": 5,
+          "q": "How many seconds will the second team take to finish the relay?",
+          "gold": "222",
+          "gen": "The second team's first runner takes 60 seconds. The second runner takes 57 seconds. The third runner takes 54 seconds. The fourth runner takes 51 seconds. The total time is 60 + 57 + 54 + 51 = 222 seconds. Therefore, the answer is 222.",
+          "correct": true
+        },
+        {
+          "t": 6,
+          "q": "How many seconds will the faster team win by?",
+          "gold": "2",
+          "gen": "The first team's total time is 220 seconds. The second team's total time is 222 seconds. The difference between the two times is 222 - 220 = 2 seconds. Therefore, the answer is 2.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the probability of rolling a number greater than 3 on a six-sided die?",
+          "gold": "50%",
+          "gen": "The probability of rolling a number greater than 3 on a six-sided die is 1/2.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the probability of rolling one even number on a six-sided die?",
+          "gold": "50%",
+          "gen": "The probability of rolling one even number on a six-sided die is 1/2.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "What is the probability of rolling two even numbers in a row?",
+          "gold": "25%",
+          "gen": "The probability of rolling two even numbers in a row is 1/4.",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How much more likely is it to roll a number greater than 3 than to roll two even numbers in a row?",
+          "gold": "25%",
+          "gen": "The probability of rolling a number greater than 3 is 1/2, and the probability of rolling two even numbers in a row is 1/4. To find how much more likely the first event is, we subtract the two probabilities: 1/2 - 1/4 = 1/4. Therefore, it is 1/4 more likely to roll a number greater than 3 than to roll two even numbers in a row.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many apples did Jenna pick?",
+          "gold": "10",
+          "gen": "28",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many apples did they both pick?",
+          "gold": "30",
+          "gen": "56",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pieces of straw are used for the hamsters?",
+          "gold": "50",
+          "gen": "50",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pieces of straw are used for the rabbits and hamsters combined?",
+          "gold": "70",
+          "gen": "100",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many pieces of straw are used for the rats?",
+          "gold": "90",
+          "gen": "180",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many pieces of straw are in each cage for the rats?",
+          "gold": "30",
+          "gen": "6",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How many rats are in each cage?",
+          "gold": "5",
+          "gen": "10",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the monthly interest amount?",
+          "gold": "2",
+          "gen": "The monthly interest amount is $2.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "What is the total interest amount after 3 months?",
+          "gold": "6",
+          "gen": "The total interest amount after 3 months is $6.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How much should Mandy give to Benedict?",
+          "gold": "106",
+          "gen": "Mandy should give $106.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "What is the total cost per bag, including transportation?",
+          "gold": "22",
+          "gen": "The total cost per bag, including transportation, is $20 per bag.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "What is the profit per bag?",
+          "gold": "8",
+          "gen": "The profit per bag is $20 per bag.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many bags did the trader sell?",
+          "gold": "50",
+          "gen": "The trader sold 100 bags.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much did they spend on food?",
+          "gold": "15.75",
+          "gen": "The answer is $4.50 less than on tickets. The tickets cost $20.25. So, $20.25 - $4.50 = $15.75. So they spent $15.75 on food.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much did they spend on the rides?",
+          "gold": "66",
+          "gen": "They went on 2 different rides which cost $33 each. So, $33 \u00d7 2 = $66. So the total cost on the rides is $66.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "What is the total amount they spent?",
+          "gold": "102",
+          "gen": "The total cost is the sum of the cost of the tickets, food, and rides. So, $20.25 (tickets) + $15.75 (food) + $66 (rides) = $102. So the total amount they spent is $102.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much did each of them pay?",
+          "gold": "34",
+          "gen": "The total amount they spent is $102. Since there are three friends, we divide the total by 3. $102 \u00f7 3 = $34. So each of them paid $34.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many minutes does John collect peaches for?",
+          "gold": "180",
+          "gen": "180",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many peaches does John collect per minute?",
+          "gold": "2",
+          "gen": "2",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many peaches does John collect in total?",
+          "gold": "360",
+          "gen": "360",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pounds of insects does the flock need per week?",
+          "gold": "35",
+          "gen": "3.5 pounds.",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many pounds of insects does the flock need per day?",
+          "gold": "5",
+          "gen": "3.5 pounds divided by 7 days is 0.5 pounds per day.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many new trees does Tom plant each year?",
+          "gold": "8",
+          "gen": "10",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many trees does Tom have after 10 years before any die?",
+          "gold": "130",
+          "gen": "130",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many trees die after 10 years?",
+          "gold": "39",
+          "gen": "39",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How many trees does Tom have left after 10 years?",
+          "gold": "91",
+          "gen": "91",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many white flamingos were added to the front yard on Saturday?",
+          "gold": "6",
+          "gen": "6",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pink flamingos were left on the front yard after the white ones were added on Saturday?",
+          "gold": "12",
+          "gen": "18 - 1/3*18 = 12",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "How many pink flamingos were on the front yard after the additional 18 pink ones were added on Sunday?",
+          "gold": "30",
+          "gen": "12 + 18 = 30",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "At noon on Sunday, how many more pink plastic flamingos were out than white plastic flamingos?",
+          "gold": "24",
+          "gen": "30 - 6 = 24",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much will Violetta pay for the crayons?",
+          "gold": "10",
+          "gen": "Violetta needs 5 crayons and each crayon costs $2, so the total cost is 5 * 2 = $10. She has $20, so she will pay $10 for the crayons.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much change will Violetta get?",
+          "gold": "10",
+          "gen": "Violetta has $20 and the total cost is $10, so the change she will get is 20 - 10 = $10.",
+          "correct": true
+        },
+        {
+          "t": 2,
+          "q": "Violetta wants to buy new crayons. She needs them in 5 different colors and prepared $20 for this purchase. One crayon costs $2. How much change will she get?",
+          "gold": "10",
+          "gen": "Violetta needs 5 crayons, each costing $2, so 5 * 2 = $10. She paid with $20, so the change is 20 - 10 = $10.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How much does a pen cost?",
+          "gold": "1.50",
+          "gen": "A pen costs $1.50.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much will 8 pens cost?",
+          "gold": "12",
+          "gen": "8 pens will cost $12.00.",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pounds of carrots do the restaurants need in total?",
+          "gold": "80",
+          "gen": "The restaurants need 40 restaurants \u00d7 2 pounds of carrots per restaurant = 80 pounds of carrots in total. The total amount of carrots, 200 pounds, is more than what is needed. Therefore, the answer is 80.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many pounds of carrots will not be used?",
+          "gold": "120",
+          "gen": "The total amount of carrots is 200 pounds, and the restaurants need 80 pounds in total. Therefore, the amount of carrots that will not be used is 200 \u2212 80 = 120 pounds. Therefore, the answer is 120.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many adults are there in Soda?",
+          "gold": "17509",
+          "gen": "The total population is 23786, with 8417 men and 9092 women. So, the number of adults is 8417 + 9092 = 17509. Therefore, the number of children is 23786 - 17509 = 6277. So, the number of adults is 17509.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How many children are there in Soda?",
+          "gold": "6277",
+          "gen": "The total population is 23786, with 8417 men and 9092 women. So, the number of adults is 8417 + 9092 = 17509. Therefore, the number of children is 23786 - 17509 = 6277. So, the number of children is 6277.",
+          "correct": true
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many pokemon cards did Elaine collect in the first month?",
+          "gold": "60",
+          "gen": "20",
+          "correct": false
+        },
+        {
+          "t": 1,
+          "q": "How many pokemon cards did Elaine collect in the second month?",
+          "gold": "40",
+          "gen": "20",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How many pokemon cards did Elaine collect in the third month?",
+          "gold": "200",
+          "gen": "80",
+          "correct": false
+        },
+        {
+          "t": 3,
+          "q": "How many pokemon cards does Elaine have now in total?",
+          "gold": "320",
+          "gen": "20 + 60 + 80 = 160",
+          "correct": false
+        }
+      ],
+      [
+        {
+          "t": 0,
+          "q": "How many sentences does Mark edit for each publisher?",
+          "gold": "500",
+          "gen": "Mark edits 500 sentences for each publisher.",
+          "correct": true
+        },
+        {
+          "t": 1,
+          "q": "How much does Mark earn from Publisher A in a week?",
+          "gold": "2500",
+          "gen": "Mark earns $25 from Publisher A in a week.",
+          "correct": false
+        },
+        {
+          "t": 2,
+          "q": "How much does Publisher B pay Mark per sentence?",
+          "gold": "10",
+          "gen": "Publisher B pays Mark 10 cents per sentence.",
+          "correct": true
+        },
+        {
+          "t": 3,
+          "q": "How much does Mark earn from Publisher B in a week?",
+          "gold": "5000",
+          "gen": "Mark earns $50 from Publisher B in a week.",
+          "correct": false
+        },
+        {
+          "t": 4,
+          "q": "How much does Mark make in a week, in cents?",
+          "gold": "7500",
+          "gen": "Mark makes 750 cents in a week, which is $7.50.",
+          "correct": false
+        }
+      ]
+    ]
+  }
+}

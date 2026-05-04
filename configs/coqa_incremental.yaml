@@ -1,0 +1,49 @@
+# coqa tokenization baseline 3: incremental cache
+# Caches previous token IDs; only tokenizes the new user turn and appends.
+# Faster than full retokenize but may have BPE boundary inconsistencies.
+
+model_name:   "Qwen/Qwen3-0.6B-Base"
+output_dir:   "experiments/coqa_tok_incremental"
+
+# rollout
+num_generations: 4
+max_turns:       10
+max_new_tokens:  300
+temperature:     0.8
+max_ctx_len:     8192
+
+# loss
+clip_eps:      0.2
+beta:          0.01
+use_ref_model: true
+
+# vllm
+vllm_gpu_memory_utilization: 0.7
+
+# training
+lr:          1.0e-5
+batch_size:  16
+num_epochs:  1
+max_steps:   2000
+grad_clip:   1.0
+bf16:        true
+
+# dataset
+dataset:     "coqa"
+reward_type: "f1"
+max_answer_words: 10
+
+# tokenization
+tokenization_strategy: "incremental"
+
+# checkpointing
+save_every:   100
+resume_from:  ""
+
+# logging
+wandb_project:  "grpo-coqa-tokenization"
+use_wandb:      true
+wandb_run_name: "incremental"
+log_every:      10
+eval_every:     50
+eval_samples:   50
