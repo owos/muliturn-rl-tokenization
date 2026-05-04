@@ -1,6 +1,6 @@
 # Multi-Turn Tokenization for RL
 
-GRPO training and evaluation studying how tokenization strategy affects multi-turn RL fine-tuning on GSM8K and CoQA.
+GRPO training and evaluation studying how tokenization strategy affects multi-turn RL fine-tuning on GSM8K.
 
 ## Setup
 
@@ -13,20 +13,15 @@ modal secret create wandb-secret WANDB_API_KEY=<your_key>
 
 ## Training
 
-Training runs on Modal (H100). Config files are in `configs/`.
-
 ```bash
-# GSM8K — pick a tokenization strategy
+# On Modal (H100)
 modal run modal_train.py --config configs/gsm8k_incremental.yaml
-modal run modal_train.py --config configs/gsm8k_full.yaml
-modal run modal_train.py --config configs/gsm8k_aligned.yaml
-modal run modal_train.py --config configs/gsm8k_single.yaml
 
-# CoQA
-modal run modal_train.py --config configs/coqa_incremental.yaml
+# Locally
+bash run_train.sh
 ```
 
-**Tokenization strategies:**
+Config files are in `configs/`. **Tokenization strategies:**
 
 | Strategy | Description |
 |---|---|
@@ -37,27 +32,13 @@ modal run modal_train.py --config configs/coqa_incremental.yaml
 
 ## Evaluation
 
-Evaluation also runs on Modal and saves results to a persistent volume.
-
 ```bash
-# GSM8K single-turn
-modal run modal_eval.py --dataset gsm8k --model Qwen/Qwen3-4B --mode single --n 500
+# On Modal
+modal run modal_eval.py --model Qwen/Qwen3-4B --mode single --n 500
+modal run modal_eval.py --model Qwen/Qwen3-4B --mode multi --n 200 --strategy incremental
 
-# GSM8K multi-turn
-modal run modal_eval.py --dataset gsm8k --model Qwen/Qwen3-4B --mode multi --n 200 --strategy incremental
-
-# CoQA multi-turn
-modal run modal_eval.py --dataset coqa --model Qwen/Qwen3-4B --n 200 --strategy incremental
-
-# Evaluate a trained checkpoint from the volume
-modal run modal_eval.py --model experiments/gsm8k_tok_incremental_<timestamp> --strategy incremental
+# Locally
+bash run_eval.sh
 ```
 
 Results are downloaded automatically to `results/`.
-
-## Local evaluation (no Modal)
-
-```bash
-python eval_gsm8k.py --models Qwen/Qwen3-4B --mode single
-python eval_gsm8k.py --models Qwen/Qwen3-4B --mode multi --tokenization_strategy incremental --n 200
-```
